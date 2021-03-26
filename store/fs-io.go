@@ -38,11 +38,14 @@ func (s *fsStore) loadData(chatID tKey, baseName string, result interface{}, opt
 	filePath := path.Join(s.stateDirPath(chatID), baseName)
 
 	data, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		if cfg.MustExists || !errors.Is(err, os.ErrNotExist) {
-			mustbe.Thrown(err)
+	if errors.Is(err, os.ErrNotExist) {
+		if cfg.MustExists {
+			mustbe.Thrown(ErrNotFound)
+		} else {
+			return
 		}
-		return
+	} else {
+		mustbe.Thrown(err)
 	}
 
 	mustbe.OK(json.Unmarshal(data, result))

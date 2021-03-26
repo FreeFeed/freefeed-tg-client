@@ -60,7 +60,7 @@ func (s *fsStore) stateDirPath(chatID tKey) string {
 
 func (s *fsStore) LoadState(chatID tKey) (*State, error) {
 	state := &State{}
-	err := s.loadData(chatID, stateFile, state)
+	err := s.loadData(chatID, stateFile, state, mustExists)
 	if err != nil {
 		return nil, err
 	}

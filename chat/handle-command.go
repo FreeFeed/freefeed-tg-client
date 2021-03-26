@@ -27,6 +27,7 @@ func (c *Chat) handleCommand(update tg.Update) {
 			c.ShouldOK(c.saveState())
 		} else {
 			c.State.Expectation = store.ExpectLanguage
+			c.ShouldOK(c.saveState())
 		}
 	} else if command == "logout" && c.State.IsAuthorized() {
 		c.ShouldSend(c.newHTMLMessage(

@@ -2,6 +2,7 @@ package app
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"sync"
 	"time"
@@ -13,7 +14,6 @@ import (
 	"github.com/davidmz/freefeed-tg-client/socketio"
 	"github.com/davidmz/freefeed-tg-client/store"
 	"github.com/davidmz/freefeed-tg-client/types"
-	"github.com/davidmz/mustbe"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
 )
@@ -151,16 +151,18 @@ func (a *App) handleTgUpdate(update tg.Update) {
 }
 
 func (a *App) LoadState(chatID types.TgChatID) (state *store.State, err error) {
-	defer mustbe.CatchedAs(&err)
-
 	// First, look in the persistent storage
-	state = mustbe.OKVal(a.Store.LoadState(chatID)).(*store.State)
-
-	if state == nil {
-		// Second, look in the cache or create a new empty state
-		state = mustbe.OKVal(a.stateCache.Get(chatID)).(*store.State)
+	state, err = a.Store.LoadState(chatID)
+	if err == nil {
+		return
+	} else if !errors.Is(err, store.ErrNotFound) {
+		return nil, err
 	}
-	return
+
+	// Second, look in the cache or create a new empty state
+	iState, err := a.stateCache.Get(chatID)
+
+	return iState.(*store.State), err
 }
 
 func (a *App) DropState(state *store.State) error {

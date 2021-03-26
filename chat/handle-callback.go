@@ -31,7 +31,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 		} else {
 			c.State.Language = language.English
 		}
-		c.saveState()
+		c.ShouldOK(c.saveState())
 
 		p := message.NewPrinter(c.State.Language)
 
@@ -43,7 +43,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 		if !c.State.IsAuthorized() {
 			c.ShouldSend(c.newRawHTMLMessage(p.Sprintf("<welcome HTML>")))
 			c.State.Expectation = store.ExpectAuthToken
-			c.saveState()
+			c.ShouldOK(c.saveState())
 		} else {
 			// TODO
 		}
