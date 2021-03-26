@@ -156,6 +156,41 @@ func (c *Chat) handleCallback(update tg.Update) {
 				Text:            emoji.Parse(p.Sprintf(":alien: Unknown command %v", cbQuery.Data)),
 			})
 		}
+
+	} else if cbData == doTrackPostByURL || cbData == doUntrackPostByURL {
+		var err error
+		msgText := ""
+		if msg.ReplyToMessage != nil {
+			msgText = msg.ReplyToMessage.Text
+		}
+
+		postID := c.postIDFromURL(msgText)
+		if postID != uuid.Nil {
+			if cbData == doTrackPostByURL {
+				if err := c.ShouldOK(c.App.TrackPost(c.ID, postID)); err == nil {
+					// subscribe
+					c.ShouldOK(c.App.RTSend(c.ID, "subscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{postID}}, nil))
+				}
+			} else {
+				if err := c.ShouldOK(c.App.UntrackPost(c.ID, postID)); err == nil {
+					// unsubscribe
+					c.ShouldOK(c.App.RTSend(c.ID, "unsubscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{postID}}, nil))
+				}
+			}
+		} else {
+			err = errors.New("cannot find post ID")
+		}
+
+		if err != nil {
+			c.ShouldAnswer(tg.CallbackConfig{
+				CallbackQueryID: cbQuery.ID,
+				Text:            emoji.Parse(p.Sprintf(":warning: Error: %v", err)),
+			})
+			return
+		}
+		msg := tg.NewEditMessageReplyMarkup(c.ID, msg.MessageID, c.postURLButtons(postID))
+		c.ShouldSend(msg)
+
 	} else if cbData == "cancel" {
 		c.State.ClearExpectations()
 		c.saveState()

@@ -11,6 +11,9 @@ const (
 	doPostBack      = "e:postBack"
 	doTrackPost     = "e:trackPost"
 	doUntrackPost   = "e:untrackPost"
+
+	doTrackPostByURL   = "trackPostByURL"
+	doUntrackPostByURL = "untrackPostByURL"
 )
 
 func isEventAction(action string) bool {

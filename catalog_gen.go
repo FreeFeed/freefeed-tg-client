@@ -42,58 +42,59 @@ var messageKeyToIndex = map[string]int{
 	":alien: Cannot load events: %v":                              23,
 	":alien: Unknown command":                                     28,
 	":alien: Unknown command %v":                                  19,
-	":alien: Unknown event: %v":                                   75,
+	":alien: Unknown event: %v":                                   76,
 	":back: Back":                                                 5,
 	":bell: Subscribe to comments":                                7,
-	":cop: %s has deleted your comment to the \"%s\":":            67,
-	":cop: %s has deleted your comment to the post in %s \"%s\":": 68,
-	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 69,
-	":cop: %s has removed the post from %s from the group %s":                    72,
-	":cop: %s has removed the post from %s from the group %s \"%s\":":            73,
-	":cop: %s has removed your post from the group %s":                           70,
-	":cop: %s has removed your post from the group %s \"%s\":":                   71,
-	":e-mail: %s mentioned you in a comment to the post \"%s\":":                 44,
-	":e-mail: %s mentioned you in a comment to the post in %s \"%s\":":           45,
-	":e-mail: %s mentioned you in the post in %s:":                               43,
-	":e-mail: %s mentioned you in the post:":                                     42,
-	":e-mail: %s replyed to you in a comment to the post \"%s\":":                46,
-	":e-mail: %s replyed to you in a comment to the post in %s \"%s\":":          47,
-	":e-mail: New comment was posted by %s to the direct message \"%s\":":        49,
-	":e-mail: New comment was posted by %s to the post \"%s\":":                  50,
-	":e-mail: You received a direct message from %s:":                            48,
+	":cop: %s has deleted your comment to the \"%s\":":            68,
+	":cop: %s has deleted your comment to the post in %s \"%s\":": 69,
+	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 70,
+	":cop: %s has removed the post from %s from the group %s":                    73,
+	":cop: %s has removed the post from %s from the group %s \"%s\":":            74,
+	":cop: %s has removed your post from the group %s":                           71,
+	":cop: %s has removed your post from the group %s \"%s\":":                   72,
+	":e-mail: %s mentioned you in a comment to the post \"%s\":":                 45,
+	":e-mail: %s mentioned you in a comment to the post in %s \"%s\":":           46,
+	":e-mail: %s mentioned you in the post in %s:":                               44,
+	":e-mail: %s mentioned you in the post:":                                     43,
+	":e-mail: %s replyed to you in a comment to the post \"%s\":":                47,
+	":e-mail: %s replyed to you in a comment to the post in %s \"%s\":":          48,
+	":e-mail: New comment was posted by %s to the direct message \"%s\":":        50,
+	":e-mail: New comment was posted by %s to the post \"%s\":":                  51,
+	":e-mail: You received a direct message from %s:":                            49,
 	":globe_with_meridians: Open comment":                                        1,
 	":globe_with_meridians: Open post":                                           0,
-	":key: Create token":                                                         38,
-	":minus: %s request to join %s was rejected by %s":                           66,
-	":minus: %s revoked admin privileges from %s in the group %s":                64,
-	":minus: %s revoked subscription request to %s":                              62,
-	":minus: %s revoked subscription request to you":                             61,
-	":minus: %s unsubscribed from %s":                                            60,
-	":minus: %s unsubscribed from your feed":                                     58,
+	":key: Create token":                                                         39,
+	":minus: %s request to join %s was rejected by %s":                           67,
+	":minus: %s revoked admin privileges from %s in the group %s":                65,
+	":minus: %s revoked subscription request to %s":                              63,
+	":minus: %s revoked subscription request to you":                             62,
+	":minus: %s unsubscribed from %s":                                            61,
+	":minus: %s unsubscribed from your feed":                                     59,
 	":no_bell: Unsubscribe from comments":                                        6,
-	":no_entry_sign: Cancel":                                                     41,
-	":no_entry_sign: Your request to join group %s was rejected":                 56,
-	":no_entry_sign: Your subscription request to %s was rejected":               54,
-	":plus: %s promoted %s to admin in the group %s":                             63,
-	":plus: %s request to join %s was approved by %s":                            65,
-	":plus: %s subscribed to %s":                                                 59,
-	":plus: %s subscribed to your feed":                                          57,
-	":raising_hand: %s sent a request to join %s that you admin":                 52,
-	":raising_hand: %s sent you a subscription request":                          51,
-	":shrug: Unknown command":                                                    36,
+	":no_entry_sign: Cancel":                                                     42,
+	":no_entry_sign: Your request to join group %s was rejected":                 57,
+	":no_entry_sign: Your subscription request to %s was rejected":               55,
+	":plus: %s promoted %s to admin in the group %s":                             64,
+	":plus: %s request to join %s was approved by %s":                            66,
+	":plus: %s subscribed to %s":                                                 60,
+	":plus: %s subscribed to your feed":                                          58,
+	":raising_hand: %s sent a request to join %s that you admin":                 53,
+	":raising_hand: %s sent you a subscription request":                          52,
+	":shrug: Unknown command":                                                    37,
 	":speech_balloon: @-Reply":                                                   3,
 	":speech_balloon: Comment more":                                              8,
 	":speech_balloon: Reply":                                                     2,
-	":tada: %s has joined FreeFeed using your invitation":                        74,
+	":tada: %s has joined FreeFeed using your invitation":                        75,
 	":tada: Comment successfully created!":                                       35,
+	":thinking: Hmm, looks like a post URL! What do you want to do with it?":     36,
 	":warning: Cannot load event data, probably this message is too old":         14,
 	":warning: Cannot load event: %v":                                            13,
 	":warning: Error: %v":                                                        18,
 	":warning: FreeFeed error: %v":                                               15,
 	":white_check_mark: Accept":                                                  9,
 	":white_check_mark: Accepted!":                                               16,
-	":white_check_mark: Your request to join group %s was approved":              55,
-	":white_check_mark: Your subscription request to %s was approved":            53,
+	":white_check_mark: Your request to join group %s was approved":              56,
+	":white_check_mark: Your subscription request to %s was approved":            54,
 	":x: Reject":                            10,
 	":x: Rejected!":                         17,
 	"<welcome HTML>":                        12,
@@ -101,15 +102,15 @@ var messageKeyToIndex = map[string]int{
 	"Can not send a comment without a text": 33,
 	"Cannot load user information: %v":      26,
 	"Checking your token...":                30,
-	"Enter your comment text.":              39,
-	"Enter your comment text. The comment will be prefixed with \"%s\"":                                40,
+	"Enter your comment text.":              40,
+	"Enter your comment text. The comment will be prefixed with \"%s\"":                                41,
 	"Error creating comment: %v":                                                                       34,
 	"Hello, @%s!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.": 32,
 	"Language is %v now":                 11,
 	"Looks like this token isn't valid.": 29,
 	"More…":                              4,
 	"OK, we will remove all of your data now. Use the /start command if you want to come back.":                              22,
-	"Please create the access token and send it to the bot:":                                                                 37,
+	"Please create the access token and send it to the bot:":                                                                 38,
 	"Something wrong happened: %v":                                                                                           31,
 	"We already know each other. Use the /logout command if you want to delete all of your data or start over.":              21,
 	"You are using this bot as %s. Use the /logout command if you want to delete all of your data or start as another user.": 27,
@@ -117,7 +118,7 @@ var messageKeyToIndex = map[string]int{
 	"Your updates are resumed now.":                                                                                          25,
 }
 
-var enIndex = []uint32{ // 77 elements
+var enIndex = []uint32{ // 78 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000021, 0x00000045, 0x0000005c,
 	0x00000075, 0x0000007d, 0x00000089, 0x000000ad,
@@ -129,21 +130,21 @@ var enIndex = []uint32{ // 77 elements
 	0x00000561, 0x00000579, 0x0000059c, 0x000005b3,
 	// Entry 20 - 3F
 	0x000005d3, 0x00000636, 0x0000065c, 0x0000067a,
-	0x0000069f, 0x000006b7, 0x000006ee, 0x00000701,
-	0x0000071a, 0x0000075d, 0x00000774, 0x0000079e,
-	0x000007d1, 0x00000810, 0x00000858, 0x00000898,
-	0x000008e1, 0x00000914, 0x0000095c, 0x0000099a,
-	0x000009cf, 0x00000a10, 0x00000a53, 0x00000a93,
-	0x00000ad4, 0x00000b12, 0x00000b37, 0x00000b61,
-	0x00000b82, 0x00000ba8, 0x00000bda, 0x00000c0e,
+	0x0000069f, 0x000006e6, 0x000006fe, 0x00000735,
+	0x00000748, 0x00000761, 0x000007a4, 0x000007bb,
+	0x000007e5, 0x00000818, 0x00000857, 0x0000089f,
+	0x000008df, 0x00000928, 0x0000095b, 0x000009a3,
+	0x000009e1, 0x00000a16, 0x00000a57, 0x00000a9a,
+	0x00000ada, 0x00000b1b, 0x00000b59, 0x00000b7e,
+	0x00000ba8, 0x00000bc9, 0x00000bef, 0x00000c21,
 	// Entry 40 - 5F
-	0x00000c46, 0x00000c8b, 0x00000cc4, 0x00000cfe,
-	0x00000d33, 0x00000d76, 0x00000dcb, 0x00000e02,
-	0x00000e42, 0x00000e83, 0x00000ecd, 0x00000f04,
-	0x00000f21,
-} // Size: 332 bytes
+	0x00000c55, 0x00000c8d, 0x00000cd2, 0x00000d0b,
+	0x00000d45, 0x00000d7a, 0x00000dbd, 0x00000e12,
+	0x00000e49, 0x00000e89, 0x00000eca, 0x00000f14,
+	0x00000f4b, 0x00000f68,
+} // Size: 336 bytes
 
-const enData string = "" + // Size: 3873 bytes
+const enData string = "" + // Size: 3944 bytes
 	"\x02:globe_with_meridians: Open post\x02:globe_with_meridians: Open comm" +
 	"ent\x02:speech_balloon: Reply\x02:speech_balloon: @-Reply\x02More…\x02:b" +
 	"ack: Back\x02:no_bell: Unsubscribe from comments\x02:bell: Subscribe to " +
@@ -169,11 +170,12 @@ const enData string = "" + // Size: 3873 bytes
 	"ng happened: %[1]v\x02Hello, @%[1]s!\x0aIt's all set. Now when the bot s" +
 	"ees the update on FreeFeed, it will show it to you.\x02Can not send a co" +
 	"mment without a text\x02Error creating comment: %[1]v\x02:tada: Comment " +
-	"successfully created!\x02:shrug: Unknown command\x02Please create the ac" +
-	"cess token and send it to the bot:\x02:key: Create token\x02Enter your c" +
-	"omment text.\x02Enter your comment text. The comment will be prefixed wi" +
-	"th \x22%[1]s\x22\x02:no_entry_sign: Cancel\x02:e-mail: %[1]s mentioned y" +
-	"ou in the post:\x02:e-mail: %[1]s mentioned you in the post in %[2]s:" +
+	"successfully created!\x02:thinking: Hmm, looks like a post URL! What do " +
+	"you want to do with it?\x02:shrug: Unknown command\x02Please create the " +
+	"access token and send it to the bot:\x02:key: Create token\x02Enter your" +
+	" comment text.\x02Enter your comment text. The comment will be prefixed " +
+	"with \x22%[1]s\x22\x02:no_entry_sign: Cancel\x02:e-mail: %[1]s mentioned" +
+	" you in the post:\x02:e-mail: %[1]s mentioned you in the post in %[2]s:" +
 	"\x02:e-mail: %[1]s mentioned you in a comment to the post \x22%[2]s\x22:" +
 	"\x02:e-mail: %[1]s mentioned you in a comment to the post in %[2]s \x22%" +
 	"[3]s\x22:\x02:e-mail: %[1]s replied to you in a comment to the post \x22" +
@@ -204,7 +206,7 @@ const enData string = "" + // Size: 3873 bytes
 	"\x22%[4]s\x22:\x02:tada: %[1]s has joined FreeFeed using your invitation" +
 	"\x02:alien: Unknown event: %[1]v"
 
-var ruIndex = []uint32{ // 77 elements
+var ruIndex = []uint32{ // 78 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000002f, 0x0000006a, 0x0000008c,
 	0x000000b0, 0x000000ba, 0x000000cc, 0x00000103,
@@ -216,21 +218,21 @@ var ruIndex = []uint32{ // 77 elements
 	0x000008d5, 0x00000903, 0x00000945, 0x0000096d,
 	// Entry 20 - 3F
 	0x00000997, 0x00000a45, 0x00000a8c, 0x00000acd,
-	0x00000af9, 0x00000b27, 0x00000b8d, 0x00000bad,
-	0x00000bec, 0x00000c6d, 0x00000c8a, 0x00000cc2,
-	0x00000d10, 0x00000d6a, 0x00000dda, 0x00000e25,
-	0x00000e86, 0x00000ed1, 0x00000f23, 0x00000f60,
-	0x00000f9d, 0x00000ff4, 0x0000104a, 0x0000109e,
-	0x00001103, 0x00001169, 0x0000119f, 0x000011db,
-	0x0000121d, 0x0000124e, 0x0000128e, 0x000012e8,
+	0x00000af9, 0x00000b6f, 0x00000b9d, 0x00000c03,
+	0x00000c23, 0x00000c62, 0x00000ce3, 0x00000d00,
+	0x00000d38, 0x00000d86, 0x00000de0, 0x00000e50,
+	0x00000e9b, 0x00000efc, 0x00000f47, 0x00000f99,
+	0x00000fd6, 0x00001013, 0x0000106a, 0x000010c0,
+	0x00001114, 0x00001179, 0x000011df, 0x00001215,
+	0x00001251, 0x00001293, 0x000012c4, 0x00001304,
 	// Entry 40 - 5F
-	0x0000133e, 0x000013ad, 0x0000140c, 0x0000146e,
-	0x000014bf, 0x00001526, 0x0000158c, 0x000015e9,
-	0x00001652, 0x000016a5, 0x00001701, 0x0000178c,
-	0x000017c8,
-} // Size: 332 bytes
+	0x0000135e, 0x000013b4, 0x00001423, 0x00001482,
+	0x000014e4, 0x00001535, 0x0000159c, 0x00001602,
+	0x0000165f, 0x000016c8, 0x0000171b, 0x00001777,
+	0x00001802, 0x0000183e,
+} // Size: 336 bytes
 
-const ruData string = "" + // Size: 6088 bytes
+const ruData string = "" + // Size: 6206 bytes
 	"\x02:globe_with_meridians: Открыть пост\x02:globe_with_meridians: Открыт" +
 	"ь коментарий\x02:speech_balloon: Ответить\x02:speech_balloon: @-Ответит" +
 	"ь\x02Ещё…\x02:back: Назад\x02:no_bell: Отписаться от комментов\x02:bell" +
@@ -256,14 +258,15 @@ const ruData string = "" + // Size: 6088 bytes
 	"\x02Проверяем ваш токен...\x02Что-то пошло не так: %[1]v\x02Привет, @%[1" +
 	"]s!\x0aВсё готово. Теперь, когда бот увидит обновления на FreeFeed-е, он" +
 	" пришлёт вам сообщение.\x02Не могу создать коментарий без текста.\x02Не " +
-	"удалось создать комментарий: %[1]v\x02:tada: Комментарий создан!\x02:sh" +
-	"rug: Неизвестная команда\x02Пожалуйста, создайте токен доступа и сообщит" +
-	"е его боту:\x02:key: Создать токен\x02Введите текст вашего комментария:" +
-	"\x02Введите текст вашего комментария. Комментарий будет начинаться с " +
-	"\x22%[1]s\x22\x02:no_entry_sign: Отмена\x02:e-mail: Вас упомянули в пост" +
-	"е %[1]s:\x02:e-mail: Вас упомянули в посте %[1]s в группе %[2]s:\x02:e-" +
-	"mail: Вас упомянули в комментарии %[1]s к посту \x22%[2]s\x22:\x02:e-mai" +
-	"l: Вас упомянули в комментарии %[1]s к посту в группе %[2]s \x22%[3]s" +
+	"удалось создать комментарий: %[1]v\x02:tada: Комментарий создан!\x02:th" +
+	"inking: Хм, кажется это ссылка на пост! Что вы хотите с ней сделать?\x02" +
+	":shrug: Неизвестная команда\x02Пожалуйста, создайте токен доступа и сооб" +
+	"щите его боту:\x02:key: Создать токен\x02Введите текст вашего комментар" +
+	"ия:\x02Введите текст вашего комментария. Комментарий будет начинаться с" +
+	" \x22%[1]s\x22\x02:no_entry_sign: Отмена\x02:e-mail: Вас упомянули в пос" +
+	"те %[1]s:\x02:e-mail: Вас упомянули в посте %[1]s в группе %[2]s:\x02:e" +
+	"-mail: Вас упомянули в комментарии %[1]s к посту \x22%[2]s\x22:\x02:e-ma" +
+	"il: Вас упомянули в комментарии %[1]s к посту в группе %[2]s \x22%[3]s" +
 	"\x22:\x02:e-mail: Ответ %[1]s в комментарии к посту \x22%[2]s\x22:\x02:e" +
 	"-mail: Ответ %[1]s в комментарии к посту в группе %[2]s \x22%[3]s\x22:" +
 	"\x02:e-mail: Вы получили директ-сообщение от %[1]s:\x02:e-mail: Коммента" +
@@ -291,4 +294,4 @@ const ruData string = "" + // Size: 6088 bytes
 	"\x22:\x02:tada: По вашему приглашению зарегистрировался новый пользовате" +
 	"ль FreeFeed — %[1]s!\x02:alien: Неизвестный тип события: %[1]v"
 
-	// Total table size 10625 bytes (10KiB); checksum: AD2215E6
+	// Total table size 10822 bytes (10KiB); checksum: FC300DAF

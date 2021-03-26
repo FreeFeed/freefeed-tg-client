@@ -362,6 +362,13 @@
             "fuzzy": true
         },
         {
+            "id": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
+            "message": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
+            "translation": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": ":shrug: Unknown command",
             "message": ":shrug: Unknown command",
             "translation": ":shrug: Unknown command",

@@ -1,6 +1,9 @@
 package chat
 
 import (
+	"regexp"
+	"strings"
+
 	"github.com/davidmz/freefeed-tg-client/store"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/dgrijalva/jwt-go"
@@ -92,8 +95,7 @@ func (c *Chat) handleMessage(update tg.Update) {
 			c.ShouldOK(err)
 			if err == nil {
 				// We have a reply to the event-related message
-				event := eventRec.Event
-				if event.PostID != uuid.Nil && msg.Text != "" {
+				if event := eventRec.Event; event != nil && event.PostID != uuid.Nil && msg.Text != "" {
 					commentText := msg.Text
 					comment, err := c.frfAPI().AddComment(event.PostID, commentText)
 					if err != nil {
@@ -115,7 +117,31 @@ func (c *Chat) handleMessage(update tg.Update) {
 			}
 		}
 
+		if postID := c.postIDFromURL(msg.Text); postID != uuid.Nil {
+			msg1 := c.newHTMLMessage(p.Sprintf(
+				":thinking: Hmm, looks like a post URL! What do you want to do with it?"))
+			msg1.ReplyToMessageID = msg.MessageID
+			msg1.ReplyMarkup = c.postURLButtons(postID)
+			c.ShouldSend(msg1)
+			return
+		}
+
 		pretty.Print(update)
 		c.ShouldSend(c.newHTMLMessage(p.Sprintf(":shrug: Unknown command")))
 	}
+}
+
+func (c *Chat) postIDFromURL(text string) uuid.UUID {
+	var postRe = regexp.MustCompile(
+		`^https://` + regexp.QuoteMeta(c.App.FreeFeedAPI().HostName) +
+			`/[a-z0-9]+(?:-[a-z0-9]+)*/` +
+			`([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})` +
+			`$`,
+	)
+	parts := postRe.FindStringSubmatch(strings.TrimSpace(text))
+	if parts == nil {
+		return uuid.Nil
+	}
+	postID, _ := uuid.FromString(parts[1])
+	return postID
 }

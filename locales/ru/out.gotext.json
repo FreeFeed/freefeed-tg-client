@@ -292,6 +292,11 @@
             "translation": ":tada: Комментарий создан!"
         },
         {
+            "id": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
+            "message": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
+            "translation": ":thinking: Хм, кажется это ссылка на пост! Что вы хотите с ней сделать?"
+        },
+        {
             "id": ":shrug: Unknown command",
             "message": ":shrug: Unknown command",
             "translation": ":shrug: Неизвестная команда"
