@@ -1,0 +1,1275 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": ":globe_with_meridians: Open post",
+            "message": ":globe_with_meridians: Open post",
+            "translation": ":globe_with_meridians: Open post",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":globe_with_meridians: Open comment",
+            "message": ":globe_with_meridians: Open comment",
+            "translation": ":globe_with_meridians: Open comment",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":speech_balloon: Reply",
+            "message": ":speech_balloon: Reply",
+            "translation": ":speech_balloon: Reply",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":speech_balloon: @-Reply",
+            "message": ":speech_balloon: @-Reply",
+            "translation": ":speech_balloon: @-Reply",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "More…",
+            "message": "More…",
+            "translation": "More…",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":back: Back",
+            "message": ":back: Back",
+            "translation": ":back: Back",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":no_bell: Unsubscribe from comments",
+            "message": ":no_bell: Unsubscribe from comments",
+            "translation": ":no_bell: Unsubscribe from comments",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":bell: Subscribe to comments",
+            "message": ":bell: Subscribe to comments",
+            "translation": ":bell: Subscribe to comments",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":speech_balloon: Comment more",
+            "message": ":speech_balloon: Comment more",
+            "translation": ":speech_balloon: Comment more",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":white_check_mark: Accept",
+            "message": ":white_check_mark: Accept",
+            "translation": ":white_check_mark: Accept",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":x: Reject",
+            "message": ":x: Reject",
+            "translation": ":x: Reject",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Language is {Language} now",
+            "message": "Language is {Language} now",
+            "translation": "Language is {Language} now",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Language",
+                    "string": "%[1]v",
+                    "type": "golang.org/x/text/language.Tag",
+                    "underlyingType": "struct{language golang.org/x/text/internal/language/compact.ID; locale golang.org/x/text/internal/language/compact.ID; full golang.org/x/text/internal/language/compact.fullTag}",
+                    "argNum": 1,
+                    "expr": "c.State.Language"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "\u003cwelcome HTML\u003e",
+            "message": "\u003cwelcome HTML\u003e",
+            "translation": "Hello again! This bot will help you keep up-to-date with everything happening on FreeFeed. It will send you \u003ca href=\"https://freefeed.net/filter/notifications\"\u003eFreeFeed notifications\u003c/a\u003e and you can reply to them directly in Telegram.\n\nTo give the bot access to your notifications, you need to create a special access token. Please create it using the button below and send it to the bot:"
+        },
+        {
+            "id": ":warning: Cannot load event: {Err}",
+            "message": ":warning: Cannot load event: {Err}",
+            "translation": ":warning: Cannot load event: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":warning: Cannot load event data, probably this message is too old",
+            "message": ":warning: Cannot load event data, probably this message is too old",
+            "translation": ":warning: Cannot load event data, probably this message is too old",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":warning: FreeFeed error: {Err}",
+            "message": ":warning: FreeFeed error: {Err}",
+            "translation": ":warning: FreeFeed error: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":white_check_mark: Accepted!",
+            "message": ":white_check_mark: Accepted!",
+            "translation": ":white_check_mark: Accepted!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":x: Rejected!",
+            "message": ":x: Rejected!",
+            "translation": ":x: Rejected!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":warning: Error: {Err}",
+            "message": ":warning: Error: {Err}",
+            "translation": ":warning: Error: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":alien: Unknown command {Data}",
+            "message": ":alien: Unknown command {Data}",
+            "translation": ":alien: Unknown command {Data}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Data",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "cbQuery.Data"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Action is cancelled",
+            "message": "Action is cancelled",
+            "translation": "Action is cancelled",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We already know each other. Use the /logout command if you want to delete all of your data or start over.",
+            "message": "We already know each other. Use the /logout command if you want to delete all of your data or start over.",
+            "translation": "We already know each other. Use the /logout command if you want to delete all of your data or start over.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "OK, we will remove all of your data now. Use the /start command if you want to come back.",
+            "message": "OK, we will remove all of your data now. Use the /start command if you want to come back.",
+            "translation": "OK, we will remove all of your data now. Use the /start command if you want to come back.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":alien: Cannot load events: {Err}",
+            "message": ":alien: Cannot load events: {Err}",
+            "translation": ":alien: Cannot load events: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Your updates are paused now.",
+            "message": "Your updates are paused now.",
+            "translation": "Your updates are paused now.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Your updates are resumed now.",
+            "message": "Your updates are resumed now.",
+            "translation": "Your updates are resumed now.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Cannot load user information: {Err}",
+            "message": "Cannot load user information: {Err}",
+            "translation": "Cannot load user information: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "You are using this bot as {User}. Use the /logout command if you want to delete all of your data or start as another user.",
+            "message": "You are using this bot as {User}. Use the /logout command if you want to delete all of your data or start as another user.",
+            "translation": "You are using this bot as {User}. Use the /logout command if you want to delete all of your data or start as another user.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "User",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "user"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":alien: Unknown command",
+            "message": ":alien: Unknown command",
+            "translation": ":alien: Unknown command",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Looks like this token isn't valid.",
+            "message": "Looks like this token isn't valid.",
+            "translation": "Looks like this token isn't valid.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Checking your token...",
+            "message": "Checking your token...",
+            "translation": "Checking your token...",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Something wrong happened: {Err}",
+            "message": "Something wrong happened: {Err}",
+            "translation": "Something wrong happened: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Hello, @{Name}!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.",
+            "message": "Hello, @{Name}!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.",
+            "translation": "Hello, @{Name}!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "user.Name"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Can not send a comment without a text",
+            "message": "Can not send a comment without a text",
+            "translation": "Can not send a comment without a text",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Error creating comment: {Err}",
+            "message": "Error creating comment: {Err}",
+            "translation": "Error creating comment: {Err}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":tada: Comment successfully created!",
+            "message": ":tada: Comment successfully created!",
+            "translation": ":tada: Comment successfully created!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":shrug: Unknown command",
+            "message": ":shrug: Unknown command",
+            "translation": ":shrug: Unknown command",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please create the access token and send it to the bot:",
+            "message": "Please create the access token and send it to the bot:",
+            "translation": "Please create the access token and send it to the bot:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":key: Create token",
+            "message": ":key: Create token",
+            "translation": ":key: Create token",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter your comment text.",
+            "message": "Enter your comment text.",
+            "translation": "Enter your comment text.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter your comment text. The comment will be prefixed with \"{CommentPrefix}\"",
+            "message": "Enter your comment text. The comment will be prefixed with \"{CommentPrefix}\"",
+            "translation": "Enter your comment text. The comment will be prefixed with \"{CommentPrefix}\"",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CommentPrefix",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "c.State.CommentPrefix"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":no_entry_sign: Cancel",
+            "message": ":no_entry_sign: Cancel",
+            "translation": ":no_entry_sign: Cancel",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in the post:",
+            "message": ":e-mail: {CreatedUser} mentioned you in the post:",
+            "translation": ":e-mail: {CreatedUser} mentioned you in the post:",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in the post in {Group}:",
+            "message": ":e-mail: {CreatedUser} mentioned you in the post in {Group}:",
+            "translation": ":e-mail: {CreatedUser} mentioned you in the post in {Group}:",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in a comment to the post \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} mentioned you in a comment to the post \"{Digest}\":",
+            "translation": ":e-mail: {CreatedUser} mentioned you in a comment to the post \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in a comment to the post in {Group} \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} mentioned you in a comment to the post in {Group} \"{Digest}\":",
+            "translation": ":e-mail: {CreatedUser} mentioned you in a comment to the post in {Group} \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+            "translation": ":e-mail: {CreatedUser} replied to you in a comment to the post \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+            "translation": ":e-mail: {CreatedUser} replied to you in a comment to the post in {Group} \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: You received a direct message from {CreatedUser}:",
+            "message": ":e-mail: You received a direct message from {CreatedUser}:",
+            "translation": ":e-mail: You received a direct message from {CreatedUser}:",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: New comment was posted by {CreatedUser} to the direct message \"{Digest}\":",
+            "message": ":e-mail: New comment was posted by {CreatedUser} to the direct message \"{Digest}\":",
+            "translation": ":e-mail: New comment was posted by {CreatedUser} to the direct message \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":e-mail: New comment was posted by {CreatedUser} to the post \"{Digest}\":",
+            "message": ":e-mail: New comment was posted by {CreatedUser} to the post \"{Digest}\":",
+            "translation": ":e-mail: New comment was posted by {CreatedUser} to the post \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":raising_hand: {CreatedUser} sent you a subscription request",
+            "message": ":raising_hand: {CreatedUser} sent you a subscription request",
+            "translation": ":raising_hand: {CreatedUser} sent you a subscription request",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":raising_hand: {CreatedUser} sent a request to join {Group} that you admin",
+            "message": ":raising_hand: {CreatedUser} sent a request to join {Group} that you admin",
+            "translation": ":raising_hand: {CreatedUser} sent a request to join {Group} that you admin",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":white_check_mark: Your subscription request to {CreatedUser} was approved",
+            "message": ":white_check_mark: Your subscription request to {CreatedUser} was approved",
+            "translation": ":white_check_mark: Your subscription request to {CreatedUser} was approved",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":no_entry_sign: Your subscription request to {CreatedUser} was rejected",
+            "message": ":no_entry_sign: Your subscription request to {CreatedUser} was rejected",
+            "translation": ":no_entry_sign: Your subscription request to {CreatedUser} was rejected",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":white_check_mark: Your request to join group {Group} was approved",
+            "message": ":white_check_mark: Your request to join group {Group} was approved",
+            "translation": ":white_check_mark: Your request to join group {Group} was approved",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Group",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":no_entry_sign: Your request to join group {Group} was rejected",
+            "message": ":no_entry_sign: Your request to join group {Group} was rejected",
+            "translation": ":no_entry_sign: Your request to join group {Group} was rejected",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Group",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":plus: {CreatedUser} subscribed to your feed",
+            "message": ":plus: {CreatedUser} subscribed to your feed",
+            "translation": ":plus: {CreatedUser} subscribed to your feed",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":minus: {CreatedUser} unsubscribed from your feed",
+            "message": ":minus: {CreatedUser} unsubscribed from your feed",
+            "translation": ":minus: {CreatedUser} unsubscribed from your feed",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":plus: {CreatedUser} subscribed to {Group}",
+            "message": ":plus: {CreatedUser} subscribed to {Group}",
+            "translation": ":plus: {CreatedUser} subscribed to {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":minus: {CreatedUser} unsubscribed from {Group}",
+            "message": ":minus: {CreatedUser} unsubscribed from {Group}",
+            "translation": ":minus: {CreatedUser} unsubscribed from {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":minus: {CreatedUser} revoked subscription request to you",
+            "message": ":minus: {CreatedUser} revoked subscription request to you",
+            "translation": ":minus: {CreatedUser} revoked subscription request to you",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":minus: {CreatedUser} revoked subscription request to {Group}",
+            "message": ":minus: {CreatedUser} revoked subscription request to {Group}",
+            "translation": ":minus: {CreatedUser} revoked subscription request to {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":plus: {CreatedUser} promoted {AffectedUser} to admin in the group {Group}",
+            "message": ":plus: {CreatedUser} promoted {AffectedUser} to admin in the group {Group}",
+            "translation": ":plus: {CreatedUser} promoted {AffectedUser} to admin in the group {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":minus: {CreatedUser} revoked admin privileges from {AffectedUser} in the group {Group}",
+            "message": ":minus: {CreatedUser} revoked admin privileges from {AffectedUser} in the group {Group}",
+            "translation": ":minus: {CreatedUser} revoked admin privileges from {AffectedUser} in the group {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":plus: {AffectedUser} request to join {Group} was approved by {CreatedUser}",
+            "message": ":plus: {AffectedUser} request to join {Group} was approved by {CreatedUser}",
+            "translation": ":plus: {AffectedUser} request to join {Group} was approved by {CreatedUser}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "AffectedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "CreatedUser",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":minus: {AffectedUser} request to join {Group} was rejected by {CreatedUser}",
+            "message": ":minus: {AffectedUser} request to join {Group} was rejected by {CreatedUser}",
+            "translation": ":minus: {AffectedUser} request to join {Group} was rejected by {CreatedUser}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "AffectedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "CreatedUser",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
+            "translation": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "translation": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed a comment from {AffectedUser} to the post in the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has removed a comment from {AffectedUser} to the post in the group {Group} \"{Digest}\":",
+            "translation": ":cop: {CreatedUser} has removed a comment from {AffectedUser} to the post in the group {Group} \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[4]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 4,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed your post from the group {Group}",
+            "message": ":cop: {CreatedUser} has removed your post from the group {Group}",
+            "translation": ":cop: {CreatedUser} has removed your post from the group {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
+            "translation": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group}",
+            "message": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group}",
+            "translation": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group} \"{Digest}\":",
+            "translation": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group} \"{Digest}\":",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[4]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 4,
+                    "expr": "event.Post.Digest()"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
+            "message": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
+            "translation": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":alien: Unknown event: {Type}",
+            "message": ":alien: Unknown event: {Type}",
+            "translation": ":alien: Unknown event: {Type}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Type",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "event.Type"
+                }
+            ],
+            "fuzzy": true
+        }
+    ]
+}

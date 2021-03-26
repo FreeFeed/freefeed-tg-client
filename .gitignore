@@ -1,0 +1,4 @@
+.*
+freefeed-tg-client*
+!.gitignore
+data/

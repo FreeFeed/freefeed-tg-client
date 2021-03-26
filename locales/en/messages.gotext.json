@@ -1,0 +1,68 @@
+{
+  "language": "en",
+  "messages": [
+    {
+      "id": "\u003cwelcome HTML\u003e",
+      "message": "\u003cwelcome HTML\u003e",
+      "translation": "Hello again! This bot will help you keep up-to-date with everything happening on FreeFeed. It will send you <a href=\"https://freefeed.net/filter/notifications\">FreeFeed notifications</a> and you can reply to them directly in Telegram.\n\nTo give the bot access to your notifications, you need to create a special access token. Please create it using the button below and send it to the bot:"
+    },
+    {
+      "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+      "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+      "translation": ":e-mail: {CreatedUser} replied to you in a comment to the post \"{Digest}\":",
+      "translatorComment": "Copied from source.",
+      "placeholders": [
+        {
+          "id": "CreatedUser",
+          "string": "%[1]s",
+          "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+          "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+          "argNum": 1,
+          "expr": "event.CreatedUser"
+        },
+        {
+          "id": "Digest",
+          "string": "%[2]s",
+          "type": "string",
+          "underlyingType": "string",
+          "argNum": 2,
+          "expr": "event.Post.Digest()"
+        }
+      ],
+      "fuzzy": true
+    },
+    {
+      "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+      "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+      "translation": ":e-mail: {CreatedUser} replied to you in a comment to the post in {Group} \"{Digest}\":",
+      "translatorComment": "Copied from source.",
+      "placeholders": [
+        {
+          "id": "CreatedUser",
+          "string": "%[1]s",
+          "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+          "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+          "argNum": 1,
+          "expr": "event.CreatedUser"
+        },
+        {
+          "id": "Group",
+          "string": "%[2]s",
+          "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+          "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+          "argNum": 2,
+          "expr": "event.Group"
+        },
+        {
+          "id": "Digest",
+          "string": "%[3]s",
+          "type": "string",
+          "underlyingType": "string",
+          "argNum": 3,
+          "expr": "event.Post.Digest()"
+        }
+      ],
+      "fuzzy": true
+    }
+  ]
+}

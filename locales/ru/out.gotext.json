@@ -1,0 +1,1125 @@
+{
+    "language": "ru",
+    "messages": [
+        {
+            "id": ":globe_with_meridians: Open post",
+            "message": ":globe_with_meridians: Open post",
+            "translation": ":globe_with_meridians: Открыть пост"
+        },
+        {
+            "id": ":globe_with_meridians: Open comment",
+            "message": ":globe_with_meridians: Open comment",
+            "translation": ":globe_with_meridians: Открыть коментарий"
+        },
+        {
+            "id": ":speech_balloon: Reply",
+            "message": ":speech_balloon: Reply",
+            "translation": ":speech_balloon: Ответить"
+        },
+        {
+            "id": ":speech_balloon: @-Reply",
+            "message": ":speech_balloon: @-Reply",
+            "translation": ":speech_balloon: @-Ответить"
+        },
+        {
+            "id": "More…",
+            "message": "More…",
+            "translation": "Ещё…"
+        },
+        {
+            "id": ":back: Back",
+            "message": ":back: Back",
+            "translation": ":back: Назад"
+        },
+        {
+            "id": ":no_bell: Unsubscribe from comments",
+            "message": ":no_bell: Unsubscribe from comments",
+            "translation": ":no_bell: Отписаться от комментов"
+        },
+        {
+            "id": ":bell: Subscribe to comments",
+            "message": ":bell: Subscribe to comments",
+            "translation": ":bell: Подписаться на комменты"
+        },
+        {
+            "id": ":speech_balloon: Comment more",
+            "message": ":speech_balloon: Comment more",
+            "translation": ":speech_balloon: Написать ещё"
+        },
+        {
+            "id": ":white_check_mark: Accept",
+            "message": ":white_check_mark: Accept",
+            "translation": ":white_check_mark: Одобрить"
+        },
+        {
+            "id": ":x: Reject",
+            "message": ":x: Reject",
+            "translation": ":x: Отказать"
+        },
+        {
+            "id": "Language is {Language} now",
+            "message": "Language is {Language} now",
+            "translation": "Ваш язык теперь {Language}",
+            "placeholders": [
+                {
+                    "id": "Language",
+                    "string": "%[1]v",
+                    "type": "golang.org/x/text/language.Tag",
+                    "underlyingType": "struct{language golang.org/x/text/internal/language/compact.ID; locale golang.org/x/text/internal/language/compact.ID; full golang.org/x/text/internal/language/compact.fullTag}",
+                    "argNum": 1,
+                    "expr": "c.State.Language"
+                }
+            ]
+        },
+        {
+            "id": "\u003cwelcome HTML\u003e",
+            "message": "\u003cwelcome HTML\u003e",
+            "translation": "Привет ещё раз! Этот бот поможет вам быть в курсе всего, что происходит во FreeFeed-е. Он будет присылать вам \u003ca href=\"https://freefeed.net/filter/notifications\"\u003eнотификации\u003c/a\u003e, и вы сможете отвечать на них прямо в Телеграме.\n\nДля того чтобы дать боту доступ к ваши нотификациям, вам нужно создать специальный токен доступа. Пожалуйста, создайте его с помощью кнопки ниже и отправьте боту:"
+        },
+        {
+            "id": ":warning: Cannot load event: {Err}",
+            "message": ":warning: Cannot load event: {Err}",
+            "translation": ":warning: Ошибка загрузки события: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": ":warning: Cannot load event data, probably this message is too old",
+            "message": ":warning: Cannot load event data, probably this message is too old",
+            "translation": ":warning: Не могу найти данные, возможно это сообщение слишком старое"
+        },
+        {
+            "id": ":warning: FreeFeed error: {Err}",
+            "message": ":warning: FreeFeed error: {Err}",
+            "translation": ":warning: Ошибка FreeFeed: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": ":white_check_mark: Accepted!",
+            "message": ":white_check_mark: Accepted!",
+            "translation": ":white_check_mark: Принято!"
+        },
+        {
+            "id": ":x: Rejected!",
+            "message": ":x: Rejected!",
+            "translation": ":x: Отказано!"
+        },
+        {
+            "id": ":warning: Error: {Err}",
+            "message": ":warning: Error: {Err}",
+            "translation": ":warning: Ошибка: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": ":alien: Unknown command {Data}",
+            "message": ":alien: Unknown command {Data}",
+            "translation": ":alien: Неизвестная команда {Data}",
+            "placeholders": [
+                {
+                    "id": "Data",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "cbQuery.Data"
+                }
+            ]
+        },
+        {
+            "id": "Action is cancelled",
+            "message": "Action is cancelled",
+            "translation": "Действие отменено"
+        },
+        {
+            "id": "We already know each other. Use the /logout command if you want to delete all of your data or start over.",
+            "message": "We already know each other. Use the /logout command if you want to delete all of your data or start over.",
+            "translation": "Мы с вами уже знакомы:) Используйте команду /logout чтобы удалить все свои данные и начать заново."
+        },
+        {
+            "id": "OK, we will remove all of your data now. Use the /start command if you want to come back.",
+            "message": "OK, we will remove all of your data now. Use the /start command if you want to come back.",
+            "translation": "Ваши данные удаляются. Используйте команду /start если захотите вернуться."
+        },
+        {
+            "id": ":alien: Cannot load events: {Err}",
+            "message": ":alien: Cannot load events: {Err}",
+            "translation": ":alien: Не удалось загрузить события: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": "Your updates are paused now.",
+            "message": "Your updates are paused now.",
+            "translation": "Обновления приостановлены"
+        },
+        {
+            "id": "Your updates are resumed now.",
+            "message": "Your updates are resumed now.",
+            "translation": "Обновления снова доставляются"
+        },
+        {
+            "id": "Cannot load user information: {Err}",
+            "message": "Cannot load user information: {Err}",
+            "translation": "Не удалось получить информацию: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": "You are using this bot as {User}. Use the /logout command if you want to delete all of your data or start as another user.",
+            "message": "You are using this bot as {User}. Use the /logout command if you want to delete all of your data or start as another user.",
+            "translation": "Вы авторизованы как {User}. Используйте команду /logout чтобы удалить все свои данные или начать работу как другой пользователь.",
+            "placeholders": [
+                {
+                    "id": "User",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "user"
+                }
+            ]
+        },
+        {
+            "id": ":alien: Unknown command",
+            "message": ":alien: Unknown command",
+            "translation": ":alien: Неизвестная команда"
+        },
+        {
+            "id": "Looks like this token isn't valid.",
+            "message": "Looks like this token isn't valid.",
+            "translation": "Похоже что этот токен неправильный."
+        },
+        {
+            "id": "Checking your token...",
+            "message": "Checking your token...",
+            "translation": "Проверяем ваш токен..."
+        },
+        {
+            "id": "Something wrong happened: {Err}",
+            "message": "Something wrong happened: {Err}",
+            "translation": "Что-то пошло не так: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": "Hello, @{Name}!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.",
+            "message": "Hello, @{Name}!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.",
+            "translation": "Привет, @{Name}!\nВсё готово. Теперь, когда бот увидит обновления на FreeFeed-е, он пришлёт вам сообщение.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "user.Name"
+                }
+            ]
+        },
+        {
+            "id": "Can not send a comment without a text",
+            "message": "Can not send a comment without a text",
+            "translation": "Не могу создать коментарий без текста."
+        },
+        {
+            "id": "Error creating comment: {Err}",
+            "message": "Error creating comment: {Err}",
+            "translation": "Не удалось создать комментарий: {Err}",
+            "placeholders": [
+                {
+                    "id": "Err",
+                    "string": "%[1]v",
+                    "type": "error",
+                    "underlyingType": "interface{Error() string}",
+                    "argNum": 1,
+                    "expr": "err"
+                }
+            ]
+        },
+        {
+            "id": ":tada: Comment successfully created!",
+            "message": ":tada: Comment successfully created!",
+            "translation": ":tada: Комментарий создан!"
+        },
+        {
+            "id": ":shrug: Unknown command",
+            "message": ":shrug: Unknown command",
+            "translation": ":shrug: Неизвестная команда"
+        },
+        {
+            "id": "Please create the access token and send it to the bot:",
+            "message": "Please create the access token and send it to the bot:",
+            "translation": "Пожалуйста, создайте токен доступа и сообщите его боту:"
+        },
+        {
+            "id": ":key: Create token",
+            "message": ":key: Create token",
+            "translation": ":key: Создать токен"
+        },
+        {
+            "id": "Enter your comment text.",
+            "message": "Enter your comment text.",
+            "translation": "Введите текст вашего комментария:"
+        },
+        {
+            "id": "Enter your comment text. The comment will be prefixed with \"{CommentPrefix}\"",
+            "message": "Enter your comment text. The comment will be prefixed with \"{CommentPrefix}\"",
+            "translation": "Введите текст вашего комментария. Комментарий будет начинаться с \"{CommentPrefix}\"",
+            "placeholders": [
+                {
+                    "id": "CommentPrefix",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "c.State.CommentPrefix"
+                }
+            ]
+        },
+        {
+            "id": ":no_entry_sign: Cancel",
+            "message": ":no_entry_sign: Cancel",
+            "translation": ":no_entry_sign: Отмена"
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in the post:",
+            "message": ":e-mail: {CreatedUser} mentioned you in the post:",
+            "translation": ":e-mail: Вас упомянули в посте {CreatedUser}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in the post in {Group}:",
+            "message": ":e-mail: {CreatedUser} mentioned you in the post in {Group}:",
+            "translation": ":e-mail: Вас упомянули в посте {CreatedUser} в группе {Group}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in a comment to the post \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} mentioned you in a comment to the post \"{Digest}\":",
+            "translation": ":e-mail: Вас упомянули в комментарии {CreatedUser} к посту \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: {CreatedUser} mentioned you in a comment to the post in {Group} \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} mentioned you in a comment to the post in {Group} \"{Digest}\":",
+            "translation": ":e-mail: Вас упомянули в комментарии {CreatedUser} к посту в группе {Group} \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+            "translation": ":e-mail: Ответ {CreatedUser} в комментарии к посту \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+            "translation": ":e-mail: Ответ {CreatedUser} в комментарии к посту в группе {Group} \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: You received a direct message from {CreatedUser}:",
+            "message": ":e-mail: You received a direct message from {CreatedUser}:",
+            "translation": ":e-mail: Вы получили директ-сообщение от {CreatedUser}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: New comment was posted by {CreatedUser} to the direct message \"{Digest}\":",
+            "message": ":e-mail: New comment was posted by {CreatedUser} to the direct message \"{Digest}\":",
+            "translation": ":e-mail: Комментарий {CreatedUser} к директ-сообщению \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":e-mail: New comment was posted by {CreatedUser} to the post \"{Digest}\":",
+            "message": ":e-mail: New comment was posted by {CreatedUser} to the post \"{Digest}\":",
+            "translation": ":e-mail: Комментарий {CreatedUser} к посту \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":raising_hand: {CreatedUser} sent you a subscription request",
+            "message": ":raising_hand: {CreatedUser} sent you a subscription request",
+            "translation": ":raising_hand: Запрос на подписку от {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":raising_hand: {CreatedUser} sent a request to join {Group} that you admin",
+            "message": ":raising_hand: {CreatedUser} sent a request to join {Group} that you admin",
+            "translation": ":raising_hand: Запрос на вступление в группу {Group} от {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":white_check_mark: Your subscription request to {CreatedUser} was approved",
+            "message": ":white_check_mark: Your subscription request to {CreatedUser} was approved",
+            "translation": ":white_check_mark: Ваш запрос на подписку к {CreatedUser} одобрен!",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":no_entry_sign: Your subscription request to {CreatedUser} was rejected",
+            "message": ":no_entry_sign: Your subscription request to {CreatedUser} was rejected",
+            "translation": ":no_entry_sign: Ваш запрос на подписку к {CreatedUser} отклонён",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":white_check_mark: Your request to join group {Group} was approved",
+            "message": ":white_check_mark: Your request to join group {Group} was approved",
+            "translation": ":white_check_mark: Ваш запрос на всупление в группу {Group} одобрен!",
+            "placeholders": [
+                {
+                    "id": "Group",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":no_entry_sign: Your request to join group {Group} was rejected",
+            "message": ":no_entry_sign: Your request to join group {Group} was rejected",
+            "translation": ":white_check_mark: Ваш запрос на всупление в группу {Group} отклонён",
+            "placeholders": [
+                {
+                    "id": "Group",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":plus: {CreatedUser} subscribed to your feed",
+            "message": ":plus: {CreatedUser} subscribed to your feed",
+            "translation": ":plus: У вас новый подписчик: {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":minus: {CreatedUser} unsubscribed from your feed",
+            "message": ":minus: {CreatedUser} unsubscribed from your feed",
+            "translation": ":minus: {CreatedUser} больше не ваш подписчик:(",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":plus: {CreatedUser} subscribed to {Group}",
+            "message": ":plus: {CreatedUser} subscribed to {Group}",
+            "translation": ":plus: В группе {Group} новый подписчик: {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":minus: {CreatedUser} unsubscribed from {Group}",
+            "message": ":minus: {CreatedUser} unsubscribed from {Group}",
+            "translation": ":minus: {CreatedUser} вышел из группы {Group}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":minus: {CreatedUser} revoked subscription request to you",
+            "message": ":minus: {CreatedUser} revoked subscription request to you",
+            "translation": ":minus: Запрос подписки от {CreatedUser} отозван",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":minus: {CreatedUser} revoked subscription request to {Group}",
+            "message": ":minus: {CreatedUser} revoked subscription request to {Group}",
+            "translation": ":minus: Запрос {CreatedUser} на вступление в группу {Group} отозван",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":plus: {CreatedUser} promoted {AffectedUser} to admin in the group {Group}",
+            "message": ":plus: {CreatedUser} promoted {AffectedUser} to admin in the group {Group}",
+            "translation": ":plus: {CreatedUser} сделал(а) {AffectedUser} администратором группы {Group}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":minus: {CreatedUser} revoked admin privileges from {AffectedUser} in the group {Group}",
+            "message": ":minus: {CreatedUser} revoked admin privileges from {AffectedUser} in the group {Group}",
+            "translation": ":minus: {CreatedUser} отозвал(а) полномочия администратора группы {Group} у {AffectedUser}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":plus: {AffectedUser} request to join {Group} was approved by {CreatedUser}",
+            "message": ":plus: {AffectedUser} request to join {Group} was approved by {CreatedUser}",
+            "translation": ":plus: Запрос {AffectedUser} на вступление в группу {Group} одобрен {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "AffectedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "CreatedUser",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":minus: {AffectedUser} request to join {Group} was rejected by {CreatedUser}",
+            "message": ":minus: {AffectedUser} request to join {Group} was rejected by {CreatedUser}",
+            "translation": ":minus: Запрос {AffectedUser} на вступление в группу {Group} отклонён {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "AffectedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "CreatedUser",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
+            "translation": ":cop: Ваш комментарий был удалён {CreatedUser}. Пост \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "translation": ":cop: Ваш комментарий в группе {Group} был удалён {CreatedUser}. Пост \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed a comment from {AffectedUser} to the post in the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has removed a comment from {AffectedUser} to the post in the group {Group} \"{Digest}\":",
+            "translation": ":cop: Комментарий {AffectedUser} был удалён {CreatedUser}. Пост в группе {Group} \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[4]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 4,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed your post from the group {Group}",
+            "message": ":cop: {CreatedUser} has removed your post from the group {Group}",
+            "translation": ":cop: Ваш пост в группе {Group} был удалён модератором {CreatedUser}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
+            "translation": ":cop: Ваш пост был удалён из группы {Group} модератором {CreatedUser}. \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[3]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 3,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group}",
+            "message": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group}",
+            "translation": ":cop: Модератор {CreatedUser} удалил пост {AffectedUser} из группы {Group}",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUser} has removed the post from {AffectedUser} from the group {Group} \"{Digest}\":",
+            "translation": ":cop: Модератор {CreatedUser} удалил пост {AffectedUser} из группы {Group} \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "AffectedUser",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.AffectedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[4]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 4,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
+            "message": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
+            "translation": ":tada: По вашему приглашению зарегистрировался новый пользователь FreeFeed — {CreatedUser}!",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":alien: Unknown event: {Type}",
+            "message": ":alien: Unknown event: {Type}",
+            "translation": ":alien: Неизвестный тип события: {Type}",
+            "placeholders": [
+                {
+                    "id": "Type",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "event.Type"
+                }
+            ]
+        }
+    ]
+}
