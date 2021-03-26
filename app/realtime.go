@@ -76,7 +76,7 @@ func (a *App) onRTConnect(chatID types.TgChatID, rt *socketio.Connection) {
 	reply := mustbe.OKVal(rt.Send("auth", authTokenPayload{state.AccessToken})).([]byte)
 	a.DebugLogger.Println("Auth reply:", string(reply))
 
-	tracked := mustbe.OKVal(a.TrackedEntities(chatID)).(*store.TrackedEntities)
+	tracked := mustbe.OKVal(a.TrackedEntities(chatID)).(store.TrackedEntities)
 	reply = mustbe.OKVal(rt.Send(
 		"subscribe",
 		types.UserSubsPayload{

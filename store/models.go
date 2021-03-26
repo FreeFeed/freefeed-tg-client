@@ -15,6 +15,8 @@ type Store interface {
 	SaveState(state *State) error
 	DeleteState(chatID types.TgChatID) error
 	ListIDs() ([]types.TgChatID, error)
+
+	// EventsQueue
 	AddToQueue(chatID types.TgChatID, entry json.RawMessage) error
 	LoadAndDeleteQueue(chatID types.TgChatID) ([]json.RawMessage, error)
 
@@ -26,7 +28,7 @@ type Store interface {
 	TrackPost(chatID types.TgChatID, postID uuid.UUID) error
 	UntrackPost(chatID types.TgChatID, postID uuid.UUID) error
 	IsPostTracked(chatID types.TgChatID, postID uuid.UUID) (bool, error)
-	TrackedEntities(chatID types.TgChatID) (*TrackedEntities, error)
+	TrackedEntities(chatID types.TgChatID) (TrackedEntities, error)
 }
 
 func NewChatState(chatID types.TgChatID) *State {

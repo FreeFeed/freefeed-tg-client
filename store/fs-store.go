@@ -14,11 +14,18 @@ import (
 type tKey = types.TgChatID
 
 // NewFsStore creates a new file-based Store.
-func NewFsStore(dirName string) Store {
-	return &fsStore{
+func NewFsStore(dirName string, options ...FsOption) Store {
+	s := &fsStore{
 		dirName:   dirName,
 		fileLocks: make(map[tKey]*sync.RWMutex),
 	}
+
+	options = append([]FsOption{FsMaxSentRecords(1000)}, options...)
+	for _, option := range options {
+		option(s)
+	}
+
+	return s
 }
 
 const (
@@ -35,6 +42,8 @@ type fsStore struct {
 	dirLock   sync.RWMutex
 	fileLocks map[tKey]*sync.RWMutex
 	dirName   string
+
+	maxSentRecords int
 }
 
 func (s *fsStore) fileLock(key tKey) (*sync.RWMutex, func()) {

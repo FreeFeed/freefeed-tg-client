@@ -89,11 +89,17 @@ func (s *fsStore) updateData(chatID tKey, baseName string, result interface{}, p
 	filePath := path.Join(s.stateDirPath(chatID), baseName)
 
 	data, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		if cfg.MustExists || !errors.Is(err, os.ErrNotExist) {
-			mustbe.Thrown(err)
+	if errors.Is(err, os.ErrNotExist) {
+		if cfg.MustExists {
+			mustbe.Thrown(ErrNotFound)
+		} else {
+			data = nil
 		}
 	} else {
+		mustbe.Thrown(err)
+	}
+
+	if data != nil {
 		mustbe.OK(json.Unmarshal(data, result))
 	}
 
@@ -103,6 +109,7 @@ func (s *fsStore) updateData(chatID tKey, baseName string, result interface{}, p
 
 	data = mustbe.OKVal(json.Marshal(result)).([]byte)
 
+	mustbe.OK(os.MkdirAll(s.stateDirPath(chatID), dirsPerm))
 	mustbe.OK(ioutil.WriteFile(filePath, data, filesPerm))
 
 	return

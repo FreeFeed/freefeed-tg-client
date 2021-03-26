@@ -7,8 +7,6 @@ import (
 	"github.com/davidmz/freefeed-tg-client/types"
 )
 
-const maxEventRecords = 1000
-
 type SentMsgRec struct {
 	MessageID int
 	Event     *frf.Event
@@ -35,8 +33,8 @@ func (s *fsStore) PutMsgRec(chatID types.TgChatID, rec SentMsgRec) error {
 	var records []SentMsgRec
 	return s.updateData(chatID, sentEventsFile, &records, func() error {
 		records = append(records, rec)
-		if len(records) > maxEventRecords {
-			records = records[len(records)-maxEventRecords:]
+		if len(records) > s.maxSentRecords {
+			records = records[len(records)-s.maxSentRecords:]
 		}
 		return nil
 	})

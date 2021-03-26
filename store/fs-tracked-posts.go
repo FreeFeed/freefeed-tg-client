@@ -10,13 +10,13 @@ type TrackedEntities struct {
 	PostIDs []uuid.UUID
 }
 
-func (s *fsStore) TrackedEntities(chatID types.TgChatID) (*TrackedEntities, error) {
+func (s *fsStore) TrackedEntities(chatID types.TgChatID) (TrackedEntities, error) {
 	var tracked TrackedEntities
 	err := s.loadData(chatID, trackedPostsFile, &tracked)
 	if err != nil {
-		return nil, err
+		return tracked, err
 	}
-	return &tracked, nil
+	return tracked, nil
 }
 
 func (s *fsStore) TrackPost(chatID types.TgChatID, postID uuid.UUID) error {
