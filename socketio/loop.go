@@ -76,6 +76,7 @@ connectLoop:
 			case msg, opened := <-rcvChan:
 				if !opened {
 					// Receiving error
+					c.log.Println("Receiving error")
 					break messageLoop
 				}
 
@@ -183,16 +184,20 @@ func (c *Connection) rcvChan() <-chan []byte {
 	inbox := make(chan []byte)
 
 	go func() {
-		defer close(inbox)
+		c.log.Println("Entering receive loop")
+		defer func() {
+			close(inbox)
+			c.log.Println("Exiting receive loop")
+		}()
 
 		for {
 			c.log.Println("Waiting for message...")
 			payload, err := wsutil.ReadServerText(c.conn)
 			if err != nil {
 				if errors.Is(err, net.ErrClosed) {
-					c.log.Println("Connection closed")
+					c.log.Println("Connection closed", err)
 				} else if _, ok := err.(wsutil.ClosedError); ok {
-					c.log.Println("Connection closed")
+					c.log.Println("Connection closed", err)
 				} else {
 					c.log.Println("Error reading payload:", err)
 				}

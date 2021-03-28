@@ -2,6 +2,7 @@ package app
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"github.com/davidmz/freefeed-tg-client/chat"
 	"github.com/davidmz/freefeed-tg-client/frf"
@@ -23,7 +24,7 @@ func (a *App) StartRealtime(chatID types.TgChatID) {
 
 	rt := socketio.Open(
 		"wss://"+a.FreeFeedHost+"/socket.io/?EIO=3&transport=websocket",
-		socketio.WithLogger(a.DebugLogger.Fork("tg-client:rt")),
+		socketio.WithLogger(a.DebugLogger.Fork(fmt.Sprintf("tg-client:rt:%d", chatID))),
 	)
 	a.rtConns[chatID] = rt
 
