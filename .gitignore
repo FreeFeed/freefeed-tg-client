@@ -2,3 +2,4 @@
 freefeed-tg-client*
 !.gitignore
 data/
+logs/
