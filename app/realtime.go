@@ -34,6 +34,7 @@ func (a *App) StartRealtime(chatID types.TgChatID) {
 		defer a.waitGroup.Done()
 		defer a.DebugLogger.Println("⏹️ Closing RT loop for", chatID)
 		for {
+			a.DebugLogger.Println("Waiting for select in RT loop of", chatID)
 			select {
 			case <-a.closeChan:
 				a.DebugLogger.Println("Closing RT connection", chatID)
@@ -65,17 +66,21 @@ func (a *App) StopRealtime(chatID types.TgChatID) {
 }
 
 func (a *App) onRTConnect(chatID types.TgChatID, rt *socketio.Connection) {
+
+	logger := a.DebugLogger.Fork(fmt.Sprintf("tg-client:rt:%d", chatID))
+
 	defer mustbe.Catched(func(err error) {
-		a.ErrorLogger.Println("Cannot process connect:", err)
+		logger.Println("Cannot process connect:", err)
 	})
 
-	a.DebugLogger.Println("RT Connected!")
+	logger.Println("RT Connected!")
+	defer logger.Println("Finish connect procedure")
 
 	state := mustbe.OKVal(a.Store.LoadState(chatID)).(*store.State)
 
 	// Authorize connection
 	reply := mustbe.OKVal(rt.Send("auth", authTokenPayload{state.AccessToken})).([]byte)
-	a.DebugLogger.Println("Auth reply:", string(reply))
+	logger.Println("Auth reply:", string(reply))
 
 	tracked := mustbe.OKVal(a.TrackedEntities(chatID)).(store.TrackedEntities)
 	reply = mustbe.OKVal(rt.Send(
@@ -85,13 +90,16 @@ func (a *App) onRTConnect(chatID types.TgChatID, rt *socketio.Connection) {
 			PostIDs: tracked.PostIDs,
 		},
 	)).([]byte)
-	a.DebugLogger.Println("Subscribe reply:", string(reply))
+	logger.Println("Subscribe reply:", string(reply))
 }
 
 func (a *App) onRTMessage(chatID types.TgChatID, msg socketio.IncomingMessage) {
 	defer mustbe.Catched(func(err error) {
 		a.ErrorLogger.Println("Cannot process message:", err)
 	})
+
+	a.DebugLogger.Println("Start process RT message of type", msg.Type)
+	defer a.DebugLogger.Println("Finish process RT message of type", msg.Type)
 
 	var events frf.Events
 

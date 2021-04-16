@@ -3,7 +3,6 @@ package chat
 import (
 	"github.com/davidmz/freefeed-tg-client/store"
 	tg "github.com/davidmz/telegram-bot-api"
-	"github.com/kr/pretty"
 	"golang.org/x/text/message"
 )
 
@@ -17,7 +16,6 @@ func (c *Chat) handleCommand(update tg.Update) {
 	p := message.NewPrinter(c.State.Language)
 
 	if command == "start" {
-		pretty.Println(c.State)
 		if c.State.IsAuthorized() {
 			c.ShouldSend(c.newHTMLMessage(
 				p.Sprintf("We already know each other. Use the /logout command if you want to delete all of your data or start over."),
