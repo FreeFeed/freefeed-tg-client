@@ -74,6 +74,7 @@ connectLoop:
 
 			// Receiving messages
 			case msg, opened := <-rcvChan:
+				c.log.Println("Message received", msg != nil, opened)
 				if !opened {
 					// Receiving error
 					c.log.Println("Receiving error")
