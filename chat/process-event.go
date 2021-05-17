@@ -26,23 +26,33 @@ func isMutedEvent(event *frf.Event) bool {
 }
 
 func (c *Chat) ProcessEvents(events []*frf.Event) {
+	c.debugLog().Printf("Start ProcessEvents for %d events", len(events))
+	defer c.debugLog().Printf("Finish renderEvent %d events", len(events))
+
 	paused := c.App.EventsPaused(c.ID)
 
 	for _, event := range events {
+		c.debugLog().Printf("ProcessEvents for %s", event.Type)
 		if isMutedEvent(event) {
+			c.debugLog().Printf("Event %s is muted", event.Type)
 			continue
 		}
 
 		if paused {
+			c.debugLog().Printf("Paused, adding %s to event queue", event.Type)
 			data, _ := c.Should(json.Marshal(event))
 			c.ShouldOK(c.App.AddToQueue(c.ID, data.([]byte)))
 		} else if msg := c.renderEvent(event); msg != nil {
+			c.debugLog().Printf("Sending %s to user", event.Type)
 			c.ShouldSendAndSave(msg, store.SentMsgRec{Event: event})
 		}
 	}
 }
 
 func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
+	c.debugLog().Println("Start renderEvent for", event.Type)
+	defer c.debugLog().Println("Finish renderEvent for", event.Type)
+
 	p := message.NewPrinter(c.State.Language)
 	event.LoadPost(c.frfAPI())
 

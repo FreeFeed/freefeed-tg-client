@@ -95,11 +95,11 @@ func (a *App) onRTConnect(chatID types.TgChatID, rt *socketio.Connection) {
 
 func (a *App) onRTMessage(chatID types.TgChatID, msg socketio.IncomingMessage) {
 	defer mustbe.Catched(func(err error) {
-		a.ErrorLogger.Println("Cannot process message:", err)
+		a.ErrorLogger.Printf("Cannot process message [%d]: %v", chatID, err)
 	})
 
-	a.DebugLogger.Println("Start process RT message of type", msg.Type)
-	defer a.DebugLogger.Println("Finish process RT message of type", msg.Type)
+	a.DebugLogger.Printf("Start process RT message of type %s [%d]", msg.Type, chatID)
+	defer a.DebugLogger.Printf("Finish process RT message of type %s [%d]", msg.Type, chatID)
 
 	var events frf.Events
 
