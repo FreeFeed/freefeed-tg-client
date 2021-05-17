@@ -2,14 +2,18 @@ package frf
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"io"
 	"io/ioutil"
 	"net/http"
+	"time"
 
 	"github.com/davidmz/mustbe"
 	"github.com/gofrs/uuid"
 )
+
+const APITimeout = 10 * time.Second
 
 // API is the FreeFeed API client
 type API struct {
@@ -114,7 +118,10 @@ func (a *API) request(method string, uri string, reqObj interface{}, respObj int
 		body = bytes.NewBuffer(bodyBytes)
 	}
 
-	req := mustbe.OKVal(http.NewRequest(method, url, body)).(*http.Request)
+	ctx, cancel := context.WithTimeout(context.Background(), APITimeout)
+	defer cancel()
+
+	req := mustbe.OKVal(http.NewRequestWithContext(ctx, method, url, body)).(*http.Request)
 
 	if a.AccessToken != "" {
 		req.Header.Add("Authorization", "Bearer "+a.AccessToken)
