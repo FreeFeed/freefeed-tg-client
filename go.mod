@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/bluele/gcache v0.0.2
-	github.com/davidmz/debug-log v1.0.2
+	github.com/davidmz/debug-log v1.1.0
 	github.com/davidmz/mustbe v1.3.0
 	github.com/davidmz/sliceutil v1.2.0
 	github.com/davidmz/telegram-bot-api v5.0.2-fork+incompatible
@@ -17,6 +17,6 @@ require (
 	github.com/kr/pretty v0.2.1
 	github.com/stretchr/testify v1.7.0
 	github.com/technoweenie/multipartstreamer v1.0.1 // indirect
-	golang.org/x/sys v0.0.0-20210309074719-68d13333faf2 // indirect
-	golang.org/x/text v0.3.5
+	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
+	golang.org/x/text v0.3.6
 )

@@ -1,6 +1,8 @@
 package chat
 
 import (
+	"fmt"
+
 	"github.com/davidmz/debug-log"
 	"github.com/davidmz/freefeed-tg-client/frf"
 	"github.com/davidmz/freefeed-tg-client/store"
@@ -12,6 +14,9 @@ type Chat struct {
 	ID    ID
 	State *store.State
 	App   App
+
+	dLog debug.Logger
+	eLog debug.Logger
 }
 
 func New(id ID, app App) (*Chat, error) {
@@ -23,11 +28,13 @@ func New(id ID, app App) (*Chat, error) {
 		ID:    id,
 		App:   app,
 		State: state,
+		dLog:  app.DebugLog().Fork(app.DebugLog().Name() + fmt.Sprintf(":chat:%d", id)),
+		eLog:  app.ErrorLog().Fork(app.ErrorLog().Name() + fmt.Sprintf(":chat:%d", id)),
 	}, nil
 }
 
-func (c *Chat) debugLog() debug.Logger { return c.App.DebugLog() }
-func (c *Chat) errorLog() debug.Logger { return c.App.ErrorLog() }
+func (c *Chat) debugLog() debug.Logger { return c.dLog }
+func (c *Chat) errorLog() debug.Logger { return c.eLog }
 
 func (c *Chat) frfAPIWithToken(accessToken string) *frf.API {
 	api := c.App.FreeFeedAPI()
