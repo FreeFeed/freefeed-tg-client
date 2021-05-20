@@ -124,7 +124,10 @@ func (a *App) onRTMessage(chatID types.TgChatID, msg socketio.IncomingMessage) {
 		}
 
 		events = frf.Events{event}
-	} else {
+	}
+
+	if len(events) == 0 {
+		a.DebugLogger.Printf("No events to process [%d]", chatID)
 		return
 	}
 

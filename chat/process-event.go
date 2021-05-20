@@ -27,9 +27,11 @@ func isMutedEvent(event *frf.Event) bool {
 
 func (c *Chat) ProcessEvents(events []*frf.Event) {
 	c.debugLog().Printf("Start ProcessEvents for %d events", len(events))
-	defer c.debugLog().Printf("Finish renderEvent %d events", len(events))
+	defer c.debugLog().Printf("Finish ProcessEvents for %d events", len(events))
 
-	paused := c.App.EventsPaused(c.ID)
+	c.debugLog().Printf("Checking paused state...")
+	isPaused := c.App.EventsPaused(c.ID)
+	c.debugLog().Printf("Result: %v", isPaused)
 
 	for _, event := range events {
 		c.debugLog().Printf("ProcessEvents for %s", event.Type)
@@ -38,7 +40,7 @@ func (c *Chat) ProcessEvents(events []*frf.Event) {
 			continue
 		}
 
-		if paused {
+		if isPaused {
 			c.debugLog().Printf("Paused, adding %s to event queue", event.Type)
 			data, _ := c.Should(json.Marshal(event))
 			c.ShouldOK(c.App.AddToQueue(c.ID, data.([]byte)))
