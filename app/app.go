@@ -36,8 +36,7 @@ type App struct {
 	rtConnLock sync.Mutex
 	rtConns    map[types.TgChatID]*socketio.Connection
 
-	pausedChats     map[types.TgChatID]*time.Timer
-	pausedChatsLock sync.RWMutex
+	pauseManager *PauseManager
 }
 
 func (a *App) DebugLog() debug.Logger { return a.DebugLogger }
@@ -63,7 +62,13 @@ func (a *App) Start() (err error) {
 	a.closeChan = make(chan struct{})
 
 	a.rtConns = make(map[types.TgChatID]*socketio.Connection)
-	a.pausedChats = make(map[types.TgChatID]*time.Timer)
+	a.pauseManager = NewPauseManager(PauseManagerCfg{
+		interval:        20 * time.Minute,
+		cleanupInterval: 2 * time.Minute,
+		onResume:        a.doResumeEvents,
+		closeChan:       a.closeChan,
+		debugLogger:     a.DebugLogger,
+	})
 
 	a.updChannel, err = a.TgAPI.GetUpdatesChan(tg.UpdateConfig{Offset: 0, Timeout: 60})
 	if err != nil {

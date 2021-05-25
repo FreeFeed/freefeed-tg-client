@@ -2,7 +2,6 @@ package app
 
 import (
 	"encoding/json"
-	"time"
 
 	"github.com/davidmz/freefeed-tg-client/chat"
 	"github.com/davidmz/freefeed-tg-client/frf"
@@ -10,54 +9,14 @@ import (
 	"github.com/davidmz/mustbe"
 )
 
-// pauseInterval is interval for pause when the user creates a new comment or post
-const pauseInterval = 20 * time.Minute
+func (a *App) EventsPaused(chatID types.TgChatID) bool { return a.pauseManager.IsPaused(chatID) }
+func (a *App) PauseEvents(chatID types.TgChatID)       { a.pauseManager.Pause(chatID) }
+func (a *App) ResumeEvents(chatID types.TgChatID)      { a.pauseManager.Resume(chatID) }
 
-func (a *App) EventsPaused(chatID types.TgChatID) bool {
-	a.pausedChatsLock.RLock()
-	defer a.pausedChatsLock.RUnlock()
-
-	_, ok := a.pausedChats[chatID]
-	return ok
-}
-
-func (a *App) PauseEvents(chatID types.TgChatID) {
-	a.pausedChatsLock.Lock()
-	defer a.pausedChatsLock.Unlock()
-
-	// Already paused?
-	if t, ok := a.pausedChats[chatID]; ok {
-		a.DebugLogger.Println("Already paused:", chatID)
-		delete(a.pausedChats, chatID)
-		if !t.Stop() {
-			<-t.C
-		}
-		a.DebugLogger.Println("Prev pause cancelled:", chatID)
-	}
-
-	a.DebugLogger.Println("Schedule resume for:", chatID)
-	a.pausedChats[chatID] = time.AfterFunc(pauseInterval, func() { a.ResumeEvents(chatID) })
-}
-
-func (a *App) ResumeEvents(chatID types.TgChatID) {
+func (a *App) doResumeEvents(chatID types.TgChatID) {
 	defer mustbe.Catched(func(err error) {
 		a.ErrorLogger.Println("Cannot resume events:", err)
 	})
-
-	a.pausedChatsLock.Lock()
-	defer a.pausedChatsLock.Unlock()
-
-	if t, ok := a.pausedChats[chatID]; ok {
-		a.DebugLogger.Println("Already paused:", chatID)
-		delete(a.pausedChats, chatID)
-		if !t.Stop() {
-			<-t.C
-		}
-		a.DebugLogger.Println("Prev pause cancelled:", chatID)
-	} else {
-		// nothing to do
-		return
-	}
 
 	ch := mustbe.OKVal(chat.New(chatID, a)).(*chat.Chat)
 
@@ -80,6 +39,5 @@ func (a *App) ResumeEvents(chatID types.TgChatID) {
 		mustbe.OK(a.Store.SaveState(ch.State))
 	}
 
-	// Processing in separated thread because of n.pausedChatsLock
-	go ch.ProcessEvents(events)
+	ch.ProcessEvents(events)
 }
