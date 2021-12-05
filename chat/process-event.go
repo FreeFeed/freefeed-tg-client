@@ -186,6 +186,20 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		}
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
 
+	case "direct_left":
+		if event.CreatedUser.ID == c.State.UserID {
+			// Our action
+			return nil
+		}
+		headText := p.Sprintf(
+			":door: %s left the direct message \"%s\":",
+			event.CreatedUser,
+			event.Post.Digest(),
+		)
+		msg := c.newHTMLMessage(headText)
+		msg.ReplyMarkup = c.postButtons(event)
+		return msg
+
 	case "direct":
 		headText := p.Sprintf(":e-mail: You received a direct message from %s:", event.CreatedUser)
 		return c.withPostBody(c.newHTMLMessage(headText), event)

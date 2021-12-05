@@ -605,6 +605,29 @@
             ]
         },
         {
+            "id": ":door: {CreatedUser} left the direct message \"{Digest}\":",
+            "message": ":door: {CreatedUser} left the direct message \"{Digest}\":",
+            "translation": ":door: {CreatedUser} больше не участвует в директе \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
             "id": ":e-mail: You received a direct message from {CreatedUser}:",
             "message": ":e-mail: You received a direct message from {CreatedUser}:",
             "translation": ":e-mail: Вы получили директ-сообщение от {CreatedUser}:",

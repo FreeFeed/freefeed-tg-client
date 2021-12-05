@@ -42,25 +42,26 @@ var messageKeyToIndex = map[string]int{
 	":alien: Cannot load events: %v":                              23,
 	":alien: Unknown command":                                     28,
 	":alien: Unknown command %v":                                  19,
-	":alien: Unknown event: %v":                                   82,
+	":alien: Unknown event: %v":                                   83,
 	":back: Back":                                                 5,
 	":bell: Subscribe to comments":                                7,
-	":cop: %s has deleted your comment to the \"%s\":":            74,
-	":cop: %s has deleted your comment to the post in %s \"%s\":": 75,
-	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 76,
-	":cop: %s has removed the post from %s from the group %s":                    79,
-	":cop: %s has removed the post from %s from the group %s \"%s\":":            80,
-	":cop: %s has removed your post from the group %s":                           77,
-	":cop: %s has removed your post from the group %s \"%s\":":                   78,
+	":cop: %s has deleted your comment to the \"%s\":":            75,
+	":cop: %s has deleted your comment to the post in %s \"%s\":": 76,
+	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 77,
+	":cop: %s has removed the post from %s from the group %s":                    80,
+	":cop: %s has removed the post from %s from the group %s \"%s\":":            81,
+	":cop: %s has removed your post from the group %s":                           78,
+	":cop: %s has removed your post from the group %s \"%s\":":                   79,
+	":door: %s left the direct message \"%s\":":                                  55,
 	":e-mail: %s mentioned you in a comment to the post \"%s\":":                 45,
 	":e-mail: %s mentioned you in a comment to the post in %s \"%s\":":           46,
 	":e-mail: %s mentioned you in the post in %s:":                               44,
 	":e-mail: %s mentioned you in the post:":                                     43,
 	":e-mail: %s replyed to you in a comment to the post \"%s\":":                47,
 	":e-mail: %s replyed to you in a comment to the post in %s \"%s\":":          48,
-	":e-mail: New comment was posted by %s to the direct message \"%s\":":        56,
-	":e-mail: New comment was posted by %s to the post \"%s\":":                  57,
-	":e-mail: You received a direct message from %s:":                            55,
+	":e-mail: New comment was posted by %s to the direct message \"%s\":":        57,
+	":e-mail: New comment was posted by %s to the post \"%s\":":                  58,
+	":e-mail: You received a direct message from %s:":                            56,
 	":globe_with_meridians: Open comment":                                        1,
 	":globe_with_meridians: Open post":                                           0,
 	":key: Create token":                                                         39,
@@ -70,27 +71,27 @@ var messageKeyToIndex = map[string]int{
 	":link: %s mentioned your post in the comment to post \"%s\":":               54,
 	":link: %s mentioned your post in the post in %s:":                           52,
 	":link: %s mentioned your post in the post:":                                 51,
-	":minus: %s request to join %s was rejected by %s":                           73,
-	":minus: %s revoked admin privileges from %s in the group %s":                71,
-	":minus: %s revoked subscription request to %s":                              69,
-	":minus: %s revoked subscription request to you":                             68,
-	":minus: %s unsubscribed from %s":                                            67,
-	":minus: %s unsubscribed from your feed":                                     65,
+	":minus: %s request to join %s was rejected by %s":                           74,
+	":minus: %s revoked admin privileges from %s in the group %s":                72,
+	":minus: %s revoked subscription request to %s":                              70,
+	":minus: %s revoked subscription request to you":                             69,
+	":minus: %s unsubscribed from %s":                                            68,
+	":minus: %s unsubscribed from your feed":                                     66,
 	":no_bell: Unsubscribe from comments":                                        6,
 	":no_entry_sign: Cancel":                                                     42,
-	":no_entry_sign: Your request to join group %s was rejected":                 63,
-	":no_entry_sign: Your subscription request to %s was rejected":               61,
-	":plus: %s promoted %s to admin in the group %s":                             70,
-	":plus: %s request to join %s was approved by %s":                            72,
-	":plus: %s subscribed to %s":                                                 66,
-	":plus: %s subscribed to your feed":                                          64,
-	":raising_hand: %s sent a request to join %s that you admin":                 59,
-	":raising_hand: %s sent you a subscription request":                          58,
+	":no_entry_sign: Your request to join group %s was rejected":                 64,
+	":no_entry_sign: Your subscription request to %s was rejected":               62,
+	":plus: %s promoted %s to admin in the group %s":                             71,
+	":plus: %s request to join %s was approved by %s":                            73,
+	":plus: %s subscribed to %s":                                                 67,
+	":plus: %s subscribed to your feed":                                          65,
+	":raising_hand: %s sent a request to join %s that you admin":                 60,
+	":raising_hand: %s sent you a subscription request":                          59,
 	":shrug: Unknown command":                                                    37,
 	":speech_balloon: @-Reply":                                                   3,
 	":speech_balloon: Comment more":                                              8,
 	":speech_balloon: Reply":                                                     2,
-	":tada: %s has joined FreeFeed using your invitation":                        81,
+	":tada: %s has joined FreeFeed using your invitation":                        82,
 	":tada: Comment successfully created!":                                       35,
 	":thinking: Hmm, looks like a post URL! What do you want to do with it?":     36,
 	":warning: Cannot load event data, probably this message is too old":         14,
@@ -99,8 +100,8 @@ var messageKeyToIndex = map[string]int{
 	":warning: FreeFeed error: %v":                                               15,
 	":white_check_mark: Accept":                                                  9,
 	":white_check_mark: Accepted!":                                               16,
-	":white_check_mark: Your request to join group %s was approved":              62,
-	":white_check_mark: Your subscription request to %s was approved":            60,
+	":white_check_mark: Your request to join group %s was approved":              63,
+	":white_check_mark: Your subscription request to %s was approved":            61,
 	":x: Reject":                            10,
 	":x: Rejected!":                         17,
 	"<welcome HTML>":                        12,
@@ -124,7 +125,7 @@ var messageKeyToIndex = map[string]int{
 	"Your updates are resumed now.":                                                                                          25,
 }
 
-var enIndex = []uint32{ // 84 elements
+var enIndex = []uint32{ // 85 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000021, 0x00000045, 0x0000005c,
 	0x00000075, 0x0000007d, 0x00000089, 0x000000ad,
@@ -141,17 +142,18 @@ var enIndex = []uint32{ // 84 elements
 	0x000007e5, 0x00000818, 0x00000857, 0x0000089f,
 	0x000008df, 0x00000928, 0x00000959, 0x00000993,
 	0x000009c1, 0x000009f8, 0x00000a3c, 0x00000a7d,
-	0x00000ab0, 0x00000af8, 0x00000b36, 0x00000b6b,
-	0x00000bac, 0x00000bef, 0x00000c2f, 0x00000c70,
+	0x00000aab, 0x00000ade, 0x00000b26, 0x00000b64,
+	0x00000b99, 0x00000bda, 0x00000c1d, 0x00000c5d,
 	// Entry 40 - 5F
-	0x00000cae, 0x00000cd3, 0x00000cfd, 0x00000d1e,
-	0x00000d44, 0x00000d76, 0x00000daa, 0x00000de2,
-	0x00000e27, 0x00000e60, 0x00000e9a, 0x00000ecf,
-	0x00000f12, 0x00000f67, 0x00000f9e, 0x00000fde,
-	0x0000101f, 0x00001069, 0x000010a0, 0x000010bd,
-} // Size: 360 bytes
+	0x00000c9e, 0x00000cdc, 0x00000d01, 0x00000d2b,
+	0x00000d4c, 0x00000d72, 0x00000da4, 0x00000dd8,
+	0x00000e10, 0x00000e55, 0x00000e8e, 0x00000ec8,
+	0x00000efd, 0x00000f40, 0x00000f95, 0x00000fcc,
+	0x0000100c, 0x0000104d, 0x00001097, 0x000010ce,
+	0x000010eb,
+} // Size: 364 bytes
 
-const enData string = "" + // Size: 4285 bytes
+const enData string = "" + // Size: 4331 bytes
 	"\x02:globe_with_meridians: Open post\x02:globe_with_meridians: Open comm" +
 	"ent\x02:speech_balloon: Reply\x02:speech_balloon: @-Reply\x02More…\x02:b" +
 	"ack: Back\x02:no_bell: Unsubscribe from comments\x02:bell: Subscribe to " +
@@ -192,33 +194,34 @@ const enData string = "" + // Size: 4285 bytes
 	"%[1]s mentioned your post in the post:\x02:link: %[1]s mentioned your po" +
 	"st in the post in %[2]s:\x02:link: %[1]s mentioned your comment in the c" +
 	"omment to post \x22%[2]s\x22:\x02:link: %[1]s mentioned your post in the" +
-	" comment to post \x22%[2]s\x22:\x02:e-mail: You received a direct messag" +
-	"e from %[1]s:\x02:e-mail: New comment was posted by %[1]s to the direct " +
-	"message \x22%[2]s\x22:\x02:e-mail: New comment was posted by %[1]s to th" +
-	"e post \x22%[2]s\x22:\x02:raising_hand: %[1]s sent you a subscription re" +
-	"quest\x02:raising_hand: %[1]s sent a request to join %[2]s that you admi" +
-	"n\x02:white_check_mark: Your subscription request to %[1]s was approved" +
-	"\x02:no_entry_sign: Your subscription request to %[1]s was rejected\x02:" +
-	"white_check_mark: Your request to join group %[1]s was approved\x02:no_e" +
-	"ntry_sign: Your request to join group %[1]s was rejected\x02:plus: %[1]s" +
-	" subscribed to your feed\x02:minus: %[1]s unsubscribed from your feed" +
-	"\x02:plus: %[1]s subscribed to %[2]s\x02:minus: %[1]s unsubscribed from " +
-	"%[2]s\x02:minus: %[1]s revoked subscription request to you\x02:minus: %[" +
-	"1]s revoked subscription request to %[2]s\x02:plus: %[1]s promoted %[2]s" +
-	" to admin in the group %[3]s\x02:minus: %[1]s revoked admin privileges f" +
-	"rom %[2]s in the group %[3]s\x02:plus: %[1]s request to join %[2]s was a" +
-	"pproved by %[3]s\x02:minus: %[1]s request to join %[2]s was rejected by " +
-	"%[3]s\x02:cop: %[1]s has deleted your comment to the \x22%[2]s\x22:\x02:" +
-	"cop: %[1]s has deleted your comment to the post in %[2]s \x22%[3]s\x22:" +
-	"\x02:cop: %[1]s has removed a comment from %[2]s to the post in the grou" +
-	"p %[3]s \x22%[4]s\x22:\x02:cop: %[1]s has removed your post from the gro" +
-	"up %[2]s\x02:cop: %[1]s has removed your post from the group %[2]s \x22%" +
-	"[3]s\x22:\x02:cop: %[1]s has removed the post from %[2]s from the group " +
-	"%[3]s\x02:cop: %[1]s has removed the post from %[2]s from the group %[3]" +
-	"s \x22%[4]s\x22:\x02:tada: %[1]s has joined FreeFeed using your invitati" +
-	"on\x02:alien: Unknown event: %[1]v"
+	" comment to post \x22%[2]s\x22:\x02:door: %[1]s left the direct message " +
+	"\x22%[2]s\x22:\x02:e-mail: You received a direct message from %[1]s:\x02" +
+	":e-mail: New comment was posted by %[1]s to the direct message \x22%[2]s" +
+	"\x22:\x02:e-mail: New comment was posted by %[1]s to the post \x22%[2]s" +
+	"\x22:\x02:raising_hand: %[1]s sent you a subscription request\x02:raisin" +
+	"g_hand: %[1]s sent a request to join %[2]s that you admin\x02:white_chec" +
+	"k_mark: Your subscription request to %[1]s was approved\x02:no_entry_sig" +
+	"n: Your subscription request to %[1]s was rejected\x02:white_check_mark:" +
+	" Your request to join group %[1]s was approved\x02:no_entry_sign: Your r" +
+	"equest to join group %[1]s was rejected\x02:plus: %[1]s subscribed to yo" +
+	"ur feed\x02:minus: %[1]s unsubscribed from your feed\x02:plus: %[1]s sub" +
+	"scribed to %[2]s\x02:minus: %[1]s unsubscribed from %[2]s\x02:minus: %[1" +
+	"]s revoked subscription request to you\x02:minus: %[1]s revoked subscrip" +
+	"tion request to %[2]s\x02:plus: %[1]s promoted %[2]s to admin in the gro" +
+	"up %[3]s\x02:minus: %[1]s revoked admin privileges from %[2]s in the gro" +
+	"up %[3]s\x02:plus: %[1]s request to join %[2]s was approved by %[3]s\x02" +
+	":minus: %[1]s request to join %[2]s was rejected by %[3]s\x02:cop: %[1]s" +
+	" has deleted your comment to the \x22%[2]s\x22:\x02:cop: %[1]s has delet" +
+	"ed your comment to the post in %[2]s \x22%[3]s\x22:\x02:cop: %[1]s has r" +
+	"emoved a comment from %[2]s to the post in the group %[3]s \x22%[4]s\x22" +
+	":\x02:cop: %[1]s has removed your post from the group %[2]s\x02:cop: %[1" +
+	"]s has removed your post from the group %[2]s \x22%[3]s\x22:\x02:cop: %[" +
+	"1]s has removed the post from %[2]s from the group %[3]s\x02:cop: %[1]s " +
+	"has removed the post from %[2]s from the group %[3]s \x22%[4]s\x22:\x02:" +
+	"tada: %[1]s has joined FreeFeed using your invitation\x02:alien: Unknown" +
+	" event: %[1]v"
 
-var ruIndex = []uint32{ // 84 elements
+var ruIndex = []uint32{ // 85 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000002f, 0x0000006a, 0x0000008c,
 	0x000000b0, 0x000000ba, 0x000000cc, 0x00000103,
@@ -235,17 +238,18 @@ var ruIndex = []uint32{ // 84 elements
 	0x00000d38, 0x00000d86, 0x00000de0, 0x00000e50,
 	0x00000e9b, 0x00000efc, 0x00000f48, 0x00000faa,
 	0x00000fe8, 0x0000103c, 0x000010aa, 0x0000110a,
-	0x00001155, 0x000011a7, 0x000011e4, 0x00001221,
-	0x00001278, 0x000012ce, 0x00001322, 0x00001387,
+	0x00001157, 0x000011a2, 0x000011f4, 0x00001231,
+	0x0000126e, 0x000012c5, 0x0000131b, 0x0000136f,
 	// Entry 40 - 5F
-	0x000013ed, 0x00001423, 0x0000145f, 0x000014a1,
-	0x000014d2, 0x00001512, 0x0000156c, 0x000015c2,
-	0x00001631, 0x00001690, 0x000016f2, 0x00001743,
-	0x000017aa, 0x00001810, 0x0000186d, 0x000018d6,
-	0x00001929, 0x00001985, 0x00001a10, 0x00001a4c,
-} // Size: 360 bytes
+	0x000013d4, 0x0000143a, 0x00001470, 0x000014ac,
+	0x000014ee, 0x0000151f, 0x0000155f, 0x000015b9,
+	0x0000160f, 0x0000167e, 0x000016dd, 0x0000173f,
+	0x00001790, 0x000017f7, 0x0000185d, 0x000018ba,
+	0x00001923, 0x00001976, 0x000019d2, 0x00001a5d,
+	0x00001a99,
+} // Size: 364 bytes
 
-const ruData string = "" + // Size: 6732 bytes
+const ruData string = "" + // Size: 6809 bytes
 	"\x02:globe_with_meridians: Открыть пост\x02:globe_with_meridians: Открыт" +
 	"ь коментарий\x02:speech_balloon: Ответить\x02:speech_balloon: @-Ответит" +
 	"ь\x02Ещё…\x02:back: Назад\x02:no_bell: Отписаться от комментов\x02:bell" +
@@ -287,30 +291,31 @@ const ruData string = "" + // Size: 6732 bytes
 	"ост в посте %[1]s:\x02:link: Ссылка на ваш пост в посте %[1]s в группе " +
 	"%[2]s:\x02:link: Ссылка на ваш комментарий в комментарии %[1]s к посту " +
 	"\x22%[2]s\x22:\x02:link: Ссылка на ваш пост в комментарии %[1]s к посту " +
-	"\x22%[2]s\x22:\x02:e-mail: Вы получили директ-сообщение от %[1]s:\x02:e-" +
-	"mail: Комментарий %[1]s к директ-сообщению \x22%[2]s\x22:\x02:e-mail: Ко" +
-	"мментарий %[1]s к посту \x22%[2]s\x22:\x02:raising_hand: Запрос на подп" +
-	"иску от %[1]s\x02:raising_hand: Запрос на вступление в группу %[2]s от " +
-	"%[1]s\x02:white_check_mark: Ваш запрос на подписку к %[1]s одобрен!\x02:" +
-	"no_entry_sign: Ваш запрос на подписку к %[1]s отклонён\x02:white_check_m" +
-	"ark: Ваш запрос на всупление в группу %[1]s одобрен!\x02:white_check_mar" +
-	"k: Ваш запрос на всупление в группу %[1]s отклонён\x02:plus: У вас новый" +
-	" подписчик: %[1]s\x02:minus: %[1]s больше не ваш подписчик:(\x02:plus: В" +
-	" группе %[2]s новый подписчик: %[1]s\x02:minus: %[1]s вышел из группы %[" +
-	"2]s\x02:minus: Запрос подписки от %[1]s отозван\x02:minus: Запрос %[1]s " +
-	"на вступление в группу %[2]s отозван\x02:plus: %[1]s сделал(а) %[2]s ад" +
-	"министратором группы %[3]s\x02:minus: %[1]s отозвал(а) полномочия админ" +
-	"истратора группы %[3]s у %[2]s\x02:plus: Запрос %[1]s на вступление в г" +
-	"руппу %[2]s одобрен %[3]s\x02:minus: Запрос %[1]s на вступление в групп" +
-	"у %[2]s отклонён %[3]s\x02:cop: Ваш комментарий был удалён %[1]s. Пост " +
-	"\x22%[2]s\x22:\x02:cop: Ваш комментарий в группе %[2]s был удалён %[1]s." +
-	" Пост \x22%[3]s\x22:\x02:cop: Комментарий %[2]s был удалён %[1]s. Пост в" +
-	" группе %[3]s \x22%[4]s\x22:\x02:cop: Ваш пост в группе %[2]s был удалён" +
-	" модератором %[1]s\x02:cop: Ваш пост был удалён из группы %[2]s модерато" +
-	"ром %[1]s. \x22%[3]s\x22:\x02:cop: Модератор %[1]s удалил пост %[2]s из" +
-	" группы %[3]s\x02:cop: Модератор %[1]s удалил пост %[2]s из группы %[3]s" +
+	"\x22%[2]s\x22:\x02:door: %[1]s больше не участвует в директе \x22%[2]s" +
+	"\x22:\x02:e-mail: Вы получили директ-сообщение от %[1]s:\x02:e-mail: Ком" +
+	"ментарий %[1]s к директ-сообщению \x22%[2]s\x22:\x02:e-mail: Комментари" +
+	"й %[1]s к посту \x22%[2]s\x22:\x02:raising_hand: Запрос на подписку от " +
+	"%[1]s\x02:raising_hand: Запрос на вступление в группу %[2]s от %[1]s\x02" +
+	":white_check_mark: Ваш запрос на подписку к %[1]s одобрен!\x02:no_entry_" +
+	"sign: Ваш запрос на подписку к %[1]s отклонён\x02:white_check_mark: Ваш " +
+	"запрос на всупление в группу %[1]s одобрен!\x02:white_check_mark: Ваш з" +
+	"апрос на всупление в группу %[1]s отклонён\x02:plus: У вас новый подпис" +
+	"чик: %[1]s\x02:minus: %[1]s больше не ваш подписчик:(\x02:plus: В групп" +
+	"е %[2]s новый подписчик: %[1]s\x02:minus: %[1]s вышел из группы %[2]s" +
+	"\x02:minus: Запрос подписки от %[1]s отозван\x02:minus: Запрос %[1]s на " +
+	"вступление в группу %[2]s отозван\x02:plus: %[1]s сделал(а) %[2]s админ" +
+	"истратором группы %[3]s\x02:minus: %[1]s отозвал(а) полномочия админист" +
+	"ратора группы %[3]s у %[2]s\x02:plus: Запрос %[1]s на вступление в груп" +
+	"пу %[2]s одобрен %[3]s\x02:minus: Запрос %[1]s на вступление в группу %" +
+	"[2]s отклонён %[3]s\x02:cop: Ваш комментарий был удалён %[1]s. Пост \x22" +
+	"%[2]s\x22:\x02:cop: Ваш комментарий в группе %[2]s был удалён %[1]s. Пос" +
+	"т \x22%[3]s\x22:\x02:cop: Комментарий %[2]s был удалён %[1]s. Пост в гр" +
+	"уппе %[3]s \x22%[4]s\x22:\x02:cop: Ваш пост в группе %[2]s был удалён м" +
+	"одератором %[1]s\x02:cop: Ваш пост был удалён из группы %[2]s модератор" +
+	"ом %[1]s. \x22%[3]s\x22:\x02:cop: Модератор %[1]s удалил пост %[2]s из " +
+	"группы %[3]s\x02:cop: Модератор %[1]s удалил пост %[2]s из группы %[3]s" +
 	" \x22%[4]s\x22:\x02:tada: По вашему приглашению зарегистрировался новый " +
 	"пользователь FreeFeed — %[1]s!\x02:alien: Неизвестный тип события: %[1]" +
 	"v"
 
-	// Total table size 11737 bytes (11KiB); checksum: 657DAD1A
+	// Total table size 11868 bytes (11KiB); checksum: ACDC2BC
