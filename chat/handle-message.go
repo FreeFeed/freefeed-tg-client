@@ -8,7 +8,6 @@ import (
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofrs/uuid"
-	"github.com/kr/pretty"
 	"golang.org/x/text/message"
 )
 
@@ -59,7 +58,6 @@ func (c *Chat) handleMessage(update tg.Update) {
 		}
 	} else if c.State.Expectation == store.ExpectComment {
 		if msg.Text == "" {
-			pretty.Println(msg)
 			c.ShouldSend(c.newHTMLMessage(p.Sprintf("Can not send a comment without a text")))
 			return
 		}
@@ -126,7 +124,6 @@ func (c *Chat) handleMessage(update tg.Update) {
 			return
 		}
 
-		pretty.Print(update)
 		c.ShouldSend(c.newHTMLMessage(p.Sprintf(":shrug: Unknown command")))
 	}
 }
