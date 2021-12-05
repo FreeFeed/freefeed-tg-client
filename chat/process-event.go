@@ -129,6 +129,63 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		}
 
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
+
+	case "backlink_in_post":
+		if ok, _ := c.App.IsPostTracked(c.ID, event.PostID); ok {
+			// We will receive this with post subscription
+			return nil
+		}
+
+		headText := ""
+		if event.RefCommentID != uuid.Nil {
+			headText = p.Sprintf(
+				":link: %s mentioned your comment in the post:",
+				event.CreatedUser,
+			)
+			if event.Group != nil {
+				headText = p.Sprintf(
+					":link: %s mentioned your comment in the post in %s:",
+					event.CreatedUser,
+					event.Group,
+				)
+			}
+		} else {
+			headText = p.Sprintf(
+				":link: %s mentioned your post in the post:",
+				event.CreatedUser,
+			)
+			if event.Group != nil {
+				headText = p.Sprintf(
+					":link: %s mentioned your post in the post in %s:",
+					event.CreatedUser,
+					event.Group,
+				)
+			}
+		}
+		return c.withPostBody(c.newHTMLMessage(headText), event)
+
+	case "backlink_in_comment":
+		if ok, _ := c.App.IsPostTracked(c.ID, event.PostID); ok {
+			// We will receive this with post subscription
+			return nil
+		}
+
+		headText := ""
+		if event.RefCommentID != uuid.Nil {
+			headText = p.Sprintf(
+				":link: %s mentioned your comment in the comment to post \"%s\":",
+				event.CreatedUser,
+				event.Post.Digest(),
+			)
+		} else {
+			headText = p.Sprintf(
+				":link: %s mentioned your post in the comment to post \"%s\":",
+				event.CreatedUser,
+				event.Post.Digest(),
+			)
+		}
+		return c.withCommentBody(c.newHTMLMessage(headText), event)
+
 	case "direct":
 		headText := p.Sprintf(":e-mail: You received a direct message from %s:", event.CreatedUser)
 		return c.withPostBody(c.newHTMLMessage(headText), event)

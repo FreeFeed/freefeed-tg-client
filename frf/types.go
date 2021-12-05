@@ -28,10 +28,12 @@ func (u *User) String() string {
 }
 
 type Event struct {
-	ID        uuid.UUID `json:"eventId"`
-	Type      string    `json:"event_type"`
-	CommentID uuid.UUID `json:"comment_id"`
-	PostID    uuid.UUID `json:"post_id"`
+	ID           uuid.UUID `json:"eventId"`
+	Type         string    `json:"event_type"`
+	CommentID    uuid.UUID `json:"comment_id"`
+	PostID       uuid.UUID `json:"post_id"`
+	RefCommentID uuid.UUID `json:"ref_comment_id"`
+	RefPostID    uuid.UUID `json:"ref_post_id"`
 
 	AffectedUserID uuid.UUID `json:"affected_user_id"`
 	CreatedUserID  uuid.UUID `json:"created_user_id"`

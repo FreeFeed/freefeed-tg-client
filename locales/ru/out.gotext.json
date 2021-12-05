@@ -483,6 +483,128 @@
             ]
         },
         {
+            "id": ":link: {CreatedUser} mentioned your comment in the post:",
+            "message": ":link: {CreatedUser} mentioned your comment in the post:",
+            "translation": ":link: Ссылка на ваш комментарий в посте {CreatedUser}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":link: {CreatedUser} mentioned your comment in the post in {Group}:",
+            "message": ":link: {CreatedUser} mentioned your comment in the post in {Group}:",
+            "translation": ":link: Ссылка на ваш комментарий в посте {CreatedUser} в группе {Group}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":link: {CreatedUser} mentioned your post in the post:",
+            "message": ":link: {CreatedUser} mentioned your post in the post:",
+            "translation": ":link: Ссылка на ваш пост в посте {CreatedUser}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                }
+            ]
+        },
+        {
+            "id": ":link: {CreatedUser} mentioned your post in the post in {Group}:",
+            "message": ":link: {CreatedUser} mentioned your post in the post in {Group}:",
+            "translation": ":link: Ссылка на ваш пост в посте {CreatedUser} в группе {Group}:",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[2]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 2,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":link: {CreatedUser} mentioned your comment in the comment to post \"{Digest}\":",
+            "message": ":link: {CreatedUser} mentioned your comment in the comment to post \"{Digest}\":",
+            "translation": ":link: Ссылка на ваш комментарий в комментарии {CreatedUser} к посту \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
+            "id": ":link: {CreatedUser} mentioned your post in the comment to post \"{Digest}\":",
+            "message": ":link: {CreatedUser} mentioned your post in the comment to post \"{Digest}\":",
+            "translation": ":link: Ссылка на ваш пост в комментарии {CreatedUser} к посту \"{Digest}\":",
+            "placeholders": [
+                {
+                    "id": "CreatedUser",
+                    "string": "%[1]s",
+                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "argNum": 1,
+                    "expr": "event.CreatedUser"
+                },
+                {
+                    "id": "Digest",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "event.Post.Digest()"
+                }
+            ]
+        },
+        {
             "id": ":e-mail: You received a direct message from {CreatedUser}:",
             "message": ":e-mail: You received a direct message from {CreatedUser}:",
             "translation": ":e-mail: Вы получили директ-сообщение от {CreatedUser}:",
