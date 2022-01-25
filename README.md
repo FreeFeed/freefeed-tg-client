@@ -2,10 +2,14 @@
 
 ## Usage
 
-Flags of freefeed-tg-client.exe:
+### Command line
+
+Flags of freefeed-tg-client.exe (eider -token or -token-file must be specified):
 
     -token string
-        Telegram bot token (required)
+        Telegram bot token
+    -token-file string
+        Path to the file with Telegram bot token
     -data string
         Data directory (must be writable)
         (default "data")
@@ -18,9 +22,15 @@ Flags of freefeed-tg-client.exe:
         User-Agent for backend requests
         (default "FreeFeedTelegramClient/1.0 (https://github.com/davidmz/freefeed-tg-client)")        
 
+### Docker
+
+Set the `TOKEN` environment variable to the value of Telegram bot token. Mount
+the `/bot/data` volume to the writable directory. Use `UID`/`GID` variables to
+set uid/gid of the running process.
+
+You can set the `DEBUG` environment variable to `*` to see all debug messages.
+
 ## Development
-
-
 
 ### Text translation
 

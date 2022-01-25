@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"strings"
 	"syscall"
 	"time"
 
@@ -28,13 +29,15 @@ func main() {
 
 	var (
 		tgToken      string
+		tgTokenFile  string
 		frfHost      string
 		userAgent    string
 		dataDir      string
 		debugSources string
 	)
 
-	flag.StringVar(&tgToken, "token", "", "Telegram bot token (required)")
+	flag.StringVar(&tgToken, "token", "", "Telegram bot token")
+	flag.StringVar(&tgTokenFile, "token-file", "", "Path to the file with Telegram bot token")
 	flag.StringVar(&frfHost, "host", "freefeed.net", "FreeFeed API/frontend hostname")
 	flag.StringVar(&dataDir, "data", "data", "Data directory (must be writable)")
 	flag.StringVar(&userAgent, "ua",
@@ -43,8 +46,9 @@ func main() {
 	flag.StringVar(&debugSources, "debug", "", "Debug sources, set to '*' to see all messages")
 	flag.Parse()
 
-	if tgToken == "" {
+	if tgToken == "" && tgTokenFile == "" {
 		fmt.Fprintf(flag.CommandLine.Output(), "Flags of %s:\n", filepath.Base(os.Args[0]))
+		fmt.Fprintf(flag.CommandLine.Output(), "/!\\ Eider -token or -token-file must be specified\n")
 		flag.PrintDefaults()
 		os.Exit(0)
 	}
@@ -53,12 +57,20 @@ func main() {
 		os.Setenv("DEBUG", debugSources)
 	}
 
+	if tgToken == "" && tgTokenFile != "" {
+		tokenData := mustbe.OKVal(os.ReadFile(tgTokenFile)).([]byte)
+		tgToken = strings.TrimSpace(string(tokenData))
+	}
+
 	debugLogger := debug.NewLogger("tg-client")
 	errorLogger := debug.NewLogger("tg-client:error")
 	tgbotapi.SetLogger(debug.NewLogger("tg-client:tgbot"))
 
 	debugLogger.Println("Starting BotAPI")
-	tgBot := mustbe.OKVal(tgbotapi.NewBotAPI(tgToken)).(*tgbotapi.BotAPI)
+	tgBot, err := tgbotapi.NewBotAPI(tgToken)
+	if err != nil {
+		mustbe.Thrown(fmt.Errorf("cannot start BotAPI: %w", err))
+	}
 
 	debugLogger.Printf("Bot authorized on account %s", tgBot.Self.UserName)
 
