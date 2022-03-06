@@ -91,14 +91,14 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		headText := p.Sprintf(
 			":e-mail: %s mentioned you in a comment to the post \"%s\":",
 			event.CreatedUser,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 		if event.Group != nil {
 			headText = p.Sprintf(
 				":e-mail: %s mentioned you in a comment to the post in %s \"%s\":",
 				event.CreatedUser,
 				event.Group,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		}
 
@@ -117,14 +117,14 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		headText := p.Sprintf(
 			":e-mail: %s replyed to you in a comment to the post \"%s\":",
 			event.CreatedUser,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 		if event.Group != nil {
 			headText = p.Sprintf(
 				":e-mail: %s replyed to you in a comment to the post in %s \"%s\":",
 				event.CreatedUser,
 				event.Group,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		}
 
@@ -175,13 +175,13 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 			headText = p.Sprintf(
 				":link: %s mentioned your comment in the comment to post \"%s\":",
 				event.CreatedUser,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		} else {
 			headText = p.Sprintf(
 				":link: %s mentioned your post in the comment to post \"%s\":",
 				event.CreatedUser,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		}
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
@@ -194,7 +194,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		headText := p.Sprintf(
 			":door: %s left the direct message \"%s\":",
 			event.CreatedUser,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 		msg := c.newHTMLMessage(headText)
 		msg.ReplyMarkup = c.postButtons(event)
@@ -212,7 +212,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		headText := p.Sprintf(
 			":e-mail: New comment was posted by %s to the direct message \"%s\":",
 			event.CreatedUser,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
 
@@ -224,7 +224,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		headText := p.Sprintf(
 			":e-mail: New comment was posted by %s to the post \"%s\":",
 			event.CreatedUser,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
 
@@ -317,14 +317,14 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		text := p.Sprintf(
 			":cop: %s has deleted your comment to the \"%s\":",
 			event.CreatedUser,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 		if event.Group != nil {
 			text = p.Sprintf(
 				":cop: %s has deleted your comment to the post in %s \"%s\":",
 				event.CreatedUser,
 				event.Group,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		}
 
@@ -338,7 +338,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 			event.CreatedUser,
 			event.AffectedUser,
 			event.Group,
-			event.Post.Digest(),
+			c.App.ContentOf(event.Post.Digest()),
 		)
 
 		msg := c.newHTMLMessage(text)
@@ -357,7 +357,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 				":cop: %s has removed your post from the group %s \"%s\":",
 				event.CreatedUser,
 				event.Group,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		}
 
@@ -381,7 +381,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 				event.CreatedUser,
 				event.AffectedUser,
 				event.Group,
-				event.Post.Digest(),
+				c.App.ContentOf(event.Post.Digest()),
 			)
 		}
 
@@ -415,7 +415,7 @@ func (c *Chat) withPostBody(msg *tg.MessageConfig, event *frf.Event) (out tg.Cha
 		msg.Text += bodySeparator + err.Error()
 	}
 
-	msg.Text += bodySeparator + c.App.Linkify(event.Post.Body)
+	msg.Text += bodySeparator + c.App.ContentOf(c.App.Linkify(event.Post.Body))
 	msg.ReplyMarkup = c.postButtons(event)
 	return msg
 }
@@ -439,7 +439,7 @@ func (c *Chat) withCommentBody(msg *tg.MessageConfig, event *frf.Event) (out tg.
 		}
 	}
 
-	msg.Text += bodySeparator + c.App.Linkify(comment.Body)
+	msg.Text += bodySeparator + c.App.ContentOf(c.App.Linkify(comment.Body))
 	msg.ReplyMarkup = c.postButtons(event)
 	return msg
 }

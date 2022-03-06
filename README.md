@@ -20,7 +20,9 @@ Flags of freefeed-tg-client.exe (eider -token or -token-file must be specified):
         (default "freefeed.net")
     -ua string
         User-Agent for backend requests
-        (default "FreeFeedTelegramClient/1.0 (https://github.com/davidmz/freefeed-tg-client)")        
+        (default "FreeFeedTelegramClient/1.0 (https://github.com/davidmz/freefeed-tg-client)")
+    -no-content
+        Do not include post/comment content into the TG messages
 
 ### Docker
 

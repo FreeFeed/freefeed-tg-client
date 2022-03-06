@@ -19,6 +19,7 @@ type App interface {
 	Tg() *tg.BotAPI
 	Send(tg.Chattable) (tg.Message, error)
 	Linkify(string) string
+	ContentOf(string) string
 
 	StartRealtime(ID)
 	StopRealtime(ID)
