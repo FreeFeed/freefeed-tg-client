@@ -34,6 +34,7 @@ func main() {
 		userAgent    string
 		dataDir      string
 		debugSources string
+		noContent    bool
 	)
 
 	flag.StringVar(&tgToken, "token", "", "Telegram bot token")
@@ -44,6 +45,7 @@ func main() {
 		"FreeFeedTelegramClient/1.0 (https://github.com/davidmz/freefeed-tg-client)",
 		"User-Agent for backend requests")
 	flag.StringVar(&debugSources, "debug", "", "Debug sources, set to '*' to see all messages")
+	flag.BoolVar(&noContent, "no-content", false, "Do not include post/comment content into the TG messages")
 	flag.Parse()
 
 	if tgToken == "" && tgTokenFile == "" {
@@ -83,6 +85,7 @@ func main() {
 		TgAPI:        tgBot,
 		FreeFeedHost: frfHost,
 		UserAgent:    userAgent,
+		NoContent:    noContent,
 	}
 
 	handleStopSignals(a.Close, debugLogger)

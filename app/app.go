@@ -24,6 +24,7 @@ type App struct {
 	store.Store
 	FreeFeedHost string
 	UserAgent    string
+	NoContent    bool
 	DebugLogger  debug.Logger
 	ErrorLogger  debug.Logger
 	TgAPI        *tg.BotAPI
@@ -45,6 +46,12 @@ func (a *App) FreeFeedAPI() *frf.API {
 	return &frf.API{HostName: a.FreeFeedHost, UserAgent: a.UserAgent}
 }
 func (a *App) Tg() *tg.BotAPI { return a.TgAPI }
+func (a *App) ContentOf(str string) string {
+	if a.NoContent {
+		return "[content hidden]"
+	}
+	return str
+}
 
 // Start initializes the bot and starts the internal loops. This function doesnt
 // return until the cxt is cancelled.
