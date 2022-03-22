@@ -7,13 +7,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/FreeFeed/freefeed-tg-client/chat"
+	"github.com/FreeFeed/freefeed-tg-client/frf"
+	"github.com/FreeFeed/freefeed-tg-client/socketio"
+	"github.com/FreeFeed/freefeed-tg-client/store"
+	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/bluele/gcache"
 	"github.com/davidmz/debug-log"
-	"github.com/davidmz/freefeed-tg-client/chat"
-	"github.com/davidmz/freefeed-tg-client/frf"
-	"github.com/davidmz/freefeed-tg-client/socketio"
-	"github.com/davidmz/freefeed-tg-client/store"
-	"github.com/davidmz/freefeed-tg-client/types"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
 )

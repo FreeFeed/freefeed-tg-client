@@ -3,8 +3,8 @@ package chat
 import (
 	"errors"
 
-	"github.com/davidmz/freefeed-tg-client/store"
-	"github.com/davidmz/freefeed-tg-client/types"
+	"github.com/FreeFeed/freefeed-tg-client/store"
+	"github.com/FreeFeed/freefeed-tg-client/types"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
 	"github.com/gofrs/uuid"

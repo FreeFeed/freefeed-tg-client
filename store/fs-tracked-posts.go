@@ -1,7 +1,7 @@
 package store
 
 import (
-	"github.com/davidmz/freefeed-tg-client/types"
+	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/davidmz/sliceutil"
 	"github.com/gofrs/uuid"
 )

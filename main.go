@@ -13,9 +13,9 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/FreeFeed/freefeed-tg-client/app"
+	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/davidmz/debug-log"
-	"github.com/davidmz/freefeed-tg-client/app"
-	"github.com/davidmz/freefeed-tg-client/store"
 	"github.com/davidmz/mustbe"
 	tgbotapi "github.com/davidmz/telegram-bot-api"
 )
@@ -42,7 +42,7 @@ func main() {
 	flag.StringVar(&frfHost, "host", "freefeed.net", "FreeFeed API/frontend hostname")
 	flag.StringVar(&dataDir, "data", "data", "Data directory (must be writable)")
 	flag.StringVar(&userAgent, "ua",
-		"FreeFeedTelegramClient/1.0 (https://github.com/davidmz/freefeed-tg-client)",
+		"FreeFeedTelegramClient/1.0 (https://github.com/FreeFeed/freefeed-tg-client)",
 		"User-Agent for backend requests")
 	flag.StringVar(&debugSources, "debug", "", "Debug sources, set to '*' to see all messages")
 	flag.BoolVar(&noContent, "no-content", false, "Do not include post/comment content into the TG messages")

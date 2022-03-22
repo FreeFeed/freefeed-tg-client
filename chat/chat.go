@@ -3,9 +3,9 @@ package chat
 import (
 	"fmt"
 
+	"github.com/FreeFeed/freefeed-tg-client/frf"
+	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/davidmz/debug-log"
-	"github.com/davidmz/freefeed-tg-client/frf"
-	"github.com/davidmz/freefeed-tg-client/store"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
 )

@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/davidmz/freefeed-tg-client/store"
+	"github.com/FreeFeed/freefeed-tg-client/store"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofrs/uuid"

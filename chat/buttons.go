@@ -3,7 +3,7 @@ package chat
 import (
 	"fmt"
 
-	"github.com/davidmz/freefeed-tg-client/frf"
+	"github.com/FreeFeed/freefeed-tg-client/frf"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
 	"github.com/gofrs/uuid"

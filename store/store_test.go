@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/davidmz/freefeed-tg-client/store"
-	"github.com/davidmz/freefeed-tg-client/types"
+	"github.com/FreeFeed/freefeed-tg-client/store"
+	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/gofrs/uuid"
 	"github.com/stretchr/testify/suite"
 	"golang.org/x/text/language"

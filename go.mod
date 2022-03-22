@@ -1,4 +1,4 @@
-module github.com/davidmz/freefeed-tg-client
+module github.com/FreeFeed/freefeed-tg-client
 
 go 1.16
 

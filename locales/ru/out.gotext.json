@@ -214,8 +214,8 @@
                 {
                     "id": "User",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "user"
                 }
@@ -344,8 +344,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -359,16 +359,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -382,8 +382,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -405,16 +405,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 },
@@ -436,8 +436,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -459,16 +459,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 },
@@ -490,8 +490,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -505,16 +505,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -528,8 +528,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -543,16 +543,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -566,8 +566,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -589,8 +589,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -612,8 +612,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -635,8 +635,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -650,8 +650,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -673,8 +673,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -696,8 +696,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -711,16 +711,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -734,8 +734,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -749,8 +749,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -764,8 +764,8 @@
                 {
                     "id": "Group",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.Group"
                 }
@@ -779,8 +779,8 @@
                 {
                     "id": "Group",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.Group"
                 }
@@ -794,8 +794,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -809,8 +809,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -824,16 +824,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -847,16 +847,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -870,8 +870,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }
@@ -885,16 +885,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -908,24 +908,24 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "AffectedUser",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.Group"
                 }
@@ -939,24 +939,24 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "AffectedUser",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.Group"
                 }
@@ -970,24 +970,24 @@
                 {
                     "id": "AffectedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 },
                 {
                     "id": "CreatedUser",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.CreatedUser"
                 }
@@ -1001,24 +1001,24 @@
                 {
                     "id": "AffectedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 },
                 {
                     "id": "CreatedUser",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.CreatedUser"
                 }
@@ -1032,8 +1032,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
@@ -1055,16 +1055,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 },
@@ -1086,24 +1086,24 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "AffectedUser",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.Group"
                 },
@@ -1125,16 +1125,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 }
@@ -1148,16 +1148,16 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.Group"
                 },
@@ -1179,24 +1179,24 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "AffectedUser",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.Group"
                 }
@@ -1210,24 +1210,24 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 },
                 {
                     "id": "AffectedUser",
                     "string": "%[2]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 2,
                     "expr": "event.AffectedUser"
                 },
                 {
                     "id": "Group",
                     "string": "%[3]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 3,
                     "expr": "event.Group"
                 },
@@ -1249,8 +1249,8 @@
                 {
                     "id": "CreatedUser",
                     "string": "%[1]s",
-                    "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
                     "argNum": 1,
                     "expr": "event.CreatedUser"
                 }

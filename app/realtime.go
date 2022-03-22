@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/davidmz/freefeed-tg-client/chat"
-	"github.com/davidmz/freefeed-tg-client/frf"
-	"github.com/davidmz/freefeed-tg-client/socketio"
-	"github.com/davidmz/freefeed-tg-client/store"
-	"github.com/davidmz/freefeed-tg-client/types"
+	"github.com/FreeFeed/freefeed-tg-client/chat"
+	"github.com/FreeFeed/freefeed-tg-client/frf"
+	"github.com/FreeFeed/freefeed-tg-client/socketio"
+	"github.com/FreeFeed/freefeed-tg-client/store"
+	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/davidmz/mustbe"
 	"github.com/gofrs/uuid"
 )

@@ -3,8 +3,8 @@ package app
 import (
 	"time"
 
+	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/davidmz/debug-log"
-	"github.com/davidmz/freefeed-tg-client/types"
 )
 
 type PauseManagerCfg struct {

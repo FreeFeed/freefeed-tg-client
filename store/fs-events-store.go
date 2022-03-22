@@ -3,8 +3,8 @@ package store
 import (
 	"fmt"
 
-	"github.com/davidmz/freefeed-tg-client/frf"
-	"github.com/davidmz/freefeed-tg-client/types"
+	"github.com/FreeFeed/freefeed-tg-client/frf"
+	"github.com/FreeFeed/freefeed-tg-client/types"
 )
 
 type SentMsgRec struct {
