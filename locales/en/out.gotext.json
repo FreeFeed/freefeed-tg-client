@@ -482,7 +482,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -515,14 +515,14 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 3,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
         },
         {
-            "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
-            "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post \"{Digest}\":",
+            "id": ":e-mail: {CreatedUser} replied to you in a comment to the post \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} replied to you in a comment to the post \"{Digest}\":",
             "translation": ":e-mail: {CreatedUser} replied to you in a comment to the post \"{Digest}\":",
             "translatorComment": "Copied from source.",
             "placeholders": [
@@ -540,14 +540,14 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
         },
         {
-            "id": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
-            "message": ":e-mail: {CreatedUser} replyed to you in a comment to the post in {Group} \"{Digest}\":",
+            "id": ":e-mail: {CreatedUser} replied to you in a comment to the post in {Group} \"{Digest}\":",
+            "message": ":e-mail: {CreatedUser} replied to you in a comment to the post in {Group} \"{Digest}\":",
             "translation": ":e-mail: {CreatedUser} replied to you in a comment to the post in {Group} \"{Digest}\":",
             "translatorComment": "Copied from source.",
             "placeholders": [
@@ -573,7 +573,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 3,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -682,7 +682,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -707,7 +707,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -732,7 +732,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -774,7 +774,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -799,7 +799,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -1192,7 +1192,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 2,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -1225,7 +1225,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 3,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -1266,7 +1266,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 4,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -1324,7 +1324,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 3,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true
@@ -1398,7 +1398,7 @@
                     "type": "string",
                     "underlyingType": "string",
                     "argNum": 4,
-                    "expr": "event.Post.Digest()"
+                    "expr": "c.App.ContentOf(event.Post.Digest())"
                 }
             ],
             "fuzzy": true

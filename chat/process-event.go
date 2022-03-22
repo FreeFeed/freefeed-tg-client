@@ -115,13 +115,13 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		}
 
 		headText := p.Sprintf(
-			":e-mail: %s replyed to you in a comment to the post \"%s\":",
+			":e-mail: %s replied to you in a comment to the post \"%s\":",
 			event.CreatedUser,
 			c.App.ContentOf(event.Post.Digest()),
 		)
 		if event.Group != nil {
 			headText = p.Sprintf(
-				":e-mail: %s replyed to you in a comment to the post in %s \"%s\":",
+				":e-mail: %s replied to you in a comment to the post in %s \"%s\":",
 				event.CreatedUser,
 				event.Group,
 				c.App.ContentOf(event.Post.Digest()),
