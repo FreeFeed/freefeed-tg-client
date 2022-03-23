@@ -34,7 +34,19 @@ You can set the `DEBUG` environment variable to `*` to see all debug messages.
 
 ## Development
 
+### Build
+
+`go build [-o output_file]`
+
+For cross-platform builds, use GOOS and GOARCH [environment variables](https://go.dev/doc/install/source#environment).
+
+### Run (some) tests
+
+`go test ./...`
+
 ### Text translation
+
+⚠ For now, this feature only works with Go up to 1.17 ([issue](https://github.com/golang/go/issues/51822)).
 
 Run `go generate`. Manually create the missing entries in `/locales/ru/messages.gotext.json`
 to update text translations. Then run `go generate` again.
