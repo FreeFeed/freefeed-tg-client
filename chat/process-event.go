@@ -217,6 +217,10 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
 
 	case "__comment:new":
+		if event.CreatedUser == nil {
+			// Hidden comment, don't do anything
+			return nil
+		}
 		if event.CreatedUser.ID == c.State.UserID {
 			// Comment from ourselves
 			return nil
