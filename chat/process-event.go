@@ -318,15 +318,19 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 			event.AffectedUser, event.Group, event.CreatedUser)
 		return c.newHTMLMessage(text)
 	case "comment_moderated":
+		createdUserStr := p.Sprintf("group admin")
+		if event.CreatedUser != nil {
+			createdUserStr = event.CreatedUser.String()
+		}
 		text := p.Sprintf(
 			":cop: %s has deleted your comment to the \"%s\":",
-			event.CreatedUser,
+			createdUserStr,
 			c.App.ContentOf(event.Post.Digest()),
 		)
 		if event.Group != nil {
 			text = p.Sprintf(
 				":cop: %s has deleted your comment to the post in %s \"%s\":",
-				event.CreatedUser,
+				createdUserStr,
 				event.Group,
 				c.App.ContentOf(event.Post.Digest()),
 			)
@@ -350,16 +354,20 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 
 		return msg
 	case "post_moderated":
+		createdUserStr := p.Sprintf("group admin")
+		if event.CreatedUser != nil {
+			createdUserStr = event.CreatedUser.String()
+		}
 		text := p.Sprintf(
 			":cop: %s has removed your post from the group %s",
-			event.CreatedUser,
+			createdUserStr,
 			event.Group,
 		)
 
 		if event.Post != nil {
 			text = p.Sprintf(
 				":cop: %s has removed your post from the group %s \"%s\":",
-				event.CreatedUser,
+				createdUserStr,
 				event.Group,
 				c.App.ContentOf(event.Post.Digest()),
 			)

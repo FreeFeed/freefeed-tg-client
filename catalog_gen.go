@@ -42,16 +42,16 @@ var messageKeyToIndex = map[string]int{
 	":alien: Cannot load events: %v":                              23,
 	":alien: Unknown command":                                     28,
 	":alien: Unknown command %v":                                  19,
-	":alien: Unknown event: %v":                                   83,
+	":alien: Unknown event: %v":                                   84,
 	":back: Back":                                                 5,
 	":bell: Subscribe to comments":                                7,
-	":cop: %s has deleted your comment to the \"%s\":":            75,
-	":cop: %s has deleted your comment to the post in %s \"%s\":": 76,
-	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 77,
-	":cop: %s has removed the post from %s from the group %s":                    80,
-	":cop: %s has removed the post from %s from the group %s \"%s\":":            81,
-	":cop: %s has removed your post from the group %s":                           78,
-	":cop: %s has removed your post from the group %s \"%s\":":                   79,
+	":cop: %s has deleted your comment to the \"%s\":":            76,
+	":cop: %s has deleted your comment to the post in %s \"%s\":": 77,
+	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 78,
+	":cop: %s has removed the post from %s from the group %s":                    81,
+	":cop: %s has removed the post from %s from the group %s \"%s\":":            82,
+	":cop: %s has removed your post from the group %s":                           79,
+	":cop: %s has removed your post from the group %s \"%s\":":                   80,
 	":door: %s left the direct message \"%s\":":                                  55,
 	":e-mail: %s mentioned you in a comment to the post \"%s\":":                 45,
 	":e-mail: %s mentioned you in a comment to the post in %s \"%s\":":           46,
@@ -91,7 +91,7 @@ var messageKeyToIndex = map[string]int{
 	":speech_balloon: @-Reply":                                                   3,
 	":speech_balloon: Comment more":                                              8,
 	":speech_balloon: Reply":                                                     2,
-	":tada: %s has joined FreeFeed using your invitation":                        82,
+	":tada: %s has joined FreeFeed using your invitation":                        83,
 	":tada: Comment successfully created!":                                       35,
 	":thinking: Hmm, looks like a post URL! What do you want to do with it?":     36,
 	":warning: Cannot load event data, probably this message is too old":         14,
@@ -123,9 +123,10 @@ var messageKeyToIndex = map[string]int{
 	"You are using this bot as %s. Use the /logout command if you want to delete all of your data or start as another user.": 27,
 	"Your updates are paused now.":                                                                                           24,
 	"Your updates are resumed now.":                                                                                          25,
+	"group admin":                                                                                                            75,
 }
 
-var enIndex = []uint32{ // 85 elements
+var enIndex = []uint32{ // 86 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000021, 0x00000045, 0x0000005c,
 	0x00000075, 0x0000007d, 0x00000089, 0x000000ad,
@@ -148,12 +149,12 @@ var enIndex = []uint32{ // 85 elements
 	0x00000c9e, 0x00000cdc, 0x00000d01, 0x00000d2b,
 	0x00000d4c, 0x00000d72, 0x00000da4, 0x00000dd8,
 	0x00000e10, 0x00000e55, 0x00000e8e, 0x00000ec8,
-	0x00000efd, 0x00000f40, 0x00000f95, 0x00000fcc,
-	0x0000100c, 0x0000104d, 0x00001097, 0x000010ce,
-	0x000010eb,
-} // Size: 364 bytes
+	0x00000ed4, 0x00000f09, 0x00000f4c, 0x00000fa1,
+	0x00000fd8, 0x00001018, 0x00001059, 0x000010a3,
+	0x000010da, 0x000010f7,
+} // Size: 368 bytes
 
-const enData string = "" + // Size: 4331 bytes
+const enData string = "" + // Size: 4343 bytes
 	"\x02:globe_with_meridians: Open post\x02:globe_with_meridians: Open comm" +
 	"ent\x02:speech_balloon: Reply\x02:speech_balloon: @-Reply\x02More…\x02:b" +
 	"ack: Back\x02:no_bell: Unsubscribe from comments\x02:bell: Subscribe to " +
@@ -210,18 +211,18 @@ const enData string = "" + // Size: 4331 bytes
 	"tion request to %[2]s\x02:plus: %[1]s promoted %[2]s to admin in the gro" +
 	"up %[3]s\x02:minus: %[1]s revoked admin privileges from %[2]s in the gro" +
 	"up %[3]s\x02:plus: %[1]s request to join %[2]s was approved by %[3]s\x02" +
-	":minus: %[1]s request to join %[2]s was rejected by %[3]s\x02:cop: %[1]s" +
-	" has deleted your comment to the \x22%[2]s\x22:\x02:cop: %[1]s has delet" +
-	"ed your comment to the post in %[2]s \x22%[3]s\x22:\x02:cop: %[1]s has r" +
-	"emoved a comment from %[2]s to the post in the group %[3]s \x22%[4]s\x22" +
-	":\x02:cop: %[1]s has removed your post from the group %[2]s\x02:cop: %[1" +
-	"]s has removed your post from the group %[2]s \x22%[3]s\x22:\x02:cop: %[" +
-	"1]s has removed the post from %[2]s from the group %[3]s\x02:cop: %[1]s " +
-	"has removed the post from %[2]s from the group %[3]s \x22%[4]s\x22:\x02:" +
-	"tada: %[1]s has joined FreeFeed using your invitation\x02:alien: Unknown" +
-	" event: %[1]v"
+	":minus: %[1]s request to join %[2]s was rejected by %[3]s\x02group admin" +
+	"\x02:cop: %[1]s has deleted your comment to the \x22%[2]s\x22:\x02:cop: " +
+	"%[1]s has deleted your comment to the post in %[2]s \x22%[3]s\x22:\x02:c" +
+	"op: %[1]s has removed a comment from %[2]s to the post in the group %[3]" +
+	"s \x22%[4]s\x22:\x02:cop: %[1]s has removed your post from the group %[2" +
+	"]s\x02:cop: %[1]s has removed your post from the group %[2]s \x22%[3]s" +
+	"\x22:\x02:cop: %[1]s has removed the post from %[2]s from the group %[3]" +
+	"s\x02:cop: %[1]s has removed the post from %[2]s from the group %[3]s " +
+	"\x22%[4]s\x22:\x02:tada: %[1]s has joined FreeFeed using your invitation" +
+	"\x02:alien: Unknown event: %[1]v"
 
-var ruIndex = []uint32{ // 85 elements
+var ruIndex = []uint32{ // 86 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000002f, 0x0000006c, 0x0000008e,
 	0x000000b2, 0x000000bc, 0x000000ce, 0x00000105,
@@ -244,12 +245,12 @@ var ruIndex = []uint32{ // 85 elements
 	0x000013da, 0x00001442, 0x00001478, 0x000014b4,
 	0x000014f6, 0x00001527, 0x00001567, 0x000015c1,
 	0x00001617, 0x00001686, 0x000016e5, 0x00001747,
-	0x00001798, 0x000017ff, 0x00001865, 0x000018c2,
-	0x0000192b, 0x0000197e, 0x000019da, 0x00001a65,
-	0x00001aa1,
-} // Size: 364 bytes
+	0x00001773, 0x000017c4, 0x0000182b, 0x00001891,
+	0x000018d7, 0x00001929, 0x0000197c, 0x000019d8,
+	0x00001a63, 0x00001a9f,
+} // Size: 368 bytes
 
-const ruData string = "" + // Size: 6817 bytes
+const ruData string = "" + // Size: 6815 bytes
 	"\x02:globe_with_meridians: Открыть пост\x02:globe_with_meridians: Открыт" +
 	"ь комментарий\x02:speech_balloon: Ответить\x02:speech_balloon: @-Ответи" +
 	"ть\x02Ещё…\x02:back: Назад\x02:no_bell: Отписаться от комментов\x02:bel" +
@@ -307,15 +308,15 @@ const ruData string = "" + // Size: 6817 bytes
 	"министратором группы %[3]s\x02:minus: %[1]s отозвал(а) полномочия админ" +
 	"истратора группы %[3]s у %[2]s\x02:plus: Запрос %[1]s на вступление в г" +
 	"руппу %[2]s одобрен %[3]s\x02:minus: Запрос %[1]s на вступление в групп" +
-	"у %[2]s отклонён %[3]s\x02:cop: Ваш комментарий был удалён %[1]s. Пост " +
-	"\x22%[2]s\x22:\x02:cop: Ваш комментарий в группе %[2]s был удалён %[1]s." +
-	" Пост \x22%[3]s\x22:\x02:cop: Комментарий %[2]s был удалён %[1]s. Пост в" +
-	" группе %[3]s \x22%[4]s\x22:\x02:cop: Ваш пост в группе %[2]s был удалён" +
-	" модератором %[1]s\x02:cop: Ваш пост был удалён из группы %[2]s модерато" +
-	"ром %[1]s. \x22%[3]s\x22:\x02:cop: Модератор %[1]s удалил пост %[2]s из" +
-	" группы %[3]s\x02:cop: Модератор %[1]s удалил пост %[2]s из группы %[3]s" +
-	" \x22%[4]s\x22:\x02:tada: По вашему приглашению зарегистрировался новый " +
-	"пользователь FreeFeed — %[1]s!\x02:alien: Неизвестный тип события: %[1]" +
-	"v"
+	"у %[2]s отклонён %[3]s\x02администратором группы\x02:cop: Ваш комментар" +
+	"ий был удалён %[1]s. Пост \x22%[2]s\x22:\x02:cop: Ваш комментарий в гру" +
+	"ппе %[2]s был удалён %[1]s. Пост \x22%[3]s\x22:\x02:cop: Комментарий %[" +
+	"2]s был удалён %[1]s. Пост в группе %[3]s \x22%[4]s\x22:\x02:cop: Ваш по" +
+	"ст в группе %[2]s был удалён %[1]s\x02:cop: Ваш пост был удалён из груп" +
+	"пы %[2]s %[1]s. \x22%[3]s\x22:\x02:cop: Модератор %[1]s удалил пост %[2" +
+	"]s из группы %[3]s\x02:cop: Модератор %[1]s удалил пост %[2]s из группы " +
+	"%[3]s \x22%[4]s\x22:\x02:tada: По вашему приглашению зарегистрировался н" +
+	"овый пользователь FreeFeed — %[1]s!\x02:alien: Неизвестный тип события:" +
+	" %[1]v"
 
-	// Total table size 11876 bytes (11KiB); checksum: 29EDF678
+	// Total table size 11894 bytes (11KiB); checksum: 33A8C340

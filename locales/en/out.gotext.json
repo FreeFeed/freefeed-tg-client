@@ -1173,18 +1173,25 @@
             "fuzzy": true
         },
         {
-            "id": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
-            "message": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
-            "translation": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
+            "id": "group admin",
+            "message": "group admin",
+            "translation": "group admin",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {CreatedUserStr} has deleted your comment to the \"{Digest}\":",
+            "message": ":cop: {CreatedUserStr} has deleted your comment to the \"{Digest}\":",
+            "translation": ":cop: {CreatedUserStr} has deleted your comment to the \"{Digest}\":",
             "translatorComment": "Copied from source.",
             "placeholders": [
                 {
-                    "id": "CreatedUser",
+                    "id": "CreatedUserStr",
                     "string": "%[1]s",
-                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "type": "string",
+                    "underlyingType": "string",
                     "argNum": 1,
-                    "expr": "event.CreatedUser"
+                    "expr": "createdUserStr"
                 },
                 {
                     "id": "Digest",
@@ -1198,18 +1205,18 @@
             "fuzzy": true
         },
         {
-            "id": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
-            "message": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
-            "translation": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "id": ":cop: {CreatedUserStr} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUserStr} has deleted your comment to the post in {Group} \"{Digest}\":",
+            "translation": ":cop: {CreatedUserStr} has deleted your comment to the post in {Group} \"{Digest}\":",
             "translatorComment": "Copied from source.",
             "placeholders": [
                 {
-                    "id": "CreatedUser",
+                    "id": "CreatedUserStr",
                     "string": "%[1]s",
-                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "type": "string",
+                    "underlyingType": "string",
                     "argNum": 1,
-                    "expr": "event.CreatedUser"
+                    "expr": "createdUserStr"
                 },
                 {
                     "id": "Group",
@@ -1272,18 +1279,18 @@
             "fuzzy": true
         },
         {
-            "id": ":cop: {CreatedUser} has removed your post from the group {Group}",
-            "message": ":cop: {CreatedUser} has removed your post from the group {Group}",
-            "translation": ":cop: {CreatedUser} has removed your post from the group {Group}",
+            "id": ":cop: {CreatedUserStr} has removed your post from the group {Group}",
+            "message": ":cop: {CreatedUserStr} has removed your post from the group {Group}",
+            "translation": ":cop: {CreatedUserStr} has removed your post from the group {Group}",
             "translatorComment": "Copied from source.",
             "placeholders": [
                 {
-                    "id": "CreatedUser",
+                    "id": "CreatedUserStr",
                     "string": "%[1]s",
-                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "type": "string",
+                    "underlyingType": "string",
                     "argNum": 1,
-                    "expr": "event.CreatedUser"
+                    "expr": "createdUserStr"
                 },
                 {
                     "id": "Group",
@@ -1297,18 +1304,18 @@
             "fuzzy": true
         },
         {
-            "id": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
-            "message": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
-            "translation": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
+            "id": ":cop: {CreatedUserStr} has removed your post from the group {Group} \"{Digest}\":",
+            "message": ":cop: {CreatedUserStr} has removed your post from the group {Group} \"{Digest}\":",
+            "translation": ":cop: {CreatedUserStr} has removed your post from the group {Group} \"{Digest}\":",
             "translatorComment": "Copied from source.",
             "placeholders": [
                 {
-                    "id": "CreatedUser",
+                    "id": "CreatedUserStr",
                     "string": "%[1]s",
-                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
-                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "type": "string",
+                    "underlyingType": "string",
                     "argNum": 1,
-                    "expr": "event.CreatedUser"
+                    "expr": "createdUserStr"
                 },
                 {
                     "id": "Group",

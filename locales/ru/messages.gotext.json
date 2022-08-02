@@ -947,17 +947,22 @@
           ]
       },
       {
-          "id": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
-          "message": ":cop: {CreatedUser} has deleted your comment to the \"{Digest}\":",
-          "translation": ":cop: Ваш комментарий был удалён {CreatedUser}. Пост \"{Digest}\":",
+        "id": "group admin",
+        "message": "group admin",
+        "translation": "администратором группы"
+      },
+      {
+          "id": ":cop: {CreatedUserStr} has deleted your comment to the \"{Digest}\":",
+          "message": ":cop: {CreatedUserStr} has deleted your comment to the \"{Digest}\":",
+          "translation": ":cop: Ваш комментарий был удалён {CreatedUserStr}. Пост \"{Digest}\":",
           "placeholders": [
               {
-                  "id": "CreatedUser",
+                  "id": "CreatedUserStr",
                   "string": "%[1]s",
-                  "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                  "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                  "type": "string",
+                  "underlyingType": "string",
                   "argNum": 1,
-                  "expr": "event.CreatedUser"
+                  "expr": "createdUserStr"
               },
               {
                   "id": "Digest",
@@ -970,17 +975,17 @@
           ]
       },
       {
-          "id": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
-          "message": ":cop: {CreatedUser} has deleted your comment to the post in {Group} \"{Digest}\":",
-          "translation": ":cop: Ваш комментарий в группе {Group} был удалён {CreatedUser}. Пост \"{Digest}\":",
+          "id": ":cop: {CreatedUserStr} has deleted your comment to the post in {Group} \"{Digest}\":",
+          "message": ":cop: {CreatedUserStr} has deleted your comment to the post in {Group} \"{Digest}\":",
+          "translation": ":cop: Ваш комментарий в группе {Group} был удалён {CreatedUserStr}. Пост \"{Digest}\":",
           "placeholders": [
               {
-                  "id": "CreatedUser",
-                  "string": "%[1]s",
-                  "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                  "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                  "argNum": 1,
-                  "expr": "event.CreatedUser"
+                "id": "CreatedUserStr",
+                "string": "%[1]s",
+                "type": "string",
+                "underlyingType": "string",
+                "argNum": 1,
+                "expr": "createdUserStr"
               },
               {
                   "id": "Group",
@@ -1040,17 +1045,17 @@
           ]
       },
       {
-          "id": ":cop: {CreatedUser} has removed your post from the group {Group}",
-          "message": ":cop: {CreatedUser} has removed your post from the group {Group}",
-          "translation": ":cop: Ваш пост в группе {Group} был удалён модератором {CreatedUser}",
+          "id": ":cop: {CreatedUserStr} has removed your post from the group {Group}",
+          "message": ":cop: {CreatedUserStr} has removed your post from the group {Group}",
+          "translation": ":cop: Ваш пост в группе {Group} был удалён {CreatedUserStr}",
           "placeholders": [
               {
-                  "id": "CreatedUser",
+                  "id": "CreatedUserStr",
                   "string": "%[1]s",
-                  "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                  "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                  "type": "string",
+                  "underlyingType": "string",
                   "argNum": 1,
-                  "expr": "event.CreatedUser"
+                  "expr": "createdUserStr"
               },
               {
                   "id": "Group",
@@ -1063,17 +1068,17 @@
           ]
       },
       {
-          "id": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
-          "message": ":cop: {CreatedUser} has removed your post from the group {Group} \"{Digest}\":",
-          "translation": ":cop: Ваш пост был удалён из группы {Group} модератором {CreatedUser}. \"{Digest}\":",
+          "id": ":cop: {CreatedUserStr} has removed your post from the group {Group} \"{Digest}\":",
+          "message": ":cop: {CreatedUserStr} has removed your post from the group {Group} \"{Digest}\":",
+          "translation": ":cop: Ваш пост был удалён из группы {Group} {CreatedUserStr}. \"{Digest}\":",
           "placeholders": [
               {
-                  "id": "CreatedUser",
+                  "id": "CreatedUserStr",
                   "string": "%[1]s",
-                  "type": "*github.com/davidmz/freefeed-tg-client/frf.User",
-                  "underlyingType": "*github.com/davidmz/freefeed-tg-client/frf.User",
+                  "type": "string",
+                  "underlyingType": "string",
                   "argNum": 1,
-                  "expr": "event.CreatedUser"
+                  "expr": "createdUserStr"
               },
               {
                   "id": "Group",
