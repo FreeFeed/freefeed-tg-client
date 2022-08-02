@@ -1411,6 +1411,86 @@
             "fuzzy": true
         },
         {
+            "id": "Group admin",
+            "message": "Group admin",
+            "translation": "Group admin",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "you",
+            "message": "you",
+            "translation": "you",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {Who} blocked {Whom} in group {Group}",
+            "message": ":cop: {Who} blocked {Whom} in group {Group}",
+            "translation": ":cop: {Who} blocked {Whom} in group {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Who",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "who"
+                },
+                {
+                    "id": "Whom",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "whom"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": ":cop: {Who} unblocked {Whom} in group {Group}",
+            "message": ":cop: {Who} unblocked {Whom} in group {Group}",
+            "translation": ":cop: {Who} unblocked {Whom} in group {Group}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Who",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "who"
+                },
+                {
+                    "id": "Whom",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "whom"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
             "id": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
             "message": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
             "translation": ":tada: {CreatedUser} has joined FreeFeed using your invitation",

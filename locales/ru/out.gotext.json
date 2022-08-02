@@ -1247,6 +1247,78 @@
             ]
         },
         {
+            "id": "Group admin",
+            "message": "Group admin",
+            "translation": "Администратор группы"
+        },
+        {
+            "id": "you",
+            "message": "you",
+            "translation": "вас"
+        },
+        {
+            "id": ":cop: {Who} blocked {Whom} in group {Group}",
+            "message": ":cop: {Who} blocked {Whom} in group {Group}",
+            "translation": ":cop: {Who} заблокировал {Whom} в группе {Group}",
+            "placeholders": [
+                {
+                    "id": "Who",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "who"
+                },
+                {
+                    "id": "Whom",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "whom"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
+            "id": ":cop: {Who} unblocked {Whom} in group {Group}",
+            "message": ":cop: {Who} unblocked {Whom} in group {Group}",
+            "translation": ":cop: {Who} разблокировал {Whom} в группе {Group}",
+            "placeholders": [
+                {
+                    "id": "Who",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "who"
+                },
+                {
+                    "id": "Whom",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "whom"
+                },
+                {
+                    "id": "Group",
+                    "string": "%[3]s",
+                    "type": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "underlyingType": "*github.com/FreeFeed/freefeed-tg-client/frf.User",
+                    "argNum": 3,
+                    "expr": "event.Group"
+                }
+            ]
+        },
+        {
             "id": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
             "message": ":tada: {CreatedUser} has joined FreeFeed using your invitation",
             "translation": ":tada: По вашему приглашению зарегистрировался новый пользователь FreeFeed — {CreatedUser}!",

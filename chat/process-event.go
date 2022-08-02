@@ -404,6 +404,34 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 
 		return msg
 
+	case "blocked_in_group":
+		who := p.Sprintf("Group admin")
+		if event.CreatedUser != nil {
+			who = event.CreatedUser.String()
+		}
+		whom := p.Sprintf("you")
+		if event.AffectedUser.ID != c.State.UserID {
+			who = event.AffectedUser.String()
+		}
+		text := p.Sprintf(
+			":cop: %s blocked %s in group %s",
+			who, whom, event.Group)
+		return c.newHTMLMessage(text)
+
+	case "unblocked_in_group":
+		who := p.Sprintf("Group admin")
+		if event.CreatedUser != nil {
+			who = event.CreatedUser.String()
+		}
+		whom := p.Sprintf("you")
+		if event.AffectedUser.ID != c.State.UserID {
+			who = event.AffectedUser.String()
+		}
+		text := p.Sprintf(
+			":cop: %s unblocked %s in group %s",
+			who, whom, event.Group)
+		return c.newHTMLMessage(text)
+
 	// ===========================
 	// Misc
 	// ===========================
