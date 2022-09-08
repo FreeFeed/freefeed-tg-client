@@ -6,8 +6,8 @@ import (
 
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	tg "github.com/davidmz/telegram-bot-api"
-	"github.com/dgrijalva/jwt-go"
 	"github.com/gofrs/uuid"
+	"github.com/golang-jwt/jwt/v4"
 	"golang.org/x/text/message"
 )
 
@@ -21,7 +21,7 @@ func (c *Chat) handleMessage(update tg.Update) {
 
 	if c.State.Expectation == store.ExpectAuthToken {
 		token := msg.Text
-		_, _, err := new(jwt.Parser).ParseUnverified(token, new(jwt.StandardClaims))
+		_, _, err := new(jwt.Parser).ParseUnverified(token, new(jwt.RegisteredClaims))
 		if err != nil {
 			c.debugLog().Printf("invalid token: %v", err)
 			c.ShouldSend(c.newHTMLMessage(p.Sprintf("Looks like this token isn't valid.")))
