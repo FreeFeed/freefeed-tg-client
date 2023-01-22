@@ -10,21 +10,6 @@ import (
 	"golang.org/x/text/message"
 )
 
-var mutedEvents = []string{
-	"banned_user",
-	"unbanned_user",
-	"group_created",
-}
-
-func isMutedEvent(event *frf.Event) bool {
-	for _, m := range mutedEvents {
-		if m == event.Type {
-			return true
-		}
-	}
-	return false
-}
-
 func (c *Chat) ProcessEvents(events []*frf.Event) {
 	c.debugLog().Printf("Start ProcessEvents for %d events", len(events))
 	defer c.debugLog().Printf("Finish ProcessEvents for %d events", len(events))
@@ -35,11 +20,6 @@ func (c *Chat) ProcessEvents(events []*frf.Event) {
 
 	for _, event := range events {
 		c.debugLog().Printf("ProcessEvents for %s", event.Type)
-		if isMutedEvent(event) {
-			c.debugLog().Printf("Event %s is muted", event.Type)
-			continue
-		}
-
 		if isPaused {
 			c.debugLog().Printf("Paused, adding %s to event queue", event.Type)
 			data, _ := c.Should(json.Marshal(event))
@@ -54,6 +34,12 @@ func (c *Chat) ProcessEvents(events []*frf.Event) {
 func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 	c.debugLog().Println("Start renderEvent for", event.Type)
 	defer c.debugLog().Println("Finish renderEvent for", event.Type)
+
+	if event.CreatedUser.ID == c.State.UserID {
+		// We initiated the event ourselves
+		c.debugLog().Printf("Event %s is from myself", event.Type)
+		return nil
+	}
 
 	p := message.NewPrinter(c.State.Language)
 	event.LoadPost(c.frfAPI())
@@ -187,10 +173,6 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
 
 	case "direct_left":
-		if event.CreatedUser.ID == c.State.UserID {
-			// Our action
-			return nil
-		}
 		headText := p.Sprintf(
 			":door: %s left the direct message \"%s\":",
 			event.CreatedUser,
@@ -219,10 +201,6 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 	case "__comment:new":
 		if event.CreatedUser == nil {
 			// Hidden comment, don't do anything
-			return nil
-		}
-		if event.CreatedUser.ID == c.State.UserID {
-			// Comment from ourselves
 			return nil
 		}
 		headText := p.Sprintf(
@@ -286,34 +264,18 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		// Group moderation
 		// ===========================
 	case "group_admin_promoted":
-		if event.CreatedUser.ID == c.State.UserID {
-			// We initiated the event ourselves
-			return nil
-		}
 		text := p.Sprintf(`:plus: %s promoted %s to admin in the group %s`,
 			event.CreatedUser, event.AffectedUser, event.Group)
 		return c.newHTMLMessage(text)
 	case "group_admin_demoted":
-		if event.CreatedUser.ID == c.State.UserID {
-			// We initiated the event ourselves
-			return nil
-		}
 		text := p.Sprintf(`:minus: %s revoked admin privileges from %s in the group %s`,
 			event.CreatedUser, event.AffectedUser, event.Group)
 		return c.newHTMLMessage(text)
 	case "managed_group_subscription_approved":
-		if event.CreatedUser.ID == c.State.UserID {
-			// We initiated the event ourselves
-			return nil
-		}
 		text := p.Sprintf(`:plus: %s request to join %s was approved by %s`,
 			event.AffectedUser, event.Group, event.CreatedUser)
 		return c.newHTMLMessage(text)
 	case "managed_group_subscription_rejected":
-		if event.CreatedUser.ID == c.State.UserID {
-			// We initiated the event ourselves
-			return nil
-		}
 		text := p.Sprintf(`:minus: %s request to join %s was rejected by %s`,
 			event.AffectedUser, event.Group, event.CreatedUser)
 		return c.newHTMLMessage(text)
