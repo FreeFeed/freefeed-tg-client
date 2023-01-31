@@ -35,7 +35,7 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 	c.debugLog().Println("Start renderEvent for", event.Type)
 	defer c.debugLog().Println("Finish renderEvent for", event.Type)
 
-	if event.CreatedUser.ID == c.State.UserID {
+	if event.CreatedUserID == c.State.UserID {
 		// We initiated the event ourselves
 		c.debugLog().Printf("Event %s is from myself", event.Type)
 		return nil
