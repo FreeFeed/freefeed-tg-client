@@ -132,13 +132,23 @@ func (c *Chat) postIDFromURL(text string) uuid.UUID {
 	var postRe = regexp.MustCompile(
 		`^https://` + regexp.QuoteMeta(c.App.FreeFeedAPI().HostName) +
 			`/[a-z0-9]+(?:-[a-z0-9]+)*/` +
-			`([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})` +
+			`([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}|[a-f\d]{6,10})` +
 			`$`,
 	)
 	parts := postRe.FindStringSubmatch(strings.TrimSpace(text))
 	if parts == nil {
 		return uuid.Nil
 	}
-	postID, _ := uuid.FromString(parts[1])
+
+	idString := parts[1]
+
+	postID, err := uuid.FromString(idString)
+	if err != nil {
+		// Short ID
+		postID, err = c.frfAPI().GetPostID(idString)
+		if err != nil {
+			return uuid.Nil
+		}
+	}
 	return postID
 }

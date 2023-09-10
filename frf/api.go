@@ -81,6 +81,12 @@ func (a *API) GetPost(postID uuid.UUID) (*Post, error) {
 	return &resp.Posts.Post, err
 }
 
+func (a *API) GetPostID(shortID string) (uuid.UUID, error) {
+	resp := &struct{ Posts struct{ Post } }{}
+	err := a.request("GET", "/v2/posts/"+shortID, nil, resp)
+	return resp.Posts.Post.ID, err
+}
+
 func (a *API) AcceptSubscriptionRequest(userName string) error {
 	return a.request("POST", "/v1/users/acceptRequest/"+userName, &struct{}{}, nil)
 }
