@@ -102,6 +102,14 @@ func (a *API) RejectGroupSubscriptionRequest(userName string, groupName string) 
 	return a.request("POST", "/v1/groups/"+groupName+"/rejectRequest/"+userName, &struct{}{}, nil)
 }
 
+func (a *API) LikeComment(commentId uuid.UUID) error {
+	return a.request("POST", "/v2/comments/"+commentId.String()+"/like", &struct{}{}, nil)
+}
+
+func (a *API) UnlikeComment(commentId uuid.UUID) error {
+	return a.request("POST", "/v2/comments/"+commentId.String()+"/unlike", &struct{}{}, nil)
+}
+
 func (a *API) AddComment(postID uuid.UUID, text string) (*Comment, error) {
 	resp := &struct {
 		Comment *Comment `json:"comments"`

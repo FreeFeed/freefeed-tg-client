@@ -39,13 +39,10 @@ func (c *Chat) postButtons(event *frf.Event) tg.InlineKeyboardMarkup {
 			doReplyAt,
 		),
 		postLinkBtn,
-	}
-
-	if !event.Post.IsDirect() {
-		row = append(row, tg.NewInlineKeyboardButtonData(
+		tg.NewInlineKeyboardButtonData(
 			emoji.Parse(p.Sprintf("More\u2026")),
 			doPostMore,
-		))
+		),
 	}
 
 	return tg.NewInlineKeyboardMarkup(row)
@@ -61,7 +58,21 @@ func (c *Chat) postButtonsMore(event *frf.Event) tg.InlineKeyboardMarkup {
 		),
 	}
 
-	if event.Post != nil && !event.Post.IsDirect() {
+	if event.Comment != nil {
+		if event.Comment.HasOwnLike {
+			row = append(row, tg.NewInlineKeyboardButtonData(
+				emoji.Parse(p.Sprintf(":broken_heart: Unlike")),
+				doUnlikeComment,
+			))
+		} else {
+			row = append(row, tg.NewInlineKeyboardButtonData(
+				emoji.Parse(p.Sprintf(":heart: Like")),
+				doLikeComment,
+			))
+		}
+	}
+
+	if event.Post != nil {
 		ok, err := c.Should(c.App.IsPostTracked(c.ID, event.PostID))
 		if err == nil {
 			if ok.(bool) {

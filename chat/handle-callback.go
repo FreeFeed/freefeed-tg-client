@@ -150,6 +150,26 @@ func (c *Chat) handleCallback(update tg.Update) {
 			msg := tg.NewEditMessageReplyMarkup(c.ID, msg.MessageID, c.postButtonsMore(event))
 			c.ShouldSend(msg)
 
+		} else if cbData == doLikeComment || cbData == doUnlikeComment {
+			var err error
+			if cbData == doLikeComment {
+				err = c.frfAPI().LikeComment(event.CommentID)
+			} else {
+				err = c.frfAPI().UnlikeComment(event.CommentID)
+			}
+			if err != nil {
+				c.ShouldAnswer(tg.CallbackConfig{
+					CallbackQueryID: cbQuery.ID,
+					Text:            emoji.Parse(p.Sprintf(":warning: FreeFeed error: %v", err)),
+				})
+				return
+			}
+
+			event.Comment.HasOwnLike = (cbData == doLikeComment)
+
+			msg := tg.NewEditMessageReplyMarkup(c.ID, msg.MessageID, c.postButtonsMore(event))
+			c.ShouldSend(msg)
+
 		} else {
 			c.ShouldAnswer(tg.CallbackConfig{
 				CallbackQueryID: cbQuery.ID,

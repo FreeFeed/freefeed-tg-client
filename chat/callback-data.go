@@ -11,6 +11,8 @@ const (
 	doPostBack      = "e:postBack"
 	doTrackPost     = "e:trackPost"
 	doUntrackPost   = "e:untrackPost"
+	doLikeComment   = "e:likeComment"
+	doUnlikeComment = "e:unlikeComment"
 
 	doTrackPostByURL   = "trackPostByURL"
 	doUntrackPostByURL = "untrackPostByURL"

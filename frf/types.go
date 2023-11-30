@@ -44,7 +44,8 @@ type Event struct {
 	CreatedUser  *User
 	Group        *User
 	PostAuthor   *User
-	Post         *Post `json:"-"`
+	Post         *Post    `json:"-"`
+	Comment      *Comment `json:"-"`
 }
 
 func (e *Event) LoadPost(api *API) error {
@@ -60,6 +61,16 @@ func (e *Event) LoadPost(api *API) error {
 	if err != nil {
 		return fmt.Errorf("cannot load post: %w", err)
 	}
+
+	if e.CommentID != uuid.Nil {
+		for _, c := range e.Post.Comments {
+			if c.ID == e.CommentID {
+				e.Comment = &c
+				break
+			}
+		}
+	}
+
 	return nil
 }
 
@@ -70,15 +81,17 @@ type Feed struct {
 }
 
 type Post struct {
-	ID         uuid.UUID
-	Body       string
-	Recipients []Feed
-	Comments   []Comment `json:"-"`
+	ID                  uuid.UUID
+	Body                string
+	Recipients          []Feed
+	NotifyOfAllComments bool
+	Comments            []Comment `json:"-"`
 }
 
 type Comment struct {
-	ID   uuid.UUID
-	Body string
+	ID         uuid.UUID
+	Body       string
+	HasOwnLike bool
 }
 
 func (p *Post) InNamedFeedOf(name string, ownerID uuid.UUID) bool {
