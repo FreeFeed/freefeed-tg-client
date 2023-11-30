@@ -3,11 +3,10 @@ package store
 import (
 	"encoding/json"
 	"errors"
-	"io/ioutil"
 	"os"
 	"path"
 
-	"github.com/davidmz/mustbe"
+	"github.com/davidmz/go-try"
 )
 
 var errSkipUpdate = errors.New("skip update")
@@ -23,7 +22,7 @@ func mustExists(cfg *optCfg) { cfg.MustExists = true }
 func deleteFile(cfg *optCfg) { cfg.DeleteFile = true }
 
 func (s *fsStore) loadData(chatID tKey, baseName string, result interface{}, options ...option) (outErr error) {
-	defer mustbe.CatchedAs(&outErr)
+	defer try.HandleAs(&outErr)
 
 	cfg := new(optCfg)
 	for _, opt := range options {
@@ -37,44 +36,44 @@ func (s *fsStore) loadData(chatID tKey, baseName string, result interface{}, opt
 
 	filePath := path.Join(s.stateDirPath(chatID), baseName)
 
-	data, err := ioutil.ReadFile(filePath)
+	data, err := os.ReadFile(filePath)
 	if errors.Is(err, os.ErrNotExist) {
 		if cfg.MustExists {
-			mustbe.Thrown(ErrNotFound)
+			try.Throw(ErrNotFound)
 		} else {
 			return
 		}
 	} else {
-		mustbe.Thrown(err)
+		try.Throw(err)
 	}
 
-	mustbe.OK(json.Unmarshal(data, result))
+	try.It(json.Unmarshal(data, result))
 	if cfg.DeleteFile {
-		mustbe.OK(os.Remove(filePath))
+		try.It(os.Remove(filePath))
 	}
 
 	return
 }
 
 func (s *fsStore) saveData(chatID tKey, baseName string, content interface{}) (err error) {
-	defer mustbe.CatchedAs(&err)
+	defer try.HandleAs(&err)
 
 	lk, release := s.fileLock(chatID)
 	defer release()
 	lk.Lock()
 	defer lk.Unlock()
 
-	data := mustbe.OKVal(json.Marshal(content)).([]byte)
-	mustbe.OK(os.MkdirAll(s.stateDirPath(chatID), dirsPerm))
+	data := try.ItVal(json.Marshal(content))
+	try.It(os.MkdirAll(s.stateDirPath(chatID), dirsPerm))
 
 	filePath := path.Join(s.stateDirPath(chatID), baseName)
-	mustbe.OK(ioutil.WriteFile(filePath, data, filesPerm))
+	try.It(os.WriteFile(filePath, data, filesPerm))
 
 	return
 }
 
 func (s *fsStore) updateData(chatID tKey, baseName string, result interface{}, processor func() error, options ...option) (outErr error) {
-	defer mustbe.CatchedAs(&outErr)
+	defer try.HandleAs(&outErr)
 
 	cfg := new(optCfg)
 	for _, opt := range options {
@@ -88,29 +87,31 @@ func (s *fsStore) updateData(chatID tKey, baseName string, result interface{}, p
 
 	filePath := path.Join(s.stateDirPath(chatID), baseName)
 
-	data, err := ioutil.ReadFile(filePath)
+	data, err := os.ReadFile(filePath)
 	if errors.Is(err, os.ErrNotExist) {
 		if cfg.MustExists {
-			mustbe.Thrown(ErrNotFound)
+			try.Throw(ErrNotFound)
 		} else {
 			data = nil
 		}
 	} else {
-		mustbe.Thrown(err)
+		try.Throw(err)
 	}
 
 	if data != nil {
-		mustbe.OK(json.Unmarshal(data, result))
+		try.It(json.Unmarshal(data, result))
 	}
 
-	if mustbe.OKOr(processor(), errSkipUpdate) != nil {
+	if err = processor(); err == errSkipUpdate {
 		return
+	} else {
+		try.Throw(err)
 	}
 
-	data = mustbe.OKVal(json.Marshal(result)).([]byte)
+	data = try.ItVal(json.Marshal(result))
 
-	mustbe.OK(os.MkdirAll(s.stateDirPath(chatID), dirsPerm))
-	mustbe.OK(ioutil.WriteFile(filePath, data, filesPerm))
+	try.It(os.MkdirAll(s.stateDirPath(chatID), dirsPerm))
+	try.It(os.WriteFile(filePath, data, filesPerm))
 
 	return
 }

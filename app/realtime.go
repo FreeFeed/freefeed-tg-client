@@ -7,9 +7,8 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/chat"
 	"github.com/FreeFeed/freefeed-tg-client/frf"
 	"github.com/FreeFeed/freefeed-tg-client/socketio"
-	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/FreeFeed/freefeed-tg-client/types"
-	"github.com/davidmz/mustbe"
+	"github.com/davidmz/go-try"
 	"github.com/gofrs/uuid"
 )
 
@@ -69,32 +68,32 @@ func (a *App) onRTConnect(chatID types.TgChatID, rt *socketio.Connection) {
 
 	logger := a.DebugLogger.Fork(fmt.Sprintf("tg-client:rt:%d", chatID))
 
-	defer mustbe.Catched(func(err error) {
+	defer try.Handle(func(err error) {
 		logger.Println("Cannot process connect:", err)
 	})
 
 	logger.Println("RT Connected!")
 	defer logger.Println("Finish connect procedure")
 
-	state := mustbe.OKVal(a.Store.LoadState(chatID)).(*store.State)
+	state := try.ItVal(a.Store.LoadState(chatID))
 
 	// Authorize connection
-	reply := mustbe.OKVal(rt.Send("auth", authTokenPayload{state.AccessToken})).([]byte)
+	reply := try.ItVal(rt.Send("auth", authTokenPayload{state.AccessToken}))
 	logger.Println("Auth reply:", string(reply))
 
-	tracked := mustbe.OKVal(a.TrackedEntities(chatID)).(store.TrackedEntities)
-	reply = mustbe.OKVal(rt.Send(
+	tracked := try.ItVal(a.TrackedEntities(chatID))
+	reply = try.ItVal(rt.Send(
 		"subscribe",
 		types.UserSubsPayload{
 			UserIDs: []uuid.UUID{state.UserID},
 			PostIDs: tracked.PostIDs,
 		},
-	)).([]byte)
+	))
 	logger.Println("Subscribe reply:", string(reply))
 }
 
 func (a *App) onRTMessage(chatID types.TgChatID, msg socketio.IncomingMessage) {
-	defer mustbe.Catched(func(err error) {
+	defer try.Handle(func(err error) {
 		a.ErrorLogger.Printf("Cannot process message [%d]: %v", chatID, err)
 	})
 
@@ -104,10 +103,10 @@ func (a *App) onRTMessage(chatID types.TgChatID, msg socketio.IncomingMessage) {
 	var events frf.Events
 
 	if msg.Type == "event:new" {
-		mustbe.OK(json.Unmarshal(msg.Payload, &events))
+		try.It(json.Unmarshal(msg.Payload, &events))
 	} else if msg.Type == "comment:new" {
 		var cEvent frf.NewCommentEvent
-		mustbe.OK(json.Unmarshal(msg.Payload, &cEvent))
+		try.It(json.Unmarshal(msg.Payload, &cEvent))
 
 		// Make a fake event
 		event := &frf.Event{
@@ -131,7 +130,7 @@ func (a *App) onRTMessage(chatID types.TgChatID, msg socketio.IncomingMessage) {
 		return
 	}
 
-	ch := mustbe.OKVal(chat.New(chatID, a)).(*chat.Chat)
+	ch := try.ItVal(chat.New(chatID, a))
 	ch.ProcessEvents(events)
 }
 

@@ -3,7 +3,7 @@ package frf
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"regexp"
 	"strings"
@@ -141,7 +141,7 @@ func errorFromResponse(resp *http.Response) error {
 		return nil
 	}
 	er := &Error{}
-	data, _ := ioutil.ReadAll(resp.Body)
+	data, _ := io.ReadAll(resp.Body)
 	_ = json.Unmarshal(data, er)
 	er.HTTPStatus = resp.Status
 	er.HTTPStatusCode = resp.StatusCode

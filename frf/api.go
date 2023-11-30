@@ -5,11 +5,10 @@ import (
 	"context"
 	"encoding/json"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"time"
 
-	"github.com/davidmz/mustbe"
+	"github.com/davidmz/go-try"
 	"github.com/gofrs/uuid"
 )
 
@@ -114,20 +113,20 @@ func (a *API) AddComment(postID uuid.UUID, text string) (*Comment, error) {
 ////
 
 func (a *API) request(method string, uri string, reqObj interface{}, respObj interface{}) (err error) {
-	defer mustbe.CatchedAs(&err)
+	defer try.HandleAs(&err)
 
 	url := "https://" + a.HostName + uri
 
 	var body io.Reader
 	if reqObj != nil {
-		bodyBytes := mustbe.OKVal(json.Marshal(reqObj)).([]byte)
+		bodyBytes := try.ItVal(json.Marshal(reqObj))
 		body = bytes.NewBuffer(bodyBytes)
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), APITimeout)
 	defer cancel()
 
-	req := mustbe.OKVal(http.NewRequestWithContext(ctx, method, url, body)).(*http.Request)
+	req := try.ItVal(http.NewRequestWithContext(ctx, method, url, body))
 
 	if a.AccessToken != "" {
 		req.Header.Add("Authorization", "Bearer "+a.AccessToken)
@@ -139,16 +138,16 @@ func (a *API) request(method string, uri string, reqObj interface{}, respObj int
 		req.Header.Set("User-Agent", a.UserAgent)
 	}
 
-	resp := mustbe.OKVal(http.DefaultClient.Do(req)).(*http.Response)
+	resp := try.ItVal(http.DefaultClient.Do(req))
 	defer resp.Body.Close()
 
-	mustbe.OK(errorFromResponse(resp))
+	try.It(errorFromResponse(resp))
 
 	if respObj != nil {
-		data := mustbe.OKVal(ioutil.ReadAll(resp.Body)).([]byte)
-		mustbe.OK(json.Unmarshal(data, respObj))
+		data := try.ItVal(io.ReadAll(resp.Body))
+		try.It(json.Unmarshal(data, respObj))
 	} else {
-		mustbe.OKVal(io.Copy(ioutil.Discard, resp.Body))
+		try.ItVal(io.Copy(io.Discard, resp.Body))
 	}
 
 	return

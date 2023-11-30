@@ -6,8 +6,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davidmz/debug-log v1.2.0 h1:7dYMJ2oLGjLXTg/wD9UpG1Ae3BPlEHZrt4F+jlqqxj4=
 github.com/davidmz/debug-log v1.2.0/go.mod h1:dhNuGbwoCq6gVfwrt+/TlKs7YQMJdAyrdlmX/0YXwj4=
-github.com/davidmz/mustbe v1.4.0 h1:YBexmMbLbUcwnc7H1ASYBHVCY7lA/74GXUHG35Uk5ZE=
-github.com/davidmz/mustbe v1.4.0/go.mod h1:+zNvMFne01WqepO1inYPwM8OackFRjH6/yuDll/IQJM=
+github.com/davidmz/go-try v0.1.5 h1:tylL42whKswcvmG9M4uM2DVRN0YJLAxP4nRylDtfN0M=
+github.com/davidmz/go-try v0.1.5/go.mod h1:OOEBam4PN+vojywL/ZkHo0q4AoQsLeOtTgt7GDS0wYs=
 github.com/davidmz/sliceutil v1.2.0 h1:rLTP0kJf7jxYkDB2qsblRM0AZzakTEALnkyQbit1dYs=
 github.com/davidmz/sliceutil v1.2.0/go.mod h1:7UYHGgafAEi0muw1W0UGRzfG0To64rJAzXFHTMkM8zk=
 github.com/davidmz/telegram-bot-api v5.0.2-fork+incompatible h1:ludjXgKEbl4JkaWPDsZ6zbQPYi3PJvpQa7yWdz+QpJ4=

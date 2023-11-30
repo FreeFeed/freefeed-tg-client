@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/bluele/gcache v0.0.2
 	github.com/davidmz/debug-log v1.2.0
-	github.com/davidmz/mustbe v1.4.0
+	github.com/davidmz/go-try v0.1.5
 	github.com/davidmz/sliceutil v1.2.0
 	github.com/davidmz/telegram-bot-api v5.0.2-fork+incompatible
 	github.com/enescakir/emoji v1.0.0

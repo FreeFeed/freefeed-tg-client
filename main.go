@@ -16,7 +16,7 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/app"
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/davidmz/debug-log"
-	"github.com/davidmz/mustbe"
+	"github.com/davidmz/go-try"
 	tgbotapi "github.com/davidmz/telegram-bot-api"
 )
 
@@ -25,7 +25,7 @@ const (
 )
 
 func main() {
-	defer mustbe.Catched(func(err error) { log.Fatalln("Fatal error:", err) })
+	defer try.Handle(func(err error) { log.Fatalln("Fatal error:", err) })
 
 	var (
 		tgToken      string
@@ -60,7 +60,7 @@ func main() {
 	}
 
 	if tgToken == "" && tgTokenFile != "" {
-		tokenData := mustbe.OKVal(os.ReadFile(tgTokenFile)).([]byte)
+		tokenData := try.ItVal(os.ReadFile(tgTokenFile))
 		tgToken = strings.TrimSpace(string(tokenData))
 	}
 
@@ -71,7 +71,7 @@ func main() {
 	debugLogger.Println("Starting BotAPI")
 	tgBot, err := tgbotapi.NewBotAPI(tgToken)
 	if err != nil {
-		mustbe.Thrown(fmt.Errorf("cannot start BotAPI: %w", err))
+		try.Throw(fmt.Errorf("cannot start BotAPI: %w", err))
 	}
 
 	debugLogger.Printf("Bot authorized on account %s", tgBot.Self.UserName)

@@ -2,7 +2,6 @@ package store_test
 
 import (
 	"encoding/json"
-	"io/ioutil"
 	"os"
 	"testing"
 
@@ -25,7 +24,7 @@ type StoreTestSite struct {
 
 func (s *StoreTestSite) SetupTest() {
 	var err error
-	s.dir, err = ioutil.TempDir("", "test")
+	s.dir, err = os.MkdirTemp("", "test")
 	s.NoError(err)
 	s.store = store.NewFsStore(s.dir, store.FsMaxSentRecords(maxSentRecords))
 	s.NotNil(s.store)
