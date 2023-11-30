@@ -3,7 +3,7 @@
 
 # BUILDER IMAGE
 ############################
-FROM golang:1.18.5-alpine3.16 AS builder
+FROM golang:1.21-alpine3.18 AS builder
 
 # Git is required for fetching the dependencies
 RUN apk update && apk add --no-cache git
@@ -16,7 +16,7 @@ RUN GOOS=linux go build -ldflags="-w -s" -o freefeed-tg-client
 
 # PRODUCTION IMAGE
 ############################
-FROM alpine:3.16.0
+FROM alpine:3.18
 
 WORKDIR /bot
 
