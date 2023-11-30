@@ -46,7 +46,7 @@ For cross-platform builds, use GOOS and GOARCH [environment variables](https://g
 
 ### Text translation
 
-⚠ For now, this feature only works with Go up to 1.17 ([issue](https://github.com/golang/go/issues/51822)).
+Install _gotext_: `go install golang.org/x/text/cmd/gotext@latest`
 
 Run `go generate`. Manually create the missing entries in `/locales/ru/messages.gotext.json`
 to update text translations. Then run `go generate` again.
