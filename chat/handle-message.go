@@ -1,9 +1,6 @@
 package chat
 
 import (
-	"regexp"
-	"strings"
-
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/gofrs/uuid"
@@ -115,40 +112,6 @@ func (c *Chat) handleMessage(update tg.Update) {
 			}
 		}
 
-		if postID := c.postIDFromURL(msg.Text); postID != uuid.Nil {
-			msg1 := c.newHTMLMessage(p.Sprintf(
-				":thinking: Hmm, looks like a post URL! What do you want to do with it?"))
-			msg1.ReplyToMessageID = msg.MessageID
-			msg1.ReplyMarkup = c.postURLButtons(postID)
-			c.ShouldSend(msg1)
-			return
-		}
-
 		c.ShouldSend(c.newHTMLMessage(p.Sprintf(":shrug: Unknown command")))
 	}
-}
-
-func (c *Chat) postIDFromURL(text string) uuid.UUID {
-	var postRe = regexp.MustCompile(
-		`^https://` + regexp.QuoteMeta(c.App.FreeFeedAPI().HostName) +
-			`/[a-z0-9]+(?:-[a-z0-9]+)*/` +
-			`([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}|[a-f\d]{6,10})` +
-			`$`,
-	)
-	parts := postRe.FindStringSubmatch(strings.TrimSpace(text))
-	if parts == nil {
-		return uuid.Nil
-	}
-
-	idString := parts[1]
-
-	postID, err := uuid.FromString(idString)
-	if err != nil {
-		// Short ID
-		postID, err = c.frfAPI().GetPostID(idString)
-		if err != nil {
-			return uuid.Nil
-		}
-	}
-	return postID
 }

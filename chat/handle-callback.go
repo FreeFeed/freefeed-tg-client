@@ -178,40 +178,6 @@ func (c *Chat) handleCallback(update tg.Update) {
 			})
 		}
 
-	} else if cbData == doTrackPostByURL || cbData == doUntrackPostByURL {
-		var err error
-		msgText := ""
-		if msg.ReplyToMessage != nil {
-			msgText = msg.ReplyToMessage.Text
-		}
-
-		postID := c.postIDFromURL(msgText)
-		if postID != uuid.Nil {
-			err = try.Func(func() {
-				// Turn off legacy post tracking, if necessary
-				if try.ItVal(c.App.IsPostTracked(c.ID, postID)) {
-					try.It(c.App.UntrackPost(c.ID, postID))
-					// RT unsubscribe
-					try.It(c.App.RTSend(c.ID, "unsubscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{postID}}, nil))
-				}
-
-				try.ItVal(c.frfAPI().NotifyOfAllComments(postID, cbData == doTrackPostByURL))
-			})()
-		} else {
-			err = errors.New("cannot find post ID")
-		}
-
-		if err != nil {
-			c.errorLog().Print(err)
-			c.ShouldAnswer(tg.CallbackConfig{
-				CallbackQueryID: cbQuery.ID,
-				Text:            emoji.Parse(p.Sprintf(":warning: Error: %v", err)),
-			})
-			return
-		}
-		msg := tg.NewEditMessageReplyMarkup(c.ID, msg.MessageID, c.postURLButtons(postID))
-		c.ShouldSend(msg)
-
 	} else if cbData == "cancel" {
 		c.State.ClearExpectations()
 		c.saveState()

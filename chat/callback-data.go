@@ -13,9 +13,6 @@ const (
 	doUntrackPost   = "e:untrackPost"
 	doLikeComment   = "e:likeComment"
 	doUnlikeComment = "e:unlikeComment"
-
-	doTrackPostByURL   = "trackPostByURL"
-	doUntrackPostByURL = "untrackPostByURL"
 )
 
 func isEventAction(action string) bool {

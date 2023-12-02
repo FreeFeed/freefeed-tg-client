@@ -121,25 +121,3 @@ func (c *Chat) subscrButtons(event *frf.Event) tg.InlineKeyboardMarkup {
 		),
 	})
 }
-
-func (c *Chat) postURLButtons(postID uuid.UUID) tg.InlineKeyboardMarkup {
-	p := message.NewPrinter(c.State.Language)
-
-	row := []tg.InlineKeyboardButton{}
-
-	if ok, err := c.Should(c.App.IsPostTracked(c.ID, postID)); err == nil {
-		if ok.(bool) {
-			row = append(row, tg.NewInlineKeyboardButtonData(
-				emoji.Parse(p.Sprintf(":no_bell: Unsubscribe from comments")),
-				doUntrackPostByURL,
-			))
-		} else {
-			row = append(row, tg.NewInlineKeyboardButtonData(
-				emoji.Parse(p.Sprintf(":bell: Subscribe to comments")),
-				doTrackPostByURL,
-			))
-		}
-	}
-
-	return tg.NewInlineKeyboardMarkup(row)
-}
