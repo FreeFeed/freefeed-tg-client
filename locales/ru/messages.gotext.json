@@ -1296,6 +1296,16 @@
         "translation": ":back: Назад"
       },
       {
+        "id": ":broken_heart: Unlike",
+        "message": ":broken_heart: Unlike",
+        "translation": ":broken_heart: Не лайк"
+      },
+      {
+        "id": ":heart: Like",
+        "message": ":heart: Like",
+        "translation": ":heart: Лайк"
+      },
+      {
         "id": ":no_bell: Unsubscribe from comments",
         "message": ":no_bell: Unsubscribe from comments",
         "translation": ":no_bell: Отписаться от комментов"
@@ -1342,11 +1352,6 @@
               "expr": "event.Post.Digest()"
           }
       ]
-    },
-    {
-      "id": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
-      "message": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
-      "translation": ":thinking: Хм, кажется это ссылка на пост! Что вы хотите с ней сделать?"
     }
   ]
 }

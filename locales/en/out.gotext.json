@@ -44,6 +44,20 @@
             "fuzzy": true
         },
         {
+            "id": ":broken_heart: Unlike",
+            "message": ":broken_heart: Unlike",
+            "translation": ":broken_heart: Unlike",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": ":heart: Like",
+            "message": ":heart: Like",
+            "translation": ":heart: Like",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": ":no_bell: Unsubscribe from comments",
             "message": ":no_bell: Unsubscribe from comments",
             "translation": ":no_bell: Unsubscribe from comments",
@@ -358,13 +372,6 @@
             "id": ":tada: Comment successfully created!",
             "message": ":tada: Comment successfully created!",
             "translation": ":tada: Comment successfully created!",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
-            "message": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
-            "translation": ":thinking: Hmm, looks like a post URL! What do you want to do with it?",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },

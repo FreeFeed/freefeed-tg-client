@@ -39,292 +39,293 @@ func init() {
 }
 
 var messageKeyToIndex = map[string]int{
-	":alien: Cannot load events: %v":                                             23,
-	":alien: Unknown command":                                                    28,
-	":alien: Unknown command %v":                                                 19,
-	":alien: Unknown event: %v":                                                  88,
-	":back: Back":                                                                5,
-	":bell: Subscribe to comments":                                               7,
-	":cop: %s blocked %s in group %s":                                            85,
-	":cop: %s has deleted your comment to the \"%s\":":                           76,
-	":cop: %s has deleted your comment to the post in %s \"%s\":":                77,
-	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 78,
-	":cop: %s has removed the post from %s from the group %s":                    81,
-	":cop: %s has removed the post from %s from the group %s \"%s\":":            82,
-	":cop: %s has removed your post from the group %s":                           79,
-	":cop: %s has removed your post from the group %s \"%s\":":                   80,
-	":cop: %s unblocked %s in group %s":                                          86,
-	":door: %s left the direct message \"%s\":":                                  55,
-	":e-mail: %s mentioned you in a comment to the post \"%s\":":                 45,
-	":e-mail: %s mentioned you in a comment to the post in %s \"%s\":":           46,
-	":e-mail: %s mentioned you in the post in %s:":                               44,
-	":e-mail: %s mentioned you in the post:":                                     43,
-	":e-mail: %s replied to you in a comment to the post \"%s\":":                47,
-	":e-mail: %s replied to you in a comment to the post in %s \"%s\":":          48,
-	":e-mail: New comment was posted by %s to the direct message \"%s\":":        57,
-	":e-mail: New comment was posted by %s to the post \"%s\":":                  58,
-	":e-mail: You received a direct message from %s:":                            56,
+	":alien: Cannot load events: %v":                              25,
+	":alien: Unknown command":                                     30,
+	":alien: Unknown command %v":                                  21,
+	":alien: Unknown event: %v":                                   89,
+	":back: Back":                                                 5,
+	":bell: Subscribe to comments":                                9,
+	":broken_heart: Unlike":                                       6,
+	":cop: %s blocked %s in group %s":                             86,
+	":cop: %s has deleted your comment to the \"%s\":":            77,
+	":cop: %s has deleted your comment to the post in %s \"%s\":": 78,
+	":cop: %s has removed a comment from %s to the post in the group %s \"%s\":": 79,
+	":cop: %s has removed the post from %s from the group %s":                    82,
+	":cop: %s has removed the post from %s from the group %s \"%s\":":            83,
+	":cop: %s has removed your post from the group %s":                           80,
+	":cop: %s has removed your post from the group %s \"%s\":":                   81,
+	":cop: %s unblocked %s in group %s":                                          87,
+	":door: %s left the direct message \"%s\":":                                  56,
+	":e-mail: %s mentioned you in a comment to the post \"%s\":":                 46,
+	":e-mail: %s mentioned you in a comment to the post in %s \"%s\":":           47,
+	":e-mail: %s mentioned you in the post in %s:":                               45,
+	":e-mail: %s mentioned you in the post:":                                     44,
+	":e-mail: %s replied to you in a comment to the post \"%s\":":                48,
+	":e-mail: %s replied to you in a comment to the post in %s \"%s\":":          49,
+	":e-mail: New comment was posted by %s to the direct message \"%s\":":        58,
+	":e-mail: New comment was posted by %s to the post \"%s\":":                  59,
+	":e-mail: You received a direct message from %s:":                            57,
 	":globe_with_meridians: Open comment":                                        1,
 	":globe_with_meridians: Open post":                                           0,
-	":key: Create token":                                                         39,
-	":link: %s mentioned your comment in the comment to post \"%s\":":            53,
-	":link: %s mentioned your comment in the post in %s:":                        50,
-	":link: %s mentioned your comment in the post:":                              49,
-	":link: %s mentioned your post in the comment to post \"%s\":":               54,
-	":link: %s mentioned your post in the post in %s:":                           52,
-	":link: %s mentioned your post in the post:":                                 51,
-	":minus: %s request to join %s was rejected by %s":                           74,
-	":minus: %s revoked admin privileges from %s in the group %s":                72,
-	":minus: %s revoked subscription request to %s":                              70,
-	":minus: %s revoked subscription request to you":                             69,
-	":minus: %s unsubscribed from %s":                                            68,
-	":minus: %s unsubscribed from your feed":                                     66,
-	":no_bell: Unsubscribe from comments":                                        6,
-	":no_entry_sign: Cancel":                                                     42,
-	":no_entry_sign: Your request to join group %s was rejected":                 64,
-	":no_entry_sign: Your subscription request to %s was rejected":               62,
-	":plus: %s promoted %s to admin in the group %s":                             71,
-	":plus: %s request to join %s was approved by %s":                            73,
-	":plus: %s subscribed to %s":                                                 67,
-	":plus: %s subscribed to your feed":                                          65,
-	":raising_hand: %s sent a request to join %s that you admin":                 60,
-	":raising_hand: %s sent you a subscription request":                          59,
-	":shrug: Unknown command":                                                    37,
+	":heart: Like":                                                               7,
+	":key: Create token":                                                         40,
+	":link: %s mentioned your comment in the comment to post \"%s\":":            54,
+	":link: %s mentioned your comment in the post in %s:":                        51,
+	":link: %s mentioned your comment in the post:":                              50,
+	":link: %s mentioned your post in the comment to post \"%s\":":               55,
+	":link: %s mentioned your post in the post in %s:":                           53,
+	":link: %s mentioned your post in the post:":                                 52,
+	":minus: %s request to join %s was rejected by %s":                           75,
+	":minus: %s revoked admin privileges from %s in the group %s":                73,
+	":minus: %s revoked subscription request to %s":                              71,
+	":minus: %s revoked subscription request to you":                             70,
+	":minus: %s unsubscribed from %s":                                            69,
+	":minus: %s unsubscribed from your feed":                                     67,
+	":no_bell: Unsubscribe from comments":                                        8,
+	":no_entry_sign: Cancel":                                                     43,
+	":no_entry_sign: Your request to join group %s was rejected":                 65,
+	":no_entry_sign: Your subscription request to %s was rejected":               63,
+	":plus: %s promoted %s to admin in the group %s":                             72,
+	":plus: %s request to join %s was approved by %s":                            74,
+	":plus: %s subscribed to %s":                                                 68,
+	":plus: %s subscribed to your feed":                                          66,
+	":raising_hand: %s sent a request to join %s that you admin":                 61,
+	":raising_hand: %s sent you a subscription request":                          60,
+	":shrug: Unknown command":                                                    38,
 	":speech_balloon: @-Reply":                                                   3,
-	":speech_balloon: Comment more":                                              8,
+	":speech_balloon: Comment more":                                              10,
 	":speech_balloon: Reply":                                                     2,
-	":tada: %s has joined FreeFeed using your invitation":                        87,
-	":tada: Comment successfully created!":                                       35,
-	":thinking: Hmm, looks like a post URL! What do you want to do with it?":     36,
-	":warning: Cannot load event data, probably this message is too old":         14,
-	":warning: Cannot load event: %v":                                            13,
-	":warning: Error: %v":                                                        18,
-	":warning: FreeFeed error: %v":                                               15,
-	":white_check_mark: Accept":                                                  9,
-	":white_check_mark: Accepted!":                                               16,
-	":white_check_mark: Your request to join group %s was approved":              63,
-	":white_check_mark: Your subscription request to %s was approved":            61,
-	":x: Reject":                            10,
-	":x: Rejected!":                         17,
-	"<welcome HTML>":                        12,
-	"Action is cancelled":                   20,
-	"Can not send a comment without a text": 33,
-	"Cannot load user information: %v":      26,
-	"Checking your token...":                30,
-	"Enter your comment text.":              40,
-	"Enter your comment text. The comment will be prefixed with \"%s\"": 41,
-	"Error creating comment: %v":                                        34,
-	"Group admin":                                                       83,
-	"Hello, @%s!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.": 32,
-	"Language is %v now":                 11,
-	"Looks like this token isn't valid.": 29,
+	":tada: %s has joined FreeFeed using your invitation":                        88,
+	":tada: Comment successfully created!":                                       37,
+	":warning: Cannot load event data, probably this message is too old":         16,
+	":warning: Cannot load event: %v":                                            15,
+	":warning: Error: %v":                                                        20,
+	":warning: FreeFeed error: %v":                                               17,
+	":white_check_mark: Accept":                                                  11,
+	":white_check_mark: Accepted!":                                               18,
+	":white_check_mark: Your request to join group %s was approved":              64,
+	":white_check_mark: Your subscription request to %s was approved":            62,
+	":x: Reject":                            12,
+	":x: Rejected!":                         19,
+	"<welcome HTML>":                        14,
+	"Action is cancelled":                   22,
+	"Can not send a comment without a text": 35,
+	"Cannot load user information: %v":      28,
+	"Checking your token...":                32,
+	"Enter your comment text.":              41,
+	"Enter your comment text. The comment will be prefixed with \"%s\"": 42,
+	"Error creating comment: %v":                                        36,
+	"Group admin":                                                       84,
+	"Hello, @%s!\nIt's all set. Now when the bot sees the update on FreeFeed, it will show it to you.": 34,
+	"Language is %v now":                 13,
+	"Looks like this token isn't valid.": 31,
 	"More…":                              4,
-	"OK, we will remove all of your data now. Use the /start command if you want to come back.":                              22,
-	"Please create the access token and send it to the bot:":                                                                 38,
-	"Something wrong happened: %v":                                                                                           31,
-	"We already know each other. Use the /logout command if you want to delete all of your data or start over.":              21,
-	"You are using this bot as %s. Use the /logout command if you want to delete all of your data or start as another user.": 27,
-	"Your updates are paused now.":                                                                                           24,
-	"Your updates are resumed now.":                                                                                          25,
-	"group admin":                                                                                                            75,
-	"you":                                                                                                                    84,
+	"OK, we will remove all of your data now. Use the /start command if you want to come back.":                              24,
+	"Please create the access token and send it to the bot:":                                                                 39,
+	"Something wrong happened: %v":                                                                                           33,
+	"We already know each other. Use the /logout command if you want to delete all of your data or start over.":              23,
+	"You are using this bot as %s. Use the /logout command if you want to delete all of your data or start as another user.": 29,
+	"Your updates are paused now.":                                                                                           26,
+	"Your updates are resumed now.":                                                                                          27,
+	"group admin":                                                                                                            76,
+	"you":                                                                                                                    85,
 }
 
-var enIndex = []uint32{ // 90 elements
+var enIndex = []uint32{ // 91 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000021, 0x00000045, 0x0000005c,
-	0x00000075, 0x0000007d, 0x00000089, 0x000000ad,
-	0x000000ca, 0x000000e8, 0x00000102, 0x0000010d,
-	0x00000123, 0x000002a8, 0x000002cb, 0x0000030e,
-	0x0000032e, 0x0000034b, 0x00000359, 0x00000370,
-	0x0000038e, 0x000003a2, 0x0000040c, 0x00000466,
-	0x00000488, 0x000004a5, 0x000004c3, 0x000004e7,
-	0x00000561, 0x00000579, 0x0000059c, 0x000005b3,
+	0x00000075, 0x0000007d, 0x00000089, 0x0000009f,
+	0x000000ac, 0x000000d0, 0x000000ed, 0x0000010b,
+	0x00000125, 0x00000130, 0x00000146, 0x000002cb,
+	0x000002ee, 0x00000331, 0x00000351, 0x0000036e,
+	0x0000037c, 0x00000393, 0x000003b1, 0x000003c5,
+	0x0000042f, 0x00000489, 0x000004ab, 0x000004c8,
+	0x000004e6, 0x0000050a, 0x00000584, 0x0000059c,
 	// Entry 20 - 3F
-	0x000005d3, 0x00000636, 0x0000065c, 0x0000067a,
-	0x0000069f, 0x000006e6, 0x000006fe, 0x00000735,
-	0x00000748, 0x00000761, 0x000007a4, 0x000007bb,
-	0x000007e5, 0x00000818, 0x00000857, 0x0000089f,
-	0x000008df, 0x00000928, 0x00000959, 0x00000993,
-	0x000009c1, 0x000009f8, 0x00000a3c, 0x00000a7d,
-	0x00000aab, 0x00000ade, 0x00000b26, 0x00000b64,
-	0x00000b99, 0x00000bda, 0x00000c1d, 0x00000c5d,
+	0x000005bf, 0x000005d6, 0x000005f6, 0x00000659,
+	0x0000067f, 0x0000069d, 0x000006c2, 0x000006da,
+	0x00000711, 0x00000724, 0x0000073d, 0x00000780,
+	0x00000797, 0x000007c1, 0x000007f4, 0x00000833,
+	0x0000087b, 0x000008bb, 0x00000904, 0x00000935,
+	0x0000096f, 0x0000099d, 0x000009d4, 0x00000a18,
+	0x00000a59, 0x00000a87, 0x00000aba, 0x00000b02,
+	0x00000b40, 0x00000b75, 0x00000bb6, 0x00000bf9,
 	// Entry 40 - 5F
-	0x00000c9e, 0x00000cdc, 0x00000d01, 0x00000d2b,
-	0x00000d4c, 0x00000d72, 0x00000da4, 0x00000dd8,
-	0x00000e10, 0x00000e55, 0x00000e8e, 0x00000ec8,
-	0x00000ed4, 0x00000f09, 0x00000f4c, 0x00000fa1,
-	0x00000fd8, 0x00001018, 0x00001059, 0x000010a3,
-	0x000010af, 0x000010b3, 0x000010dc, 0x00001107,
-	0x0000113e, 0x0000115b,
-} // Size: 384 bytes
+	0x00000c39, 0x00000c7a, 0x00000cb8, 0x00000cdd,
+	0x00000d07, 0x00000d28, 0x00000d4e, 0x00000d80,
+	0x00000db4, 0x00000dec, 0x00000e31, 0x00000e6a,
+	0x00000ea4, 0x00000eb0, 0x00000ee5, 0x00000f28,
+	0x00000f7d, 0x00000fb4, 0x00000ff4, 0x00001035,
+	0x0000107f, 0x0000108b, 0x0000108f, 0x000010b8,
+	0x000010e3, 0x0000111a, 0x00001137,
+} // Size: 388 bytes
 
-const enData string = "" + // Size: 4443 bytes
+const enData string = "" + // Size: 4407 bytes
 	"\x02:globe_with_meridians: Open post\x02:globe_with_meridians: Open comm" +
 	"ent\x02:speech_balloon: Reply\x02:speech_balloon: @-Reply\x02More…\x02:b" +
-	"ack: Back\x02:no_bell: Unsubscribe from comments\x02:bell: Subscribe to " +
-	"comments\x02:speech_balloon: Comment more\x02:white_check_mark: Accept" +
-	"\x02:x: Reject\x02Language is %[1]v now\x02Hello again! This bot will he" +
-	"lp you keep up-to-date with everything happening on FreeFeed. It will se" +
-	"nd you <a href=\x22https://freefeed.net/filter/notifications\x22>FreeFee" +
-	"d notifications</a> and you can reply to them directly in Telegram.\x0a" +
-	"\x0aTo give the bot access to your notifications, you need to create a s" +
-	"pecial access token. Please create it using the button below and send it" +
-	" to the bot:\x02:warning: Cannot load event: %[1]v\x02:warning: Cannot l" +
-	"oad event data, probably this message is too old\x02:warning: FreeFeed e" +
-	"rror: %[1]v\x02:white_check_mark: Accepted!\x02:x: Rejected!\x02:warning" +
-	": Error: %[1]v\x02:alien: Unknown command %[1]v\x02Action is cancelled" +
-	"\x02We already know each other. Use the /logout command if you want to d" +
-	"elete all of your data or start over.\x02OK, we will remove all of your " +
-	"data now. Use the /start command if you want to come back.\x02:alien: Ca" +
-	"nnot load events: %[1]v\x02Your updates are paused now.\x02Your updates " +
-	"are resumed now.\x02Cannot load user information: %[1]v\x02You are using" +
-	" this bot as %[1]s. Use the /logout command if you want to delete all of" +
-	" your data or start as another user.\x02:alien: Unknown command\x02Looks" +
-	" like this token isn't valid.\x02Checking your token...\x02Something wro" +
-	"ng happened: %[1]v\x02Hello, @%[1]s!\x0aIt's all set. Now when the bot s" +
-	"ees the update on FreeFeed, it will show it to you.\x02Can not send a co" +
-	"mment without a text\x02Error creating comment: %[1]v\x02:tada: Comment " +
-	"successfully created!\x02:thinking: Hmm, looks like a post URL! What do " +
-	"you want to do with it?\x02:shrug: Unknown command\x02Please create the " +
-	"access token and send it to the bot:\x02:key: Create token\x02Enter your" +
-	" comment text.\x02Enter your comment text. The comment will be prefixed " +
-	"with \x22%[1]s\x22\x02:no_entry_sign: Cancel\x02:e-mail: %[1]s mentioned" +
-	" you in the post:\x02:e-mail: %[1]s mentioned you in the post in %[2]s:" +
-	"\x02:e-mail: %[1]s mentioned you in a comment to the post \x22%[2]s\x22:" +
-	"\x02:e-mail: %[1]s mentioned you in a comment to the post in %[2]s \x22%" +
-	"[3]s\x22:\x02:e-mail: %[1]s replied to you in a comment to the post \x22" +
-	"%[2]s\x22:\x02:e-mail: %[1]s replied to you in a comment to the post in " +
-	"%[2]s \x22%[3]s\x22:\x02:link: %[1]s mentioned your comment in the post:" +
-	"\x02:link: %[1]s mentioned your comment in the post in %[2]s:\x02:link: " +
-	"%[1]s mentioned your post in the post:\x02:link: %[1]s mentioned your po" +
-	"st in the post in %[2]s:\x02:link: %[1]s mentioned your comment in the c" +
-	"omment to post \x22%[2]s\x22:\x02:link: %[1]s mentioned your post in the" +
-	" comment to post \x22%[2]s\x22:\x02:door: %[1]s left the direct message " +
-	"\x22%[2]s\x22:\x02:e-mail: You received a direct message from %[1]s:\x02" +
-	":e-mail: New comment was posted by %[1]s to the direct message \x22%[2]s" +
-	"\x22:\x02:e-mail: New comment was posted by %[1]s to the post \x22%[2]s" +
-	"\x22:\x02:raising_hand: %[1]s sent you a subscription request\x02:raisin" +
-	"g_hand: %[1]s sent a request to join %[2]s that you admin\x02:white_chec" +
-	"k_mark: Your subscription request to %[1]s was approved\x02:no_entry_sig" +
-	"n: Your subscription request to %[1]s was rejected\x02:white_check_mark:" +
-	" Your request to join group %[1]s was approved\x02:no_entry_sign: Your r" +
-	"equest to join group %[1]s was rejected\x02:plus: %[1]s subscribed to yo" +
-	"ur feed\x02:minus: %[1]s unsubscribed from your feed\x02:plus: %[1]s sub" +
-	"scribed to %[2]s\x02:minus: %[1]s unsubscribed from %[2]s\x02:minus: %[1" +
-	"]s revoked subscription request to you\x02:minus: %[1]s revoked subscrip" +
-	"tion request to %[2]s\x02:plus: %[1]s promoted %[2]s to admin in the gro" +
-	"up %[3]s\x02:minus: %[1]s revoked admin privileges from %[2]s in the gro" +
-	"up %[3]s\x02:plus: %[1]s request to join %[2]s was approved by %[3]s\x02" +
-	":minus: %[1]s request to join %[2]s was rejected by %[3]s\x02group admin" +
-	"\x02:cop: %[1]s has deleted your comment to the \x22%[2]s\x22:\x02:cop: " +
-	"%[1]s has deleted your comment to the post in %[2]s \x22%[3]s\x22:\x02:c" +
-	"op: %[1]s has removed a comment from %[2]s to the post in the group %[3]" +
-	"s \x22%[4]s\x22:\x02:cop: %[1]s has removed your post from the group %[2" +
-	"]s\x02:cop: %[1]s has removed your post from the group %[2]s \x22%[3]s" +
-	"\x22:\x02:cop: %[1]s has removed the post from %[2]s from the group %[3]" +
-	"s\x02:cop: %[1]s has removed the post from %[2]s from the group %[3]s " +
-	"\x22%[4]s\x22:\x02Group admin\x02you\x02:cop: %[1]s blocked %[2]s in gro" +
-	"up %[3]s\x02:cop: %[1]s unblocked %[2]s in group %[3]s\x02:tada: %[1]s h" +
-	"as joined FreeFeed using your invitation\x02:alien: Unknown event: %[1]v"
+	"ack: Back\x02:broken_heart: Unlike\x02:heart: Like\x02:no_bell: Unsubscr" +
+	"ibe from comments\x02:bell: Subscribe to comments\x02:speech_balloon: Co" +
+	"mment more\x02:white_check_mark: Accept\x02:x: Reject\x02Language is %[1" +
+	"]v now\x02Hello again! This bot will help you keep up-to-date with every" +
+	"thing happening on FreeFeed. It will send you <a href=\x22https://freefe" +
+	"ed.net/filter/notifications\x22>FreeFeed notifications</a> and you can r" +
+	"eply to them directly in Telegram.\x0a\x0aTo give the bot access to your" +
+	" notifications, you need to create a special access token. Please create" +
+	" it using the button below and send it to the bot:\x02:warning: Cannot l" +
+	"oad event: %[1]v\x02:warning: Cannot load event data, probably this mess" +
+	"age is too old\x02:warning: FreeFeed error: %[1]v\x02:white_check_mark: " +
+	"Accepted!\x02:x: Rejected!\x02:warning: Error: %[1]v\x02:alien: Unknown " +
+	"command %[1]v\x02Action is cancelled\x02We already know each other. Use " +
+	"the /logout command if you want to delete all of your data or start over" +
+	".\x02OK, we will remove all of your data now. Use the /start command if " +
+	"you want to come back.\x02:alien: Cannot load events: %[1]v\x02Your upda" +
+	"tes are paused now.\x02Your updates are resumed now.\x02Cannot load user" +
+	" information: %[1]v\x02You are using this bot as %[1]s. Use the /logout " +
+	"command if you want to delete all of your data or start as another user." +
+	"\x02:alien: Unknown command\x02Looks like this token isn't valid.\x02Che" +
+	"cking your token...\x02Something wrong happened: %[1]v\x02Hello, @%[1]s!" +
+	"\x0aIt's all set. Now when the bot sees the update on FreeFeed, it will " +
+	"show it to you.\x02Can not send a comment without a text\x02Error creati" +
+	"ng comment: %[1]v\x02:tada: Comment successfully created!\x02:shrug: Unk" +
+	"nown command\x02Please create the access token and send it to the bot:" +
+	"\x02:key: Create token\x02Enter your comment text.\x02Enter your comment" +
+	" text. The comment will be prefixed with \x22%[1]s\x22\x02:no_entry_sign" +
+	": Cancel\x02:e-mail: %[1]s mentioned you in the post:\x02:e-mail: %[1]s " +
+	"mentioned you in the post in %[2]s:\x02:e-mail: %[1]s mentioned you in a" +
+	" comment to the post \x22%[2]s\x22:\x02:e-mail: %[1]s mentioned you in a" +
+	" comment to the post in %[2]s \x22%[3]s\x22:\x02:e-mail: %[1]s replied t" +
+	"o you in a comment to the post \x22%[2]s\x22:\x02:e-mail: %[1]s replied " +
+	"to you in a comment to the post in %[2]s \x22%[3]s\x22:\x02:link: %[1]s " +
+	"mentioned your comment in the post:\x02:link: %[1]s mentioned your comme" +
+	"nt in the post in %[2]s:\x02:link: %[1]s mentioned your post in the post" +
+	":\x02:link: %[1]s mentioned your post in the post in %[2]s:\x02:link: %[" +
+	"1]s mentioned your comment in the comment to post \x22%[2]s\x22:\x02:lin" +
+	"k: %[1]s mentioned your post in the comment to post \x22%[2]s\x22:\x02:d" +
+	"oor: %[1]s left the direct message \x22%[2]s\x22:\x02:e-mail: You receiv" +
+	"ed a direct message from %[1]s:\x02:e-mail: New comment was posted by %[" +
+	"1]s to the direct message \x22%[2]s\x22:\x02:e-mail: New comment was pos" +
+	"ted by %[1]s to the post \x22%[2]s\x22:\x02:raising_hand: %[1]s sent you" +
+	" a subscription request\x02:raising_hand: %[1]s sent a request to join %" +
+	"[2]s that you admin\x02:white_check_mark: Your subscription request to %" +
+	"[1]s was approved\x02:no_entry_sign: Your subscription request to %[1]s " +
+	"was rejected\x02:white_check_mark: Your request to join group %[1]s was " +
+	"approved\x02:no_entry_sign: Your request to join group %[1]s was rejecte" +
+	"d\x02:plus: %[1]s subscribed to your feed\x02:minus: %[1]s unsubscribed " +
+	"from your feed\x02:plus: %[1]s subscribed to %[2]s\x02:minus: %[1]s unsu" +
+	"bscribed from %[2]s\x02:minus: %[1]s revoked subscription request to you" +
+	"\x02:minus: %[1]s revoked subscription request to %[2]s\x02:plus: %[1]s " +
+	"promoted %[2]s to admin in the group %[3]s\x02:minus: %[1]s revoked admi" +
+	"n privileges from %[2]s in the group %[3]s\x02:plus: %[1]s request to jo" +
+	"in %[2]s was approved by %[3]s\x02:minus: %[1]s request to join %[2]s wa" +
+	"s rejected by %[3]s\x02group admin\x02:cop: %[1]s has deleted your comme" +
+	"nt to the \x22%[2]s\x22:\x02:cop: %[1]s has deleted your comment to the " +
+	"post in %[2]s \x22%[3]s\x22:\x02:cop: %[1]s has removed a comment from %" +
+	"[2]s to the post in the group %[3]s \x22%[4]s\x22:\x02:cop: %[1]s has re" +
+	"moved your post from the group %[2]s\x02:cop: %[1]s has removed your pos" +
+	"t from the group %[2]s \x22%[3]s\x22:\x02:cop: %[1]s has removed the pos" +
+	"t from %[2]s from the group %[3]s\x02:cop: %[1]s has removed the post fr" +
+	"om %[2]s from the group %[3]s \x22%[4]s\x22:\x02Group admin\x02you\x02:c" +
+	"op: %[1]s blocked %[2]s in group %[3]s\x02:cop: %[1]s unblocked %[2]s in" +
+	" group %[3]s\x02:tada: %[1]s has joined FreeFeed using your invitation" +
+	"\x02:alien: Unknown event: %[1]v"
 
-var ruIndex = []uint32{ // 90 elements
+var ruIndex = []uint32{ // 91 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000002f, 0x0000006c, 0x0000008e,
-	0x000000b2, 0x000000bc, 0x000000ce, 0x00000105,
-	0x00000139, 0x00000162, 0x00000186, 0x0000019b,
-	0x000001be, 0x0000044b, 0x00000489, 0x00000501,
-	0x00000528, 0x0000054b, 0x00000561, 0x0000057f,
-	0x000005b3, 0x000005d5, 0x00000681, 0x00000706,
-	0x0000074b, 0x0000077d, 0x000007b6, 0x000007f7,
-	0x000008d7, 0x00000905, 0x00000947, 0x0000096f,
+	0x000000b2, 0x000000bc, 0x000000ce, 0x000000eb,
+	0x000000fc, 0x00000133, 0x00000167, 0x00000190,
+	0x000001b4, 0x000001c9, 0x000001ec, 0x00000479,
+	0x000004b7, 0x0000052f, 0x00000556, 0x00000579,
+	0x0000058f, 0x000005ad, 0x000005e1, 0x00000603,
+	0x000006af, 0x00000734, 0x00000779, 0x000007ab,
+	0x000007e4, 0x00000825, 0x00000905, 0x00000933,
 	// Entry 20 - 3F
-	0x00000999, 0x00000a47, 0x00000a90, 0x00000ad1,
-	0x00000afd, 0x00000b73, 0x00000ba1, 0x00000c07,
-	0x00000c27, 0x00000c66, 0x00000ce7, 0x00000d04,
-	0x00000d3c, 0x00000d8a, 0x00000de4, 0x00000e54,
-	0x00000e9f, 0x00000f00, 0x00000f4c, 0x00000fae,
-	0x00000fec, 0x00001040, 0x000010ae, 0x0000110e,
-	0x0000115b, 0x000011a6, 0x000011f8, 0x00001235,
-	0x00001272, 0x000012c9, 0x0000131f, 0x00001373,
+	0x00000975, 0x0000099d, 0x000009c7, 0x00000a75,
+	0x00000abe, 0x00000aff, 0x00000b2b, 0x00000b59,
+	0x00000bbf, 0x00000bdf, 0x00000c1e, 0x00000c9f,
+	0x00000cbc, 0x00000cf4, 0x00000d42, 0x00000d9c,
+	0x00000e0c, 0x00000e57, 0x00000eb8, 0x00000f04,
+	0x00000f66, 0x00000fa4, 0x00000ff8, 0x00001066,
+	0x000010c6, 0x00001113, 0x0000115e, 0x000011b0,
+	0x000011ed, 0x0000122a, 0x00001281, 0x000012d7,
 	// Entry 40 - 5F
-	0x000013da, 0x00001442, 0x00001478, 0x000014b4,
-	0x000014f6, 0x00001527, 0x00001567, 0x000015c1,
-	0x00001617, 0x00001686, 0x000016e5, 0x00001747,
-	0x00001773, 0x000017c4, 0x0000182b, 0x00001891,
-	0x000018d7, 0x00001929, 0x0000197c, 0x000019d8,
-	0x00001a00, 0x00001a07, 0x00001a48, 0x00001a8b,
-	0x00001b16, 0x00001b52,
-} // Size: 384 bytes
+	0x0000132b, 0x00001392, 0x000013fa, 0x00001430,
+	0x0000146c, 0x000014ae, 0x000014df, 0x0000151f,
+	0x00001579, 0x000015cf, 0x0000163e, 0x0000169d,
+	0x000016ff, 0x0000172b, 0x0000177c, 0x000017e3,
+	0x00001849, 0x0000188f, 0x000018e1, 0x00001934,
+	0x00001990, 0x000019b8, 0x000019bf, 0x00001a00,
+	0x00001a43, 0x00001ace, 0x00001b0a,
+} // Size: 388 bytes
 
-const ruData string = "" + // Size: 6994 bytes
+const ruData string = "" + // Size: 6922 bytes
 	"\x02:globe_with_meridians: Открыть пост\x02:globe_with_meridians: Открыт" +
 	"ь комментарий\x02:speech_balloon: Ответить\x02:speech_balloon: @-Ответи" +
-	"ть\x02Ещё…\x02:back: Назад\x02:no_bell: Отписаться от комментов\x02:bel" +
-	"l: Подписаться на комменты\x02:speech_balloon: Написать ещё\x02:white_ch" +
-	"eck_mark: Одобрить\x02:x: Отказать\x02Ваш язык теперь %[1]v\x02Привет ещ" +
-	"ё раз! Этот бот поможет вам быть в курсе всего, что происходит во FreeF" +
-	"eed-е. Он будет присылать вам <a href=\x22https://freefeed.net/filter/no" +
-	"tifications\x22>нотификации</a>, и вы сможете отвечать на них прямо в Те" +
-	"леграме.\x0a\x0aДля того чтобы дать боту доступ к ваши нотификациям, ва" +
-	"м нужно создать специальный токен доступа. Пожалуйста, создайте его с п" +
-	"омощью кнопки ниже и отправьте боту:\x02:warning: Ошибка загрузки событ" +
-	"ия: %[1]v\x02:warning: Не могу найти данные, возможно это сообщение сли" +
-	"шком старое\x02:warning: Ошибка FreeFeed: %[1]v\x02:white_check_mark: П" +
-	"ринято!\x02:x: Отказано!\x02:warning: Ошибка: %[1]v\x02:alien: Неизвест" +
-	"ная команда %[1]v\x02Действие отменено\x02Мы с вами уже знакомы:) Испол" +
-	"ьзуйте команду /logout чтобы удалить все свои данные и начать заново." +
-	"\x02Ваши данные удаляются. Используйте команду /start если захотите верн" +
-	"уться.\x02:alien: Не удалось загрузить события: %[1]v\x02Обновления при" +
-	"остановлены\x02Обновления снова доставляются\x02Не удалось получить инф" +
-	"ормацию: %[1]v\x02Вы авторизованы как %[1]s. Используйте команду /logou" +
-	"t чтобы удалить все свои данные или начать работу как другой пользовател" +
-	"ь.\x02:alien: Неизвестная команда\x02Похоже что этот токен неправильный" +
-	".\x02Проверяем ваш токен...\x02Что-то пошло не так: %[1]v\x02Привет, @%[" +
-	"1]s!\x0aВсё готово. Теперь, когда бот увидит обновления на FreeFeed-е, о" +
-	"н пришлёт вам сообщение.\x02Не могу создать комментарий без текста.\x02" +
-	"Не удалось создать комментарий: %[1]v\x02:tada: Комментарий создан!\x02" +
-	":thinking: Хм, кажется это ссылка на пост! Что вы хотите с ней сделать?" +
-	"\x02:shrug: Неизвестная команда\x02Пожалуйста, создайте токен доступа и " +
-	"сообщите его боту:\x02:key: Создать токен\x02Введите текст вашего комме" +
-	"нтария:\x02Введите текст вашего комментария. Комментарий будет начинать" +
-	"ся с \x22%[1]s\x22\x02:no_entry_sign: Отмена\x02:e-mail: Вас упомянули " +
-	"в посте %[1]s:\x02:e-mail: Вас упомянули в посте %[1]s в группе %[2]s:" +
-	"\x02:e-mail: Вас упомянули в комментарии %[1]s к посту \x22%[2]s\x22:" +
-	"\x02:e-mail: Вас упомянули в комментарии %[1]s к посту в группе %[2]s " +
-	"\x22%[3]s\x22:\x02:e-mail: Ответ %[1]s в комментарии к посту \x22%[2]s" +
-	"\x22:\x02:e-mail: Ответ %[1]s в комментарии к посту в группе %[2]s \x22%" +
-	"[3]s\x22:\x02:link: Ссылка на ваш комментарий в посте %[1]s:\x02:link: С" +
-	"сылка на ваш комментарий в посте %[1]s в группе %[2]s:\x02:link: Ссылка" +
-	" на ваш пост в посте %[1]s:\x02:link: Ссылка на ваш пост в посте %[1]s в" +
-	" группе %[2]s:\x02:link: Ссылка на ваш комментарий в комментарии %[1]s к" +
-	" посту \x22%[2]s\x22:\x02:link: Ссылка на ваш пост в комментарии %[1]s к" +
-	" посту \x22%[2]s\x22:\x02:door: %[1]s больше не участвует в директе \x22" +
-	"%[2]s\x22:\x02:e-mail: Вы получили директ-сообщение от %[1]s:\x02:e-mail" +
-	": Комментарий %[1]s к директ-сообщению \x22%[2]s\x22:\x02:e-mail: Коммен" +
-	"тарий %[1]s к посту \x22%[2]s\x22:\x02:raising_hand: Запрос на подписку" +
-	" от %[1]s\x02:raising_hand: Запрос на вступление в группу %[2]s от %[1]s" +
-	"\x02:white_check_mark: Ваш запрос на подписку к %[1]s одобрен!\x02:no_en" +
-	"try_sign: Ваш запрос на подписку к %[1]s отклонён\x02:white_check_mark: " +
-	"Ваш запрос на вступление в группу %[1]s одобрен!\x02:white_check_mark: " +
-	"Ваш запрос на вступление в группу %[1]s отклонён\x02:plus: У вас новый " +
-	"подписчик: %[1]s\x02:minus: %[1]s больше не ваш подписчик:(\x02:plus: В" +
-	" группе %[2]s новый подписчик: %[1]s\x02:minus: %[1]s вышел из группы %[" +
-	"2]s\x02:minus: Запрос подписки от %[1]s отозван\x02:minus: Запрос %[1]s " +
-	"на вступление в группу %[2]s отозван\x02:plus: %[1]s сделал(а) %[2]s ад" +
-	"министратором группы %[3]s\x02:minus: %[1]s отозвал(а) полномочия админ" +
-	"истратора группы %[3]s у %[2]s\x02:plus: Запрос %[1]s на вступление в г" +
-	"руппу %[2]s одобрен %[3]s\x02:minus: Запрос %[1]s на вступление в групп" +
-	"у %[2]s отклонён %[3]s\x02администратором группы\x02:cop: Ваш комментар" +
-	"ий был удалён %[1]s. Пост \x22%[2]s\x22:\x02:cop: Ваш комментарий в гру" +
-	"ппе %[2]s был удалён %[1]s. Пост \x22%[3]s\x22:\x02:cop: Комментарий %[" +
-	"2]s был удалён %[1]s. Пост в группе %[3]s \x22%[4]s\x22:\x02:cop: Ваш по" +
-	"ст в группе %[2]s был удалён %[1]s\x02:cop: Ваш пост был удалён из груп" +
-	"пы %[2]s %[1]s. \x22%[3]s\x22:\x02:cop: Модератор %[1]s удалил пост %[2" +
-	"]s из группы %[3]s\x02:cop: Модератор %[1]s удалил пост %[2]s из группы " +
-	"%[3]s \x22%[4]s\x22:\x02Администратор группы\x02вас\x02:cop: %[1]s забло" +
-	"кировал %[2]s в группе %[3]s\x02:cop: %[1]s разблокировал %[2]s в групп" +
-	"е %[3]s\x02:tada: По вашему приглашению зарегистрировался новый пользов" +
-	"атель FreeFeed — %[1]s!\x02:alien: Неизвестный тип события: %[1]v"
+	"ть\x02Ещё…\x02:back: Назад\x02:broken_heart: Не лайк\x02:heart: Лайк" +
+	"\x02:no_bell: Отписаться от комментов\x02:bell: Подписаться на комменты" +
+	"\x02:speech_balloon: Написать ещё\x02:white_check_mark: Одобрить\x02:x: " +
+	"Отказать\x02Ваш язык теперь %[1]v\x02Привет ещё раз! Этот бот поможет в" +
+	"ам быть в курсе всего, что происходит во FreeFeed-е. Он будет присылать" +
+	" вам <a href=\x22https://freefeed.net/filter/notifications\x22>нотификац" +
+	"ии</a>, и вы сможете отвечать на них прямо в Телеграме.\x0a\x0aДля того" +
+	" чтобы дать боту доступ к ваши нотификациям, вам нужно создать специальн" +
+	"ый токен доступа. Пожалуйста, создайте его с помощью кнопки ниже и отпр" +
+	"авьте боту:\x02:warning: Ошибка загрузки события: %[1]v\x02:warning: Не" +
+	" могу найти данные, возможно это сообщение слишком старое\x02:warning: О" +
+	"шибка FreeFeed: %[1]v\x02:white_check_mark: Принято!\x02:x: Отказано!" +
+	"\x02:warning: Ошибка: %[1]v\x02:alien: Неизвестная команда %[1]v\x02Дейс" +
+	"твие отменено\x02Мы с вами уже знакомы:) Используйте команду /logout чт" +
+	"обы удалить все свои данные и начать заново.\x02Ваши данные удаляются. " +
+	"Используйте команду /start если захотите вернуться.\x02:alien: Не удало" +
+	"сь загрузить события: %[1]v\x02Обновления приостановлены\x02Обновления " +
+	"снова доставляются\x02Не удалось получить информацию: %[1]v\x02Вы автор" +
+	"изованы как %[1]s. Используйте команду /logout чтобы удалить все свои д" +
+	"анные или начать работу как другой пользователь.\x02:alien: Неизвестная" +
+	" команда\x02Похоже что этот токен неправильный.\x02Проверяем ваш токен.." +
+	".\x02Что-то пошло не так: %[1]v\x02Привет, @%[1]s!\x0aВсё готово. Теперь" +
+	", когда бот увидит обновления на FreeFeed-е, он пришлёт вам сообщение." +
+	"\x02Не могу создать комментарий без текста.\x02Не удалось создать коммен" +
+	"тарий: %[1]v\x02:tada: Комментарий создан!\x02:shrug: Неизвестная коман" +
+	"да\x02Пожалуйста, создайте токен доступа и сообщите его боту:\x02:key: " +
+	"Создать токен\x02Введите текст вашего комментария:\x02Введите текст ваш" +
+	"его комментария. Комментарий будет начинаться с \x22%[1]s\x22\x02:no_en" +
+	"try_sign: Отмена\x02:e-mail: Вас упомянули в посте %[1]s:\x02:e-mail: Ва" +
+	"с упомянули в посте %[1]s в группе %[2]s:\x02:e-mail: Вас упомянули в к" +
+	"омментарии %[1]s к посту \x22%[2]s\x22:\x02:e-mail: Вас упомянули в ком" +
+	"ментарии %[1]s к посту в группе %[2]s \x22%[3]s\x22:\x02:e-mail: Ответ " +
+	"%[1]s в комментарии к посту \x22%[2]s\x22:\x02:e-mail: Ответ %[1]s в ком" +
+	"ментарии к посту в группе %[2]s \x22%[3]s\x22:\x02:link: Ссылка на ваш " +
+	"комментарий в посте %[1]s:\x02:link: Ссылка на ваш комментарий в посте " +
+	"%[1]s в группе %[2]s:\x02:link: Ссылка на ваш пост в посте %[1]s:\x02:li" +
+	"nk: Ссылка на ваш пост в посте %[1]s в группе %[2]s:\x02:link: Ссылка на" +
+	" ваш комментарий в комментарии %[1]s к посту \x22%[2]s\x22:\x02:link: Сс" +
+	"ылка на ваш пост в комментарии %[1]s к посту \x22%[2]s\x22:\x02:door: %" +
+	"[1]s больше не участвует в директе \x22%[2]s\x22:\x02:e-mail: Вы получил" +
+	"и директ-сообщение от %[1]s:\x02:e-mail: Комментарий %[1]s к директ-соо" +
+	"бщению \x22%[2]s\x22:\x02:e-mail: Комментарий %[1]s к посту \x22%[2]s" +
+	"\x22:\x02:raising_hand: Запрос на подписку от %[1]s\x02:raising_hand: За" +
+	"прос на вступление в группу %[2]s от %[1]s\x02:white_check_mark: Ваш за" +
+	"прос на подписку к %[1]s одобрен!\x02:no_entry_sign: Ваш запрос на подп" +
+	"иску к %[1]s отклонён\x02:white_check_mark: Ваш запрос на вступление в " +
+	"группу %[1]s одобрен!\x02:white_check_mark: Ваш запрос на вступление в " +
+	"группу %[1]s отклонён\x02:plus: У вас новый подписчик: %[1]s\x02:minus:" +
+	" %[1]s больше не ваш подписчик:(\x02:plus: В группе %[2]s новый подписчи" +
+	"к: %[1]s\x02:minus: %[1]s вышел из группы %[2]s\x02:minus: Запрос подпи" +
+	"ски от %[1]s отозван\x02:minus: Запрос %[1]s на вступление в группу %[2" +
+	"]s отозван\x02:plus: %[1]s сделал(а) %[2]s администратором группы %[3]s" +
+	"\x02:minus: %[1]s отозвал(а) полномочия администратора группы %[3]s у %[" +
+	"2]s\x02:plus: Запрос %[1]s на вступление в группу %[2]s одобрен %[3]s" +
+	"\x02:minus: Запрос %[1]s на вступление в группу %[2]s отклонён %[3]s\x02" +
+	"администратором группы\x02:cop: Ваш комментарий был удалён %[1]s. Пост " +
+	"\x22%[2]s\x22:\x02:cop: Ваш комментарий в группе %[2]s был удалён %[1]s." +
+	" Пост \x22%[3]s\x22:\x02:cop: Комментарий %[2]s был удалён %[1]s. Пост в" +
+	" группе %[3]s \x22%[4]s\x22:\x02:cop: Ваш пост в группе %[2]s был удалён" +
+	" %[1]s\x02:cop: Ваш пост был удалён из группы %[2]s %[1]s. \x22%[3]s\x22" +
+	":\x02:cop: Модератор %[1]s удалил пост %[2]s из группы %[3]s\x02:cop: Мо" +
+	"дератор %[1]s удалил пост %[2]s из группы %[3]s \x22%[4]s\x22:\x02Админ" +
+	"истратор группы\x02вас\x02:cop: %[1]s заблокировал %[2]s в группе %[3]s" +
+	"\x02:cop: %[1]s разблокировал %[2]s в группе %[3]s\x02:tada: По вашему п" +
+	"риглашению зарегистрировался новый пользователь FreeFeed — %[1]s!\x02:a" +
+	"lien: Неизвестный тип события: %[1]v"
 
-	// Total table size 12205 bytes (11KiB); checksum: 31003B14
+	// Total table size 12105 bytes (11KiB); checksum: 9DAE3B4C
