@@ -73,9 +73,9 @@ func (c *Chat) postButtonsMore(event *frf.Event) tg.InlineKeyboardMarkup {
 	}
 
 	if event.Post != nil {
-		ok, err := c.Should(c.App.IsPostTracked(c.ID, event.PostID))
+		legacyTracked, err := c.Should(c.App.IsPostTracked(c.ID, event.PostID))
 		if err == nil {
-			if ok.(bool) {
+			if legacyTracked.(bool) || event.Post.NotifyOfAllComments {
 				row = append(row, tg.NewInlineKeyboardButtonData(
 					emoji.Parse(p.Sprintf(":no_bell: Unsubscribe from comments")),
 					doUntrackPost,

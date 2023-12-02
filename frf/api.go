@@ -110,6 +110,17 @@ func (a *API) UnlikeComment(commentId uuid.UUID) error {
 	return a.request("POST", "/v2/comments/"+commentId.String()+"/unlike", &struct{}{}, nil)
 }
 
+func (a *API) NotifyOfAllComments(postID uuid.UUID, enabled bool) (bool, error) {
+	resp := &struct {
+		Posts *Post `json:"posts"`
+	}{}
+	req := &struct {
+		Enabled bool `json:"enabled"`
+	}{enabled}
+	err := a.request("POST", "/v1/posts/"+postID.String()+"/notifyOfAllComments", req, resp)
+	return resp.Posts.NotifyOfAllComments, err
+}
+
 func (a *API) AddComment(postID uuid.UUID, text string) (*Comment, error) {
 	resp := &struct {
 		Comment *Comment `json:"comments"`

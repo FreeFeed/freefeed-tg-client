@@ -5,6 +5,7 @@ import (
 
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/FreeFeed/freefeed-tg-client/types"
+	"github.com/davidmz/go-try"
 	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
 	"github.com/gofrs/uuid"
@@ -128,19 +129,19 @@ func (c *Chat) handleCallback(update tg.Update) {
 			c.ShouldSend(msg)
 
 		} else if cbData == doTrackPost || cbData == doUntrackPost {
-			var err error
-			if cbData == doTrackPost {
-				if err := c.ShouldOK(c.App.TrackPost(c.ID, event.PostID)); err == nil {
-					// subscribe
-					c.ShouldOK(c.App.RTSend(c.ID, "subscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{event.PostID}}, nil))
+			err := try.Func(func() {
+				// Turn off legacy post tracking, if necessary
+				if try.ItVal(c.App.IsPostTracked(c.ID, event.PostID)) {
+					try.It(c.App.UntrackPost(c.ID, event.PostID))
+					// RT unsubscribe
+					try.It(c.App.RTSend(c.ID, "unsubscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{event.PostID}}, nil))
 				}
-			} else {
-				if err := c.ShouldOK(c.App.UntrackPost(c.ID, event.PostID)); err == nil {
-					// unsubscribe
-					c.ShouldOK(c.App.RTSend(c.ID, "unsubscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{event.PostID}}, nil))
-				}
-			}
+
+				ok := try.ItVal(c.frfAPI().NotifyOfAllComments(event.PostID, cbData == doTrackPost))
+				event.Post.NotifyOfAllComments = ok
+			})()
 			if err != nil {
+				c.errorLog().Print(err)
 				c.ShouldAnswer(tg.CallbackConfig{
 					CallbackQueryID: cbQuery.ID,
 					Text:            emoji.Parse(p.Sprintf(":warning: Error: %v", err)),
@@ -186,22 +187,22 @@ func (c *Chat) handleCallback(update tg.Update) {
 
 		postID := c.postIDFromURL(msgText)
 		if postID != uuid.Nil {
-			if cbData == doTrackPostByURL {
-				if err := c.ShouldOK(c.App.TrackPost(c.ID, postID)); err == nil {
-					// subscribe
-					c.ShouldOK(c.App.RTSend(c.ID, "subscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{postID}}, nil))
+			err = try.Func(func() {
+				// Turn off legacy post tracking, if necessary
+				if try.ItVal(c.App.IsPostTracked(c.ID, postID)) {
+					try.It(c.App.UntrackPost(c.ID, postID))
+					// RT unsubscribe
+					try.It(c.App.RTSend(c.ID, "unsubscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{postID}}, nil))
 				}
-			} else {
-				if err := c.ShouldOK(c.App.UntrackPost(c.ID, postID)); err == nil {
-					// unsubscribe
-					c.ShouldOK(c.App.RTSend(c.ID, "unsubscribe", types.UserSubsPayload{PostIDs: []uuid.UUID{postID}}, nil))
-				}
-			}
+
+				try.ItVal(c.frfAPI().NotifyOfAllComments(postID, cbData == doTrackPostByURL))
+			})()
 		} else {
 			err = errors.New("cannot find post ID")
 		}
 
 		if err != nil {
+			c.errorLog().Print(err)
 			c.ShouldAnswer(tg.CallbackConfig{
 				CallbackQueryID: cbQuery.ID,
 				Text:            emoji.Parse(p.Sprintf(":warning: Error: %v", err)),
