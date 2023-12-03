@@ -6,8 +6,8 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/frf"
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/davidmz/debug-log"
-	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 type Chat struct {
@@ -59,11 +59,6 @@ func (c *Chat) ShouldSendAndSave(msg tg.Chattable, rec store.SentMsgRec) (tg.Mes
 		c.ShouldOK(c.App.PutMsgRec(c.ID, rec))
 	}
 	return m.(tg.Message), err
-}
-
-func (c *Chat) ShouldAnswer(config tg.CallbackConfig) (tg.APIResponse, error) {
-	resp, err := c.Should(c.App.Tg().AnswerCallbackQuery(config))
-	return resp.(tg.APIResponse), err
 }
 
 func (c *Chat) newHTMLMessage(text string) *tg.MessageConfig {

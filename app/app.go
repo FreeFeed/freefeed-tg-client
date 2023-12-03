@@ -14,8 +14,8 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/bluele/gcache"
 	"github.com/davidmz/debug-log"
-	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 var internaErrorMsg = emoji.Parse(":stop_sign: An internal error occurred during your request. If it repeats, please contact support.")
@@ -77,10 +77,7 @@ func (a *App) Start() (err error) {
 		debugLogger:     a.DebugLogger,
 	})
 
-	a.updChannel, err = a.TgAPI.GetUpdatesChan(tg.UpdateConfig{Offset: 0, Timeout: 60})
-	if err != nil {
-		return
-	}
+	a.updChannel = a.TgAPI.GetUpdatesChan(tg.UpdateConfig{Offset: 0, Timeout: 60})
 
 	a.waitGroup.Add(1)
 	a.DebugLogger.Println("▶️ Starting Telegram listener")

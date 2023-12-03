@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/FreeFeed/freefeed-tg-client/frf"
-	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/gofrs/uuid"
 	"golang.org/x/text/message"
 )

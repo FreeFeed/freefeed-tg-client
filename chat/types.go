@@ -5,7 +5,7 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/davidmz/debug-log"
-	tg "github.com/davidmz/telegram-bot-api"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 type ID = types.TgChatID

@@ -6,8 +6,8 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/FreeFeed/freefeed-tg-client/types"
 	"github.com/davidmz/go-try"
-	tg "github.com/davidmz/telegram-bot-api"
 	"github.com/enescakir/emoji"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/gofrs/uuid"
 	"golang.org/x/text/language"
 	"golang.org/x/text/message"
@@ -36,7 +36,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 
 		p := message.NewPrinter(c.State.Language)
 
-		c.ShouldAnswer(tg.CallbackConfig{
+		c.ShouldSend(tg.CallbackConfig{
 			CallbackQueryID: cbQuery.ID,
 			Text:            p.Sprintf("Language is %v now", c.State.Language),
 		})
@@ -55,7 +55,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 			if errors.Is(err, store.ErrNotFound) {
 				text = emoji.Parse(p.Sprintf(":warning: Cannot load event data, probably this message is too old"))
 			}
-			c.ShouldAnswer(tg.CallbackConfig{
+			c.ShouldSend(tg.CallbackConfig{
 				CallbackQueryID: cbQuery.ID,
 				Text:            text,
 			})
@@ -65,7 +65,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 		event := eventRec.Event
 
 		if err := c.ShouldOK(event.LoadPost(c.frfAPI())); err != nil {
-			c.ShouldAnswer(tg.CallbackConfig{
+			c.ShouldSend(tg.CallbackConfig{
 				CallbackQueryID: cbQuery.ID,
 				Text:            emoji.Parse(p.Sprintf(":warning: FreeFeed error: %v", err)),
 			})
@@ -84,7 +84,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 			}
 			c.saveState()
 			c.App.PauseEvents(c.ID)
-			c.ShouldAnswer(tg.CallbackConfig{CallbackQueryID: cbQuery.ID})
+			c.ShouldSend(tg.CallbackConfig{CallbackQueryID: cbQuery.ID})
 		} else if cbData == doAcceptRequest || cbData == doRejectRequest {
 			var err error
 			if event.Group == nil {
@@ -101,7 +101,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 				}
 			}
 			if err != nil {
-				c.ShouldAnswer(tg.CallbackConfig{
+				c.ShouldSend(tg.CallbackConfig{
 					CallbackQueryID: cbQuery.ID,
 					Text:            emoji.Parse(p.Sprintf(":warning: FreeFeed error: %v", err)),
 				})
@@ -142,7 +142,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 			})()
 			if err != nil {
 				c.errorLog().Print(err)
-				c.ShouldAnswer(tg.CallbackConfig{
+				c.ShouldSend(tg.CallbackConfig{
 					CallbackQueryID: cbQuery.ID,
 					Text:            emoji.Parse(p.Sprintf(":warning: Error: %v", err)),
 				})
@@ -159,7 +159,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 				err = c.frfAPI().UnlikeComment(event.CommentID)
 			}
 			if err != nil {
-				c.ShouldAnswer(tg.CallbackConfig{
+				c.ShouldSend(tg.CallbackConfig{
 					CallbackQueryID: cbQuery.ID,
 					Text:            emoji.Parse(p.Sprintf(":warning: FreeFeed error: %v", err)),
 				})
@@ -172,7 +172,7 @@ func (c *Chat) handleCallback(update tg.Update) {
 			c.ShouldSend(msg)
 
 		} else {
-			c.ShouldAnswer(tg.CallbackConfig{
+			c.ShouldSend(tg.CallbackConfig{
 				CallbackQueryID: cbQuery.ID,
 				Text:            emoji.Parse(p.Sprintf(":alien: Unknown command %v", cbQuery.Data)),
 			})
@@ -182,14 +182,14 @@ func (c *Chat) handleCallback(update tg.Update) {
 		c.State.ClearExpectations()
 		c.saveState()
 		c.App.ResumeEvents(c.ID)
-		c.ShouldAnswer(tg.CallbackConfig{
+		c.ShouldSend(tg.CallbackConfig{
 			CallbackQueryID: cbQuery.ID,
 			Text:            p.Sprintf("Action is cancelled"),
 		})
 	} else {
 		// Unknown or irrelevant command
 		c.errorLog().Printf("Unknown callback data received: %v", cbQuery.Data)
-		c.ShouldAnswer(tg.CallbackConfig{
+		c.ShouldSend(tg.CallbackConfig{
 			CallbackQueryID: cbQuery.ID,
 			Text:            emoji.Parse(p.Sprintf(":alien: Unknown command %v", cbQuery.Data)),
 		})

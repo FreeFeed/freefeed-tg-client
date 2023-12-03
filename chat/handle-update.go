@@ -1,6 +1,6 @@
 package chat
 
-import tg "github.com/davidmz/telegram-bot-api"
+import tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
 func (c *Chat) HandleUpdate(update tg.Update) {
 	c.handleMessage(update)

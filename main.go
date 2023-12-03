@@ -17,7 +17,7 @@ import (
 	"github.com/FreeFeed/freefeed-tg-client/store"
 	"github.com/davidmz/debug-log"
 	"github.com/davidmz/go-try"
-	tgbotapi "github.com/davidmz/telegram-bot-api"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 const (

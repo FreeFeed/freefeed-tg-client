@@ -1,8 +1,9 @@
 package store
 
 import (
+	"slices"
+
 	"github.com/FreeFeed/freefeed-tg-client/types"
-	"github.com/davidmz/sliceutil"
 	"github.com/gofrs/uuid"
 )
 
@@ -26,8 +27,9 @@ func (s *fsStore) TrackPost(chatID types.TgChatID, postID uuid.UUID) error {
 		trackedPostsFile,
 		&tracked,
 		func() error {
-			tracked.PostIDs = append(tracked.PostIDs, postID)
-			sliceutil.Unique(&tracked.PostIDs)
+			if !slices.Contains(tracked.PostIDs, postID) {
+				tracked.PostIDs = append(tracked.PostIDs, postID)
+			}
 			return nil
 		},
 	)
@@ -40,8 +42,9 @@ func (s *fsStore) UntrackPost(chatID types.TgChatID, postID uuid.UUID) error {
 		trackedPostsFile,
 		&tracked,
 		func() error {
-			sliceutil.Filter(&tracked.PostIDs,
-				func(i int) bool { return tracked.PostIDs[i] != postID })
+			if idx := slices.Index(tracked.PostIDs, postID); idx >= 0 {
+				slices.Delete(tracked.PostIDs, idx, idx+1)
+			}
 			return nil
 		},
 	)

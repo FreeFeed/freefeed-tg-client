@@ -2,7 +2,7 @@ package chat
 
 import (
 	"github.com/FreeFeed/freefeed-tg-client/store"
-	tg "github.com/davidmz/telegram-bot-api"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/gofrs/uuid"
 	"github.com/golang-jwt/jwt/v4"
 	"golang.org/x/text/message"
@@ -26,7 +26,7 @@ func (c *Chat) handleMessage(update tg.Update) {
 		}
 
 		// Delete message with the token for safety
-		c.Should(c.App.Tg().DeleteMessage(tg.DeleteMessageConfig{
+		c.Should(c.App.Tg().Request(tg.DeleteMessageConfig{
 			ChatID:    c.ID,
 			MessageID: msg.MessageID,
 		}))

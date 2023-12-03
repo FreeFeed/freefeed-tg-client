@@ -2,7 +2,7 @@ package chat
 
 import (
 	"github.com/FreeFeed/freefeed-tg-client/store"
-	tg "github.com/davidmz/telegram-bot-api"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"golang.org/x/text/message"
 )
 
