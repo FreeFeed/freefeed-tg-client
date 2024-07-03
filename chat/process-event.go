@@ -64,11 +64,6 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 		}
 		return c.withPostBody(c.newHTMLMessage(text), event)
 	case "mention_in_comment":
-		if event.Post != nil && event.Post.IsDirect() {
-			// We will receive this in 'direct_comment' event
-			return nil
-		}
-
 		if ok, _ := c.App.IsPostTracked(c.ID, event.PostID); ok {
 			// We will receive this with post subscription
 			return nil
@@ -90,11 +85,6 @@ func (c *Chat) renderEvent(event *frf.Event) tg.Chattable {
 
 		return c.withCommentBody(c.newHTMLMessage(headText), event)
 	case "mention_comment_to":
-		if event.Post != nil && event.Post.IsDirect() {
-			// We will receive this in 'direct_comment' event
-			return nil
-		}
-
 		if ok, _ := c.App.IsPostTracked(c.ID, event.PostID); ok {
 			// We will receive this with post subscription
 			return nil
